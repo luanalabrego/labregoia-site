@@ -1710,6 +1710,12 @@ html {
     opacity: 0.3;
 }
 
+/* Ajusta cores de texto para melhor contraste nos heros escuros */
+.services-hero .hero-title,
+.services-hero .hero-subtitle {
+    color: var(--white);
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
