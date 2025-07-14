@@ -1775,6 +1775,17 @@ html {
     letter-spacing: 0.05em;
 }
 
+/* About hero layout adjustments */
+.about-hero .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    text-align: left;
+    max-width: none;
+    margin: 0;
+}
+
 /* Cards Modernos */
 .service-card, .case-card, .industry-card, .pricing-card {
     background: white;
