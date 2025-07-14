@@ -2894,3 +2894,96 @@ html {
 }
 
 /* ================== End Vitriny Page ================== */
+
+/* ================== Cases Page ================== */
+
+.cases-hero {
+    padding: 140px 0 100px;
+}
+
+.featured-cases,
+.cases-grid-section,
+.testimonials-section,
+.process-section {
+    padding: 100px 0;
+}
+
+.featured-case-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.case-content {
+    max-width: 500px;
+}
+
+.case-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.case-image img {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.case-metrics {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    flex: 1;
+    min-width: 140px;
+    background: var(--white);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.metric-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.cases-filter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background: var(--gray-50);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .featured-case-card {
+        gap: 40px;
+    }
+}
+
