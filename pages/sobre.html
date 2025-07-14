@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Labrego IA - Especialistas em Inteligência Artificial</title>
+    <meta name="description" content="Conheça a Labrego IA: especialistas em soluções de inteligência artificial para empresas. Nossa missão, valores, equipe e história de inovação.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="vitriny.html" class="nav-link">Vitriny</a>
+                    <a href="sobre.html" class="nav-link active">Sobre</a>
+                    <a href="cases.html" class="nav-link">Cases</a>
+                    <a href="../index.html#contato" class="nav-link">Contato</a>
+                </nav>
+                <button class="btn btn-primary header-contact-btn" onclick="window.location.href='../index.html#contato'">
+                    Fale Conosco
+                    <span class="arrow">→</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>Inovação em Inteligência Artificial</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Transformamos negócios com 
+                    <span class="highlight">Inteligência Artificial</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Somos especialistas em criar soluções de IA que geram resultados reais. 
+                    Nossa missão é democratizar a inteligência artificial, tornando-a acessível 
+                    e eficaz para empresas de todos os tamanhos.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Projetos Entregues</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Clientes Ativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Taxa de Sucesso</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3 anos</div>
+                        <div class="stat-label">No Mercado</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="about-illustration">
+                    <div class="ai-network">
+                        <div class="network-node central">
+                            <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="node-logo">
+                        </div>
+                        <div class="network-node">
+                            <i class="fas fa-robot"></i>
+                            <span>IA</span>
+                        </div>
+                        <div class="network-node">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="network-node">
+                            <i class="fas fa-cogs"></i>
+                            <span>Automação</span>
+                        </div>
+                        <div class="network-node">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Apps</span>
+                        </div>
+                        <div class="network-node">
+                            <i class="fas fa-comments"></i>
+                            <span>Chatbots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-content">
+                    <h2>Nossa Missão</h2>
+                    <p class="mission-text">
+                        Democratizar a inteligência artificial, tornando-a acessível e eficaz para empresas 
+                        de todos os tamanhos. Acreditamos que toda empresa, independente do porte, deve ter 
+                        acesso às melhores tecnologias de IA para competir no mercado digital.
+                    </p>
+                    <p class="mission-text">
+                        Não apenas desenvolvemos tecnologia, mas criamos soluções que geram impacto real 
+                        nos negócios dos nossos clientes, sempre com foco em resultados mensuráveis e 
+                        retorno sobre investimento.
+                    </p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Inovação</h3>
+                        <p>Sempre na vanguarda das tecnologias de IA, buscando soluções criativas para desafios complexos.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Parceria</h3>
+                        <p>Trabalhamos como parceiros estratégicos, não apenas fornecedores, no sucesso dos nossos clientes.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h3>Resultados</h3>
+                        <p>Foco total em gerar resultados mensuráveis e impacto positivo nos negócios dos nossos clientes.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Confiança</h3>
+                        <p>Transparência, ética e segurança em todos os projetos, construindo relacionamentos duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa História</h2>
+                <p>A jornada da Labrego IA desde a fundação até se tornar referência em soluções de IA</p>
+            </div>
+            
+            <div class="story-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Fundação</h3>
+                        <p>
+                            A Labrego IA nasceu da visão de tornar a inteligência artificial acessível para 
+                            empresas brasileiras. Fundada por especialistas em IA e desenvolvimento de software, 
+                            começamos com o objetivo de democratizar tecnologias avançadas.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Primeiros Projetos</h3>
+                        <p>
+                            Desenvolvemos nossos primeiros chatbots e sistemas de automação para pequenas e 
+                            médias empresas, provando que IA pode gerar resultados reais independente do 
+                            tamanho da empresa.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Expansão de Serviços</h3>
+                        <p>
+                            Ampliamos nosso portfólio para incluir análise preditiva, visão computacional e 
+                            processamento de linguagem natural, atendendo empresas de diversos setores com 
+                            soluções personalizadas.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>Lançamento do Vitriny AI</h3>
+                        <p>
+                            Criamos nosso produto próprio: o Vitriny AI, uma vitrine digital inteligente que 
+                            revoluciona o e-commerce com personalização avançada e assistentes de vendas IA.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>Presente</h3>
+                        <p>
+                            Hoje somos referência em soluções de IA no Brasil, com mais de 200 projetos 
+                            entregues e uma equipe especializada em transformar desafios de negócio em 
+                            oportunidades através da inteligência artificial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Equipe</h2>
+                <p>Especialistas apaixonados por inteligência artificial e inovação</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/Lucas.jpg" alt="Lucas - CEO Labrego IA">
+                    </div>
+                    <div class="member-info">
+                        <h3>Lucas</h3>
+                        <p class="member-role">CEO & Co-Fundador</p>
+                        <p class="member-description">
+                            Especialista em estratégia de IA e transformação digital. Lidera a visão 
+                            estratégica da empresa e o desenvolvimento de novos produtos.
+                        </p>
+                        <div class="member-expertise">
+                            <span>Estratégia IA</span>
+                            <span>Liderança</span>
+                            <span>Inovação</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/Luana.jpg" alt="Luana - CTO Labrego IA">
+                    </div>
+                    <div class="member-info">
+                        <h3>Luana</h3>
+                        <p class="member-role">CTO & Co-Fundadora</p>
+                        <p class="member-description">
+                            Especialista em machine learning e arquitetura de sistemas. Responsável 
+                            pela excelência técnica e inovação em todos os projetos da empresa.
+                        </p>
+                        <div class="member-expertise">
+                            <span>Machine Learning</span>
+                            <span>Arquitetura</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div class="member-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Equipe de Desenvolvimento</h3>
+                        <p class="member-role">Desenvolvedores Especialistas</p>
+                        <p class="member-description">
+                            Time multidisciplinar de desenvolvedores especializados em IA, frontend, 
+                            backend e DevOps, garantindo entregas de alta qualidade.
+                        </p>
+                        <div class="member-expertise">
+                            <span>Full Stack</span>
+                            <span>DevOps</span>
+                            <span>Cloud</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div class="member-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Consultores de IA</h3>
+                        <p class="member-role">Especialistas em Negócios</p>
+                        <p class="member-description">
+                            Consultores especializados em identificar oportunidades de IA e traduzir 
+                            necessidades de negócio em soluções técnicas eficazes.
+                        </p>
+                        <div class="member-expertise">
+                            <span>Consultoria</span>
+                            <span>Análise</span>
+                            <span>Estratégia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Expertise</h2>
+                <p>Tecnologias e metodologias que dominamos para entregar soluções de IA de classe mundial</p>
+            </div>
+            
+            <div class="expertise-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="technologies">Tecnologias</button>
+                    <button class="tab-btn" data-tab="methodologies">Metodologias</button>
+                    <button class="tab-btn" data-tab="industries">Setores</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="technologies">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h3>Machine Learning & AI</h3>
+                                <div class="tech-items">
+                                    <span class="tech-item">TensorFlow</span>
+                                    <span class="tech-item">PyTorch</span>
+                                    <span class="tech-item">Scikit-learn</span>
+                                    <span class="tech-item">OpenAI GPT</span>
+                                    <span class="tech-item">Hugging Face</span>
+                                    <span class="tech-item">LangChain</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h3>Desenvolvimento</h3>
+                                <div class="tech-items">
+                                    <span class="tech-item">Python</span>
+                                    <span class="tech-item">JavaScript</span>
+                                    <span class="tech-item">React</span>
+                                    <span class="tech-item">Node.js</span>
+                                    <span class="tech-item">FastAPI</span>
+                                    <span class="tech-item">Docker</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h3>Cloud & Infrastructure</h3>
+                                <div class="tech-items">
+                                    <span class="tech-item">AWS</span>
+                                    <span class="tech-item">Google Cloud</span>
+                                    <span class="tech-item">Azure</span>
+                                    <span class="tech-item">Kubernetes</span>
+                                    <span class="tech-item">Terraform</span>
+                                    <span class="tech-item">MongoDB</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h3>Dados & Analytics</h3>
+                                <div class="tech-items">
+                                    <span class="tech-item">Pandas</span>
+                                    <span class="tech-item">NumPy</span>
+                                    <span class="tech-item">Apache Spark</span>
+                                    <span class="tech-item">Elasticsearch</span>
+                                    <span class="tech-item">Grafana</span>
+                                    <span class="tech-item">Tableau</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="methodologies">
+                        <div class="methodologies-grid">
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h3>Metodologia Ágil</h3>
+                                <p>Utilizamos Scrum e Kanban para entregas iterativas e feedback contínuo, garantindo que o produto final atenda exatamente às necessidades do cliente.</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h3>Design Thinking</h3>
+                                <p>Processo centrado no usuário para identificar problemas reais e criar soluções inovadoras que geram valor tangível para o negócio.</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>Data-Driven</h3>
+                                <p>Todas as decisões são baseadas em dados e métricas, garantindo que as soluções de IA gerem resultados mensuráveis e ROI positivo.</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>MLOps</h3>
+                                <p>Implementamos práticas de MLOps para garantir que modelos de IA sejam confiáveis, escaláveis e mantenham performance ao longo do tempo.</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Human-Centered AI</h3>
+                                <p>Desenvolvemos IA que complementa capacidades humanas, sempre considerando aspectos éticos e impacto social das soluções.</p>
+                            </div>
+                            
+                            <div class="methodology-card">
+                                <div class="methodology-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>MVP First</h3>
+                                <p>Começamos sempre com um MVP para validar hipóteses rapidamente e iterar baseado em feedback real dos usuários.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="industries">
+                        <div class="industries-grid">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h3>E-commerce & Varejo</h3>
+                                <p>Personalização, recomendações inteligentes, chatbots de vendas e análise preditiva de demanda.</p>
+                                <div class="industry-projects">15+ projetos</div>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h3>Serviços Financeiros</h3>
+                                <p>Detecção de fraude, análise de risco, automação de processos e atendimento inteligente.</p>
+                                <div class="industry-projects">12+ projetos</div>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <h3>Saúde</h3>
+                                <p>Análise de imagens médicas, agendamento inteligente e sistemas de apoio à decisão clínica.</p>
+                                <div class="industry-projects">8+ projetos</div>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>Educação</h3>
+                                <p>Tutores virtuais, personalização de aprendizado e sistemas de avaliação automatizada.</p>
+                                <div class="industry-projects">10+ projetos</div>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h3>Manufatura</h3>
+                                <p>Manutenção preditiva, controle de qualidade e otimização de processos produtivos.</p>
+                                <div class="industry-projects">6+ projetos</div>
+                            </div>
+                            
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3>Imobiliário</h3>
+                                <p>Avaliação automática de imóveis, chatbots de atendimento e análise de mercado.</p>
+                                <div class="industry-projects">7+ projetos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section class="differentials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por que Escolher a Labrego IA?</h2>
+                <p>Diferenciais que nos tornam a melhor escolha para seus projetos de IA</p>
+            </div>
+            
+            <div class="differentials-grid">
+                <div class="differential-card">
+                    <div class="differential-number">01</div>
+                    <h3>Expertise Comprovada</h3>
+                    <p>
+                        Mais de 200 projetos entregues com sucesso, equipe especializada e metodologias 
+                        testadas em empresas de diversos portes e setores.
+                    </p>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-number">02</div>
+                    <h3>Foco em Resultados</h3>
+                    <p>
+                        Não vendemos tecnologia, vendemos resultados. Cada projeto é medido por métricas 
+                        claras de ROI e impacto no negócio.
+                    </p>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-number">03</div>
+                    <h3>Suporte Completo</h3>
+                    <p>
+                        Acompanhamos desde a concepção até a implementação e evolução contínua, 
+                        garantindo que a solução continue gerando valor.
+                    </p>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-number">04</div>
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>
+                        Utilizamos as mais avançadas tecnologias de IA, sempre atualizados com as 
+                        últimas inovações do mercado global.
+                    </p>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-number">05</div>
+                    <h3>Preço Justo</h3>
+                    <p>
+                        Oferecemos soluções de IA de classe mundial com preços acessíveis, 
+                        democratizando o acesso à tecnologia avançada.
+                    </p>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-number">06</div>
+                    <h3>Parceria Estratégica</h3>
+                    <p>
+                        Não somos apenas fornecedores, somos parceiros estratégicos no crescimento 
+                        e transformação digital do seu negócio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Pronto para transformar seu negócio com Inteligência Artificial?
+                </h2>
+                <p class="cta-subtitle">
+                    Vamos conversar sobre como a Labrego IA pode ajudar sua empresa a crescer 
+                    e se destacar no mercado através de soluções inteligentes e inovadoras.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Falar com Especialista
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact" id="floatingContactWrapper">
+        <div class="floating-menu" id="floatingMenu">
+            <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:contato@labregoia.com" class="floating-option email" aria-label="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+        <button class="floating-btn" id="floatingContact" aria-label="Contato">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Tabs functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        stat.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            stat.style.transform = 'scale(1)';
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+    </script>
+</body>
+</html>
+

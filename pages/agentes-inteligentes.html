@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes Inteligentes - Labrego IA</title>
+    <meta name="description" content="IA conversacional para atendimento, vendas e suporte, trabalhando 24h por dia. Implementamos chatbots e voicebots inteligentes que automatizam interações.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="vitriny.html" class="nav-link">Vitriny</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="cases.html" class="nav-link">Cases</a>
+                    <a href="../index.html#contato" class="nav-link">Contato</a>
+                </nav>
+                <button class="btn btn-primary header-contact-btn" onclick="window.location.href='../index.html#contato'">
+                    Fale Conosco
+                    <span class="arrow">→</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-service">
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> > <a href="servicos.html">Serviços</a> > <span>Agentes Inteligentes</span>
+                </div>
+                <div class="service-icon-large">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Agentes Inteligentes</h1>
+                <p class="hero-subtitle">
+                    IA conversacional para atendimento, vendas e suporte, trabalhando 24h por dia. 
+                    Chatbots e voicebots que entendem, aprendem e resolvem.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Implementar Agente IA
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>Atendimento inteligente que nunca dorme</h2>
+                    <p>
+                        Desenvolvemos agentes conversacionais inteligentes que transformam o atendimento ao cliente, 
+                        vendas e suporte técnico. Nossos chatbots e voicebots não apenas respondem perguntas, 
+                        mas entendem contexto, aprendem com interações e resolvem problemas complexos.
+                    </p>
+                    <p>
+                        Utilizando processamento de linguagem natural avançado e machine learning, criamos agentes 
+                        que oferecem experiências personalizadas, reduzem custos operacionais e aumentam a 
+                        satisfação do cliente, funcionando 24 horas por dia, 7 dias por semana.
+                    </p>
+                    
+                    <div class="key-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Disponibilidade 24/7</h3>
+                                <p>Atendimento ininterrupto que nunca tira férias, adoece ou precisa de descanso.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Resposta Instantânea</h3>
+                                <p>Zero tempo de espera com respostas imediatas e precisas para seus clientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Escalabilidade Infinita</h3>
+                                <p>Atende milhares de clientes simultaneamente sem perder qualidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overview-visual">
+                    <div class="chat-demo">
+                        <div class="chat-window">
+                            <div class="chat-header">
+                                <div class="chat-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="chat-info">
+                                    <span class="chat-name">Assistente IA</span>
+                                    <span class="chat-status">Online</span>
+                                </div>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="message bot">
+                                    <div class="message-content">
+                                        Olá! Como posso ajudá-lo hoje?
+                                    </div>
+                                </div>
+                                <div class="message user">
+                                    <div class="message-content">
+                                        Preciso de informações sobre produtos
+                                    </div>
+                                </div>
+                                <div class="message bot">
+                                    <div class="message-content">
+                                        Claro! Posso ajudar com informações detalhadas sobre nossos produtos. Qual categoria te interessa?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent Types -->
+    <section class="agent-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tipos de Agentes Inteligentes</h2>
+                <p>Soluções conversacionais para diferentes necessidades e canais</p>
+            </div>
+            
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Chatbot de Atendimento</h3>
+                    <p>Agente que resolve dúvidas comuns, fornece informações e direciona casos complexos para humanos quando necessário.</p>
+                    <div class="type-features">
+                        <span>FAQ inteligente</span>
+                        <span>Escalação automática</span>
+                        <span>Múltiplos idiomas</span>
+                        <span>Integração CRM</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">80%</span>
+                            <span class="metric-label">Resolução automática</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-60%</span>
+                            <span class="metric-label">Custo atendimento</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Assistente de Vendas</h3>
+                    <p>IA que qualifica leads, apresenta produtos, negocia preços e conduz o cliente através do funil de vendas.</p>
+                    <div class="type-features">
+                        <span>Qualificação de leads</span>
+                        <span>Recomendação de produtos</span>
+                        <span>Negociação inteligente</span>
+                        <span>Follow-up automático</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">+40%</span>
+                            <span class="metric-label">Conversão</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">+25%</span>
+                            <span class="metric-label">Ticket médio</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Agente especializado em resolver problemas técnicos, guiar troubleshooting e acessar base de conhecimento.</p>
+                    <div class="type-features">
+                        <span>Diagnóstico automático</span>
+                        <span>Guias passo-a-passo</span>
+                        <span>Base de conhecimento</span>
+                        <span>Abertura de tickets</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">70%</span>
+                            <span class="metric-label">Resolução L1</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-50%</span>
+                            <span class="metric-label">Tempo resolução</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Voicebot</h3>
+                    <p>Assistente de voz que atende chamadas telefônicas, compreende fala natural e responde por voz sintética.</p>
+                    <div class="type-features">
+                        <span>Reconhecimento de voz</span>
+                        <span>Síntese de fala</span>
+                        <span>URA inteligente</span>
+                        <span>Integração telefonia</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">24/7</span>
+                            <span class="metric-label">Disponibilidade</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-70%</span>
+                            <span class="metric-label">Custo chamadas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Business</h3>
+                    <p>Agente integrado ao WhatsApp Business API para atendimento, vendas e marketing conversacional.</p>
+                    <div class="type-features">
+                        <span>WhatsApp API</span>
+                        <span>Mídia rica</span>
+                        <span>Catálogo de produtos</span>
+                        <span>Pagamentos integrados</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">90%</span>
+                            <span class="metric-label">Taxa abertura</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">+60%</span>
+                            <span class="metric-label">Engajamento</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Assistente Interno</h3>
+                    <p>IA para uso interno da empresa, auxiliando funcionários com processos, informações e tarefas administrativas.</p>
+                    <div class="type-features">
+                        <span>Processos internos</span>
+                        <span>Base de conhecimento</span>
+                        <span>Automação de tarefas</span>
+                        <span>Integração sistemas</span>
+                    </div>
+                    <div class="type-metrics">
+                        <div class="metric">
+                            <span class="metric-value">+30%</span>
+                            <span class="metric-label">Produtividade</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-40%</span>
+                            <span class="metric-label">Tempo busca info</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="agent-capabilities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Capacidades dos Nossos Agentes</h2>
+                <p>Tecnologias avançadas que tornam nossos agentes verdadeiramente inteligentes</p>
+            </div>
+            
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Processamento de Linguagem Natural</h3>
+                    <p>Compreende intenções, contexto e nuances da linguagem humana, incluindo gírias, abreviações e erros de digitação.</p>
+                    <ul class="capability-features">
+                        <li>Análise de sentimento</li>
+                        <li>Extração de entidades</li>
+                        <li>Classificação de intenções</li>
+                        <li>Correção automática</li>
+                    </ul>
+                </div>
+                
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Aprendizado Contínuo</h3>
+                    <p>Melhora automaticamente com cada interação, aprendendo novos padrões e refinando respostas.</p>
+                    <ul class="capability-features">
+                        <li>Machine learning adaptativo</li>
+                        <li>Feedback loop automático</li>
+                        <li>Otimização de respostas</li>
+                        <li>Detecção de novos padrões</li>
+                    </ul>
+                </div>
+                
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h3>Memória Contextual</h3>
+                    <p>Mantém contexto da conversa e histórico do cliente para interações mais personalizadas e eficientes.</p>
+                    <ul class="capability-features">
+                        <li>Histórico de conversas</li>
+                        <li>Perfil do cliente</li>
+                        <li>Contexto de sessão</li>
+                        <li>Preferências pessoais</li>
+                    </ul>
+                </div>
+                
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Integração Completa</h3>
+                    <p>Conecta-se com CRM, ERP, bases de dados e APIs para acessar informações em tempo real.</p>
+                    <ul class="capability-features">
+                        <li>APIs REST/GraphQL</li>
+                        <li>Webhooks em tempo real</li>
+                        <li>Sincronização de dados</li>
+                        <li>SSO e autenticação</li>
+                    </ul>
+                </div>
+                
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Roteamento Inteligente</h3>
+                    <p>Direciona conversas para agentes humanos especializados quando necessário, com contexto completo.</p>
+                    <ul class="capability-features">
+                        <li>Escalação automática</li>
+                        <li>Transferência de contexto</li>
+                        <li>Roteamento por habilidade</li>
+                        <li>Priorização inteligente</li>
+                    </ul>
+                </div>
+                
+                <div class="capability-card">
+                    <div class="capability-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics Avançado</h3>
+                    <p>Métricas detalhadas sobre performance, satisfação e oportunidades de melhoria.</p>
+                    <ul class="capability-features">
+                        <li>Dashboards em tempo real</li>
+                        <li>Análise de satisfação</li>
+                        <li>Identificação de gaps</li>
+                        <li>Relatórios personalizados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Process -->
+    <section class="implementation-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Processo de Implementação</h2>
+                <p>Metodologia estruturada para criar agentes inteligentes eficazes</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Análise e Design Conversacional</h3>
+                        <p>Mapeamos fluxos de atendimento, identificamos intenções e projetamos a personalidade do agente.</p>
+                        <ul class="step-details">
+                            <li>Mapeamento de jornadas do cliente</li>
+                            <li>Identificação de intenções e entidades</li>
+                            <li>Design da personalidade do bot</li>
+                            <li>Definição de KPIs e métricas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Desenvolvimento e Treinamento</h3>
+                        <p>Criamos o agente usando NLP avançado e treinamos com dados específicos do seu negócio.</p>
+                        <ul class="step-details">
+                            <li>Desenvolvimento da arquitetura NLP</li>
+                            <li>Criação de base de conhecimento</li>
+                            <li>Treinamento com dados históricos</li>
+                            <li>Configuração de integrações</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Testes e Refinamento</h3>
+                        <p>Testamos exaustivamente o agente com cenários reais e refinamos respostas e fluxos.</p>
+                        <ul class="step-details">
+                            <li>Testes de conversação</li>
+                            <li>Validação de integrações</li>
+                            <li>Refinamento de respostas</li>
+                            <li>Otimização de performance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Deploy e Integração</h3>
+                        <p>Implementamos o agente nos canais desejados e integramos com seus sistemas existentes.</p>
+                        <ul class="step-details">
+                            <li>Deploy em produção</li>
+                            <li>Integração com canais</li>
+                            <li>Configuração de monitoramento</li>
+                            <li>Treinamento da equipe</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Monitoramento e Evolução</h3>
+                        <p>Monitoramos performance continuamente e evoluímos o agente baseado em dados e feedback.</p>
+                        <ul class="step-details">
+                            <li>Monitoramento em tempo real</li>
+                            <li>Análise de conversas</li>
+                            <li>Retreinamento periódico</li>
+                            <li>Expansão de capacidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases by Industry -->
+    <section class="industry-use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Casos de Uso por Setor</h2>
+                <p>Como agentes inteligentes transformam diferentes indústrias</p>
+            </div>
+            
+            <div class="industry-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="ecommerce">E-commerce</button>
+                    <button class="tab-btn" data-tab="financeiro">Financeiro</button>
+                    <button class="tab-btn" data-tab="saude">Saúde</button>
+                    <button class="tab-btn" data-tab="educacao">Educação</button>
+                    <button class="tab-btn" data-tab="imobiliario">Imobiliário</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="ecommerce">
+                        <div class="use-cases-grid">
+                            <div class="use-case-item">
+                                <h4>Assistente de Compras</h4>
+                                <p>Ajuda clientes a encontrar produtos, compara opções e finaliza compras através de conversa natural.</p>
+                                <div class="case-benefits">
+                                    <span>+45% conversão</span>
+                                    <span>+30% ticket médio</span>
+                                    <span>-60% abandono carrinho</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Suporte Pós-Venda</h4>
+                                <p>Resolve dúvidas sobre pedidos, rastreamento, trocas e devoluções automaticamente.</p>
+                                <div class="case-benefits">
+                                    <span>85% resolução automática</span>
+                                    <span>-70% tempo resposta</span>
+                                    <span>+40% satisfação</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Recuperação de Carrinho</h4>
+                                <p>Identifica carrinhos abandonados e inicia conversas personalizadas para recuperar vendas.</p>
+                                <div class="case-benefits">
+                                    <span>+25% recuperação</span>
+                                    <span>ROI 400%</span>
+                                    <span>Automação 100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="financeiro">
+                        <div class="use-cases-grid">
+                            <div class="use-case-item">
+                                <h4>Consultor Financeiro</h4>
+                                <p>Oferece consultoria básica, explica produtos financeiros e auxilia em investimentos.</p>
+                                <div class="case-benefits">
+                                    <span>24/7 consultoria</span>
+                                    <span>+50% leads qualificados</span>
+                                    <span>-60% custo aquisição</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Suporte Bancário</h4>
+                                <p>Resolve consultas sobre saldo, extratos, transferências e produtos bancários.</p>
+                                <div class="case-benefits">
+                                    <span>90% resolução L1</span>
+                                    <span>-80% chamadas humanas</span>
+                                    <span>Segurança total</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Cobrança Inteligente</h4>
+                                <p>Negocia dívidas, oferece condições de pagamento e facilita acordos automaticamente.</p>
+                                <div class="case-benefits">
+                                    <span>+40% recuperação</span>
+                                    <span>-50% custo cobrança</span>
+                                    <span>Negociação 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="saude">
+                        <div class="use-cases-grid">
+                            <div class="use-case-item">
+                                <h4>Agendamento Médico</h4>
+                                <p>Agenda consultas, confirma presença, reagenda e envia lembretes automaticamente.</p>
+                                <div class="case-benefits">
+                                    <span>-60% no-shows</span>
+                                    <span>+80% agendamentos online</span>
+                                    <span>24/7 disponibilidade</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Triagem Inicial</h4>
+                                <p>Coleta sintomas, faz triagem inicial e direciona para especialista apropriado.</p>
+                                <div class="case-benefits">
+                                    <span>+30% eficiência triagem</span>
+                                    <span>Direcionamento preciso</span>
+                                    <span>Redução filas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Acompanhamento Paciente</h4>
+                                <p>Monitora medicação, coleta feedback pós-consulta e agenda retornos.</p>
+                                <div class="case-benefits">
+                                    <span>+50% aderência tratamento</span>
+                                    <span>Monitoramento contínuo</span>
+                                    <span>Cuidado personalizado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="educacao">
+                        <div class="use-cases-grid">
+                            <div class="use-case-item">
+                                <h4>Tutor Virtual</h4>
+                                <p>Auxilia estudantes com dúvidas, explica conceitos e oferece exercícios personalizados.</p>
+                                <div class="case-benefits">
+                                    <span>Suporte 24/7</span>
+                                    <span>+40% engajamento</span>
+                                    <span>Aprendizado personalizado</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Assistente Administrativo</h4>
+                                <p>Informa sobre matrículas, notas, calendário acadêmico e procedimentos.</p>
+                                <div class="case-benefits">
+                                    <span>-70% consultas presenciais</span>
+                                    <span>Informação sempre atualizada</span>
+                                    <span>Múltiplos idiomas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Orientação Vocacional</h4>
+                                <p>Ajuda estudantes a escolher cursos baseado em perfil, interesses e aptidões.</p>
+                                <div class="case-benefits">
+                                    <span>Orientação personalizada</span>
+                                    <span>+25% satisfação curso</span>
+                                    <span>Redução evasão</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="imobiliario">
+                        <div class="use-cases-grid">
+                            <div class="use-case-item">
+                                <h4>Consultor Imobiliário</h4>
+                                <p>Qualifica interessados, apresenta imóveis e agenda visitas automaticamente.</p>
+                                <div class="case-benefits">
+                                    <span>+60% leads qualificados</span>
+                                    <span>-50% tempo qualificação</span>
+                                    <span>24/7 atendimento</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Assistente de Locação</h4>
+                                <p>Auxilia inquilinos com dúvidas sobre contratos, pagamentos e manutenção.</p>
+                                <div class="case-benefits">
+                                    <span>-80% chamadas administradora</span>
+                                    <span>Resolução imediata</span>
+                                    <span>Satisfação inquilinos</span>
+                                </div>
+                            </div>
+                            
+                            <div class="use-case-item">
+                                <h4>Avaliação Automática</h4>
+                                <p>Coleta dados do imóvel e fornece estimativa de valor baseada em mercado.</p>
+                                <div class="case-benefits">
+                                    <span>Avaliação instantânea</span>
+                                    <span>+200% leads gerados</span>
+                                    <span>Precisão mercado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
+        <div class="container">
+            <div class="calculator-content">
+                <div class="calculator-text">
+                    <h2>Calcule o ROI do seu Agente Inteligente</h2>
+                    <p>Veja quanto sua empresa pode economizar com atendimento automatizado</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label>Quantos atendimentos sua empresa faz por mês?</label>
+                            <input type="number" id="atendimentosMes" placeholder="Ex: 5000" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Qual o custo médio por atendimento? (R$)</label>
+                            <input type="number" id="custoAtendimento" placeholder="Ex: 8" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Quantos atendentes trabalham no suporte?</label>
+                            <input type="number" id="numeroAtendentes" placeholder="Ex: 10" min="1">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calcularROIAgente()">Calcular Economia</button>
+                    </div>
+                </div>
+                
+                <div class="calculator-results" id="calculatorResults" style="display: none;">
+                    <h3>Potencial de Economia com Agente IA</h3>
+                    <div class="result-item">
+                        <span class="result-label">Economia Mensal:</span>
+                        <span class="result-value" id="economiaMensal">R$ 0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Economia Anual:</span>
+                        <span class="result-value" id="economiaAnual">R$ 0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Atendimentos Automatizados:</span>
+                        <span class="result-value" id="atendimentosAutomatizados">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">ROI em 12 meses:</span>
+                        <span class="result-value" id="roiAnual">0%</span>
+                    </div>
+                    <p class="result-note">*Cálculo baseado em 70% de automação dos atendimentos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="agent-technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tecnologias que Utilizamos</h2>
+                <p>Stack completo para desenvolvimento de agentes conversacionais inteligentes</p>
+            </div>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>NLP & AI</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">OpenAI GPT</span>
+                        <span class="tech-item">Google Dialogflow</span>
+                        <span class="tech-item">Microsoft LUIS</span>
+                        <span class="tech-item">Rasa</span>
+                        <span class="tech-item">spaCy</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Plataformas de Chat</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">WhatsApp Business API</span>
+                        <span class="tech-item">Facebook Messenger</span>
+                        <span class="tech-item">Telegram Bot API</span>
+                        <span class="tech-item">Slack</span>
+                        <span class="tech-item">Microsoft Teams</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Voz & Telefonia</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Twilio</span>
+                        <span class="tech-item">Amazon Polly</span>
+                        <span class="tech-item">Google Speech-to-Text</span>
+                        <span class="tech-item">Azure Speech Services</span>
+                        <span class="tech-item">Asterisk</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Backend & APIs</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">FastAPI</span>
+                        <span class="tech-item">WebSockets</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Banco de Dados</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">Elasticsearch</span>
+                        <span class="tech-item">Vector Databases</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Analytics & Monitoring</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Botanalytics</span>
+                        <span class="tech-item">Dashbot</span>
+                        <span class="tech-item">Google Analytics</span>
+                        <span class="tech-item">Grafana</span>
+                        <span class="tech-item">Prometheus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Esclarecemos as principais dúvidas sobre agentes inteligentes</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O chatbot consegue entender linguagem natural?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, nossos agentes utilizam processamento de linguagem natural avançado para compreender intenções, contexto e até mesmo gírias e erros de digitação. Eles conseguem manter conversas naturais e fluidas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como o agente aprende com as conversas?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilizamos machine learning para analisar conversas, identificar padrões e melhorar respostas automaticamente. O agente também aprende com feedback dos usuários e supervisão humana quando necessário.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O que acontece quando o bot não sabe responder?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O agente é configurado para reconhecer suas limitações e transferir a conversa para um atendente humano quando necessário, sempre passando todo o contexto da conversa para garantir continuidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso personalizar a personalidade do agente?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutamente! Definimos tom de voz, personalidade, linguagem e até mesmo avatar do agente para alinhar perfeitamente com a identidade da sua marca e expectativas dos seus clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O agente funciona em múltiplos canais?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, desenvolvemos agentes omnichannel que funcionam em WhatsApp, site, Facebook Messenger, Telegram, telefone e outros canais, mantendo histórico unificado e experiência consistente.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como garantem a segurança das informações?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Implementamos criptografia end-to-end, controles de acesso rigorosos, compliance com LGPD/GDPR e auditoria completa de todas as interações. A segurança é prioridade em todo o desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Pronto para ter um agente inteligente trabalhando 24/7 para sua empresa?
+                </h2>
+                <p class="cta-subtitle">
+                    Vamos criar um agente conversacional que entende seus clientes, resolve problemas 
+                    e gera resultados reais, funcionando incansavelmente para o crescimento do seu negócio.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Implementar Agente IA
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        Falar no WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact" id="floatingContactWrapper">
+        <div class="floating-menu" id="floatingMenu">
+            <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:contato@labregoia.com" class="floating-option email" aria-label="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+        <button class="floating-btn" id="floatingContact" aria-label="Contato">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Tabs functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // ROI Calculator for Agents
+        function calcularROIAgente() {
+            const atendimentosMes = parseFloat(document.getElementById('atendimentosMes').value) || 0;
+            const custoAtendimento = parseFloat(document.getElementById('custoAtendimento').value) || 0;
+            const numeroAtendentes = parseFloat(document.getElementById('numeroAtendentes').value) || 0;
+            
+            if (atendimentosMes > 0 && custoAtendimento > 0 && numeroAtendentes > 0) {
+                const custoMensal = atendimentosMes * custoAtendimento;
+                const atendimentosAutomatizados = Math.round(atendimentosMes * 0.7); // 70% automação
+                const economiaMensal = atendimentosAutomatizados * custoAtendimento;
+                const economiaAnual = economiaMensal * 12;
+                const investimentoBot = 15000; // Estimativa de investimento
+                const roi = ((economiaAnual - investimentoBot) / investimentoBot) * 100;
+                
+                document.getElementById('economiaMensal').textContent = `R$ ${economiaMensal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                document.getElementById('economiaAnual').textContent = `R$ ${economiaAnual.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                document.getElementById('atendimentosAutomatizados').textContent = `${atendimentosAutomatizados.toLocaleString('pt-BR')}/mês`;
+                document.getElementById('roiAnual').textContent = `${Math.round(roi)}%`;
+                
+                document.getElementById('calculatorResults').style.display = 'block';
+            } else {
+                alert('Por favor, preencha todos os campos com valores válidos.');
+            }
+        }
+    </script>
+</body>
+</html>
+

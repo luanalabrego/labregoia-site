@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada - Labrego IA</title>
+    <meta name="description" content="Página não encontrada. Volte para o site da Labrego IA e descubra nossas soluções de inteligência artificial.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .error-content {
+            max-width: 600px;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .error-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .error-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-404 {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary-404 {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary-404:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-404 {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-outline-404:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .error-animation {
+            margin-bottom: 2rem;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-description {
+                font-size: 1rem;
+            }
+            
+            .error-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-404 {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="floating-elements">
+            <div class="floating-element">
+                <i class="fas fa-robot" style="font-size: 3rem;"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-brain" style="font-size: 2.5rem;"></i>
+            </div>
+            <div class="floating-element">
+                <i class="fas fa-cogs" style="font-size: 2rem;"></i>
+            </div>
+        </div>
+        
+        <div class="error-content">
+            <div class="error-animation">
+                <i class="fas fa-search" style="font-size: 4rem; opacity: 0.7; margin-bottom: 1rem;"></i>
+            </div>
+            
+            <div class="error-code">404</div>
+            
+            <h1 class="error-title">Página não encontrada</h1>
+            
+            <p class="error-description">
+                Ops! A página que você está procurando não existe ou foi movida. 
+                Que tal explorar nossas soluções de inteligência artificial?
+            </p>
+            
+            <div class="error-buttons">
+                <a href="index.html" class="btn-404 btn-primary-404">
+                    <i class="fas fa-home"></i>
+                    Voltar ao Início
+                </a>
+                
+                <a href="pages/servicos.html" class="btn-404 btn-outline-404">
+                    <i class="fas fa-cogs"></i>
+                    Ver Serviços
+                </a>
+                
+                <a href="pages/vitriny.html" class="btn-404 btn-outline-404">
+                    <i class="fas fa-robot"></i>
+                    Conhecer Vitriny AI
+                </a>
+            </div>
+            
+            <div style="margin-top: 3rem; opacity: 0.7;">
+                <p>Precisa de ajuda? Entre em contato conosco:</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://wa.me/11934427070" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:contato@labregoia.com" style="color: white; text-decoration: none; margin: 0 1rem;">
+                        <i class="far fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Adicionar efeito de partículas flutuantes
+        function createFloatingParticle() {
+            const particle = document.createElement('div');
+            particle.innerHTML = '<i class="fas fa-circle"></i>';
+            particle.style.position = 'absolute';
+            particle.style.fontSize = '0.5rem';
+            particle.style.opacity = '0.1';
+            particle.style.color = 'white';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.pointerEvents = 'none';
+            particle.style.animation = `floatUp ${3 + Math.random() * 3}s linear forwards`;
+            
+            document.querySelector('.floating-elements').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+        
+        // Criar partículas periodicamente
+        setInterval(createFloatingParticle, 2000);
+        
+        // Adicionar animação CSS para partículas
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.1;
+                }
+                50% {
+                    opacity: 0.3;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+

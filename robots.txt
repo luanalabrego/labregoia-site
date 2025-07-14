@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://labregoia.com/sitemap.xml
+
+# Páginas principais
+Allow: /index.html
+Allow: /pages/servicos.html
+Allow: /pages/vitriny.html
+Allow: /pages/sobre.html
+Allow: /pages/cases.html
+
+# Páginas de serviços
+Allow: /pages/aplicativos-sob-medida.html
+Allow: /pages/automacao-processos.html
+Allow: /pages/inteligencia-artificial.html
+Allow: /pages/agentes-inteligentes.html
+
+# Assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Bloquear arquivos desnecessários
+Disallow: /*.log
+Disallow: /.*
+Disallow: /backup/
+Disallow: /temp/
+
+# Crawl-delay (opcional)
+Crawl-delay: 1
+

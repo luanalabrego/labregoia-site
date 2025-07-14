@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitriny AI - Vitrine Digital Inteligente | Labrego IA</title>
+    <meta name="description" content="Vitriny AI: A vitrine digital inteligente que revoluciona a experiência de compra online. IA que personaliza, recomenda e converte visitantes em clientes.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="vitriny.html" class="nav-link active">Vitriny</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="cases.html" class="nav-link">Cases</a>
+                    <a href="../index.html#contato" class="nav-link">Contato</a>
+                </nav>
+                <button class="btn btn-primary header-contact-btn" onclick="window.location.href='../index.html#contato'">
+                    Fale Conosco
+                    <span class="arrow">→</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="vitriny-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">✨</span>
+                    <span>Produto Exclusivo Labrego IA</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="vitriny-logo">Vitriny</span>
+                    <span class="ai-suffix">AI</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    A vitrine digital inteligente que revoluciona a experiência de compra online. 
+                    IA que personaliza, recomenda e converte visitantes em clientes.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-brain"></i>
+                        <span>IA Personalizada</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>+40% Conversão</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Setup em 24h</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Solicitar Demo
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('como-funciona')">
+                        Ver Como Funciona
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="vitriny-showcase">
+                    <div class="showcase-screen">
+                        <div class="screen-header">
+                            <div class="screen-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <div class="screen-url">vitriny.ai/loja-demo</div>
+                        </div>
+                        <div class="screen-content">
+                            <div class="product-grid">
+                                <div class="product-card featured">
+                                    <div class="product-image"></div>
+                                    <div class="product-info">
+                                        <h4>Produto Recomendado</h4>
+                                        <div class="ai-badge">🤖 IA</div>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image"></div>
+                                    <div class="product-info">
+                                        <h4>Produto Popular</h4>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image"></div>
+                                    <div class="product-info">
+                                        <h4>Oferta Especial</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ai-assistant">
+                                <div class="assistant-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="assistant-message">
+                                    Baseado no seu perfil, recomendo este produto!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-effects">
+                        <div class="effect-circle"></div>
+                        <div class="effect-circle"></div>
+                        <div class="effect-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Problema que o Vitriny AI Resolve</h2>
+                <p>Desafios reais que todo e-commerce enfrenta no mercado digital atual</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-users-slash"></i>
+                    </div>
+                    <h3>Baixa Taxa de Conversão</h3>
+                    <p>Apenas 2-3% dos visitantes se tornam clientes, desperdiçando 97% do tráfego investido em marketing digital.</p>
+                    <div class="problem-stat">
+                        <span class="stat-number">97%</span>
+                        <span class="stat-label">dos visitantes abandonam sem comprar</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Abandono de Carrinho</h3>
+                    <p>70% dos carrinhos são abandonados, representando milhões em vendas perdidas por falta de personalização.</p>
+                    <div class="problem-stat">
+                        <span class="stat-number">70%</span>
+                        <span class="stat-label">dos carrinhos são abandonados</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Experiência Genérica</h3>
+                    <p>Todos os clientes veem a mesma loja, sem personalização baseada em comportamento, preferências ou histórico.</p>
+                    <div class="problem-stat">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">dos clientes querem experiências personalizadas</span>
+                    </div>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atendimento Limitado</h3>
+                    <p>Clientes precisam de ajuda 24/7, mas o atendimento humano tem horários limitados e custos elevados.</p>
+                    <div class="problem-stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">necessidade de atendimento</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como o Vitriny AI Transforma sua Loja</h2>
+                <p>Inteligência artificial que personaliza cada visita e maximiza conversões</p>
+            </div>
+            
+            <div class="solution-features">
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <div class="feature-number">01</div>
+                        <h3>Personalização Inteligente</h3>
+                        <p>
+                            O Vitriny AI analisa o comportamento de cada visitante em tempo real - páginas visitadas, 
+                            tempo de permanência, produtos visualizados, origem do tráfego - e personaliza 
+                            automaticamente a experiência de compra.
+                        </p>
+                        <ul class="feature-benefits">
+                            <li>Produtos recomendados baseados em IA</li>
+                            <li>Layout adaptativo por perfil de cliente</li>
+                            <li>Ofertas personalizadas em tempo real</li>
+                            <li>Conteúdo dinâmico por segmento</li>
+                        </ul>
+                        <div class="feature-result">
+                            <span class="result-number">+40%</span>
+                            <span class="result-text">aumento na taxa de conversão</span>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="personalization-demo">
+                            <div class="visitor-profiles">
+                                <div class="profile active">
+                                    <div class="profile-avatar">👨‍💼</div>
+                                    <span>Executivo</span>
+                                </div>
+                                <div class="profile">
+                                    <div class="profile-avatar">👩‍🎓</div>
+                                    <span>Estudante</span>
+                                </div>
+                                <div class="profile">
+                                    <div class="profile-avatar">👵</div>
+                                    <span>Aposentada</span>
+                                </div>
+                            </div>
+                            <div class="personalized-content">
+                                <div class="content-item">Produtos Premium</div>
+                                <div class="content-item">Ofertas Executivas</div>
+                                <div class="content-item">Entrega Expressa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-showcase reverse">
+                    <div class="feature-content">
+                        <div class="feature-number">02</div>
+                        <h3>Assistente de Vendas IA</h3>
+                        <p>
+                            Um assistente virtual inteligente que atende clientes 24/7, responde dúvidas, 
+                            apresenta produtos, negocia preços e conduz o cliente através do funil de vendas 
+                            com a eficiência de um vendedor experiente.
+                        </p>
+                        <ul class="feature-benefits">
+                            <li>Atendimento instantâneo 24 horas por dia</li>
+                            <li>Qualificação automática de leads</li>
+                            <li>Negociação inteligente de preços</li>
+                            <li>Recuperação de carrinho abandonado</li>
+                        </ul>
+                        <div class="feature-result">
+                            <span class="result-number">+60%</span>
+                            <span class="result-text">aumento no ticket médio</span>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="chat-assistant-demo">
+                            <div class="chat-window">
+                                <div class="chat-header">
+                                    <div class="assistant-info">
+                                        <div class="assistant-avatar">🤖</div>
+                                        <div class="assistant-details">
+                                            <span class="assistant-name">Assistente Vitriny</span>
+                                            <span class="assistant-status">Online</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="message bot">
+                                        Olá! Vi que você está interessado em notebooks. Posso ajudar a encontrar o ideal para você?
+                                    </div>
+                                    <div class="message user">
+                                        Preciso de algo para trabalho e jogos
+                                    </div>
+                                    <div class="message bot">
+                                        Perfeito! Baseado no seu perfil, recomendo este modelo com desconto especial de 15%. Quer ver?
+                                    </div>
+                                </div>
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-showcase">
+                    <div class="feature-content">
+                        <div class="feature-number">03</div>
+                        <h3>Analytics Preditivo</h3>
+                        <p>
+                            Dashboard inteligente que não apenas mostra o que aconteceu, mas prevê tendências, 
+                            identifica oportunidades e sugere ações estratégicas baseadas em machine learning 
+                            e análise de dados avançada.
+                        </p>
+                        <ul class="feature-benefits">
+                            <li>Previsão de demanda por produto</li>
+                            <li>Identificação de clientes em risco</li>
+                            <li>Otimização automática de campanhas</li>
+                            <li>Insights acionáveis em tempo real</li>
+                        </ul>
+                        <div class="feature-result">
+                            <span class="result-number">+25%</span>
+                            <span class="result-text">aumento no ROI de marketing</span>
+                        </div>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="analytics-demo">
+                            <div class="dashboard">
+                                <div class="dashboard-header">
+                                    <h4>Dashboard Preditivo</h4>
+                                    <div class="dashboard-status">
+                                        <span class="status-dot"></span>
+                                        Analisando em tempo real
+                                    </div>
+                                </div>
+                                <div class="dashboard-metrics">
+                                    <div class="metric-card">
+                                        <div class="metric-value">+23%</div>
+                                        <div class="metric-label">Conversão prevista</div>
+                                        <div class="metric-trend up">↗</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">R$ 45k</div>
+                                        <div class="metric-label">Receita projetada</div>
+                                        <div class="metric-trend up">↗</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value">127</div>
+                                        <div class="metric-label">Leads qualificados</div>
+                                        <div class="metric-trend up">↗</div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-insights">
+                                    <div class="insight-item">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Produto X terá alta demanda na próxima semana</span>
+                                    </div>
+                                    <div class="insight-item">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <span>15 clientes VIP em risco de churn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resultados Comprovados</h2>
+                <p>Métricas reais de clientes que implementaram o Vitriny AI</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="result-number">+47%</div>
+                    <div class="result-label">Taxa de Conversão</div>
+                    <div class="result-description">
+                        Aumento médio na conversão de visitantes em clientes após implementação do Vitriny AI
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="result-number">+35%</div>
+                    <div class="result-label">Ticket Médio</div>
+                    <div class="result-description">
+                        Incremento no valor médio dos pedidos através de recomendações inteligentes
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div class="result-number">-62%</div>
+                    <div class="result-label">Abandono de Carrinho</div>
+                    <div class="result-description">
+                        Redução no abandono através de intervenções inteligentes e ofertas personalizadas
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="result-number">24/7</div>
+                    <div class="result-label">Atendimento</div>
+                    <div class="result-description">
+                        Disponibilidade total com qualidade superior ao atendimento humano tradicional
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="result-number">ROI 340%</div>
+                    <div class="result-label">Retorno Investimento</div>
+                    <div class="result-description">
+                        Retorno médio sobre investimento em 12 meses de uso do Vitriny AI
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="result-number">+28%</div>
+                    <div class="result-label">Satisfação Cliente</div>
+                    <div class="result-description">
+                        Melhoria na experiência do cliente medida através de NPS e pesquisas
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Implementamos o Vitriny AI</h2>
+                <p>Processo simples e rápido para transformar sua loja em uma vitrine inteligente</p>
+            </div>
+            
+            <div class="implementation-timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Análise e Configuração</h3>
+                        <p>Analisamos sua loja atual, produtos, público-alvo e objetivos para configurar a IA de acordo com seu negócio específico.</p>
+                        <div class="step-duration">Duração: 1-2 dias</div>
+                        <ul class="step-activities">
+                            <li>Auditoria da loja atual</li>
+                            <li>Mapeamento do público-alvo</li>
+                            <li>Configuração inicial da IA</li>
+                            <li>Definição de KPIs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Integração Técnica</h3>
+                        <p>Integramos o Vitriny AI com sua plataforma de e-commerce existente sem interromper as operações.</p>
+                        <div class="step-duration">Duração: 2-3 dias</div>
+                        <ul class="step-activities">
+                            <li>Integração com plataforma</li>
+                            <li>Configuração de APIs</li>
+                            <li>Sincronização de dados</li>
+                            <li>Testes de funcionamento</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Treinamento da IA</h3>
+                        <p>A IA aprende com seus dados históricos, produtos e comportamento dos clientes para oferecer recomendações precisas.</p>
+                        <div class="step-duration">Duração: 3-5 dias</div>
+                        <ul class="step-activities">
+                            <li>Análise de dados históricos</li>
+                            <li>Treinamento de modelos</li>
+                            <li>Calibração de algoritmos</li>
+                            <li>Validação de precisão</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Lançamento e Otimização</h3>
+                        <p>Ativamos o Vitriny AI em sua loja e monitoramos performance, fazendo ajustes para maximizar resultados.</p>
+                        <div class="step-duration">Duração: Contínuo</div>
+                        <ul class="step-activities">
+                            <li>Ativação em produção</li>
+                            <li>Monitoramento em tempo real</li>
+                            <li>Otimização contínua</li>
+                            <li>Relatórios de performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="implementation-summary">
+                <div class="summary-card">
+                    <h4>Tempo Total de Implementação</h4>
+                    <div class="summary-value">7-10 dias</div>
+                    <p>Da análise inicial ao lançamento completo</p>
+                </div>
+                <div class="summary-card">
+                    <h4>Suporte Técnico</h4>
+                    <div class="summary-value">24/7</div>
+                    <p>Suporte contínuo e monitoramento</p>
+                </div>
+                <div class="summary-card">
+                    <h4>Garantia de Resultados</h4>
+                    <div class="summary-value">30 dias</div>
+                    <p>Ou devolvemos seu investimento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos Vitriny AI</h2>
+                <p>Escolha o plano ideal para o tamanho e necessidades da sua loja</p>
+            </div>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Mensal</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Anual <span class="discount-badge">-20%</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <p>Ideal para lojas iniciantes</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="497" data-yearly="398">497</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Até 1.000 visitantes/mês</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Recomendações básicas de IA</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Assistente de vendas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Analytics básico</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte por email</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-large plan-button">
+                        Começar Agora
+                    </button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h3>Professional</h3>
+                        <p>Para lojas em crescimento</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="997" data-yearly="798">997</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Até 10.000 visitantes/mês</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>IA avançada de personalização</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Assistente com negociação</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Analytics preditivo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Recuperação de carrinho</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte prioritário</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-large plan-button">
+                        Escolher Plano
+                    </button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <p>Para grandes operações</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="1997" data-yearly="1598">1997</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Visitantes ilimitados</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>IA customizada</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Múltiplos assistentes</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Analytics completo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Integrações avançadas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte dedicado 24/7</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-large plan-button">
+                        Falar com Vendas
+                    </button>
+                </div>
+            </div>
+            
+            <div class="pricing-guarantee">
+                <div class="guarantee-content">
+                    <div class="guarantee-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="guarantee-text">
+                        <h4>Garantia de 30 dias</h4>
+                        <p>Se não aumentarmos sua conversão em pelo menos 20% nos primeiros 30 dias, devolvemos 100% do seu investimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Esclarecemos as principais dúvidas sobre o Vitriny AI</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O Vitriny AI funciona com qualquer plataforma de e-commerce?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, o Vitriny AI é compatível com as principais plataformas como Shopify, WooCommerce, Magento, Vtex, Tray e outras. Nossa equipe técnica faz toda a integração sem interromper suas operações.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo leva para ver resultados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Os primeiros resultados aparecem em 7-14 dias após a implementação. A IA precisa de um período inicial de aprendizado, mas muitos clientes veem melhorias na conversão já na primeira semana.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>A IA vai substituir minha equipe de vendas?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não, o Vitriny AI complementa sua equipe. Ele cuida do atendimento inicial, qualificação e vendas simples, liberando sua equipe para focar em vendas complexas e relacionamento com clientes VIP.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona a personalização?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A IA analisa comportamento em tempo real (páginas visitadas, tempo de permanência, produtos visualizados) e dados históricos para personalizar produtos, ofertas, layout e comunicação para cada visitante.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso cancelar a qualquer momento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, não há fidelidade. Você pode cancelar a qualquer momento. Além disso, oferecemos garantia de 30 dias - se não ficar satisfeito, devolvemos 100% do investimento.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O Vitriny AI afeta a velocidade da loja?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não, nossa tecnologia é otimizada para não impactar a performance. O processamento acontece em nossos servidores em nuvem, mantendo sua loja rápida e responsiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Pronto para transformar sua loja com Inteligência Artificial?
+                </h2>
+                <p class="cta-subtitle">
+                    Junte-se a centenas de lojistas que já aumentaram suas vendas com o Vitriny AI. 
+                    Comece hoje mesmo e veja sua conversão disparar em poucos dias.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Solicitar Demo Gratuita
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        Falar no WhatsApp
+                    </button>
+                </div>
+                <div class="cta-guarantee">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Garantia de 30 dias ou seu dinheiro de volta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact" id="floatingContactWrapper">
+        <div class="floating-menu" id="floatingMenu">
+            <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:contato@labregoia.com" class="floating-option email" aria-label="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+        <button class="floating-btn" id="floatingContact" aria-label="Contato">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Pricing Toggle
+        const pricingToggle = document.getElementById('pricingToggle');
+        const priceValues = document.querySelectorAll('.price-value');
+
+        pricingToggle.addEventListener('change', () => {
+            const isYearly = pricingToggle.checked;
+            
+            priceValues.forEach(priceValue => {
+                const monthlyPrice = priceValue.getAttribute('data-monthly');
+                const yearlyPrice = priceValue.getAttribute('data-yearly');
+                
+                priceValue.textContent = isYearly ? yearlyPrice : monthlyPrice;
+            });
+        });
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Plan button actions
+        document.querySelectorAll('.plan-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const planName = button.closest('.pricing-card').querySelector('h3').textContent;
+                
+                if (planName === 'Enterprise') {
+                    window.open('https://wa.me/11934427070?text=Olá! Tenho interesse no plano Enterprise do Vitriny AI.', '_blank');
+                } else {
+                    window.location.href = '../index.html#contato';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

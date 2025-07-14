@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de Processos - Labrego IA</title>
+    <meta name="description" content="Eliminamos tarefas repetitivas e manuais através de automação inteligente, aumentando a produtividade, reduzindo erros e otimizando seus fluxos de trabalho.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="vitriny.html" class="nav-link">Vitriny</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="cases.html" class="nav-link">Cases</a>
+                    <a href="../index.html#contato" class="nav-link">Contato</a>
+                </nav>
+                <button class="btn btn-primary header-contact-btn" onclick="window.location.href='../index.html#contato'">
+                    Fale Conosco
+                    <span class="arrow">→</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-service">
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Início</a> > <a href="servicos.html">Serviços</a> > <span>Automação de Processos</span>
+                </div>
+                <div class="service-icon-large">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a3 3 0 0 0-3 3c0 1.5 1.5 3 3 3s3-1.5 3-3a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M19 14c0-7-3-9-7-9s-7 2-7 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 14v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 18h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1 class="hero-title">Automação de Processos</h1>
+                <p class="hero-subtitle">
+                    Projetos focados em automação, eficiência operacional e redução de erros. 
+                    Eliminamos tarefas repetitivas e aumentamos sua produtividade.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Automatizar Processos
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>Transforme tarefas repetitivas em processos inteligentes</h2>
+                    <p>
+                        Eliminamos tarefas repetitivas e manuais através de automação inteligente, liberando sua equipe 
+                        para focar no que realmente importa: estratégia e crescimento. Nossos projetos são focados em 
+                        automação, eficiência operacional e redução de erros.
+                    </p>
+                    <p>
+                        Desenvolvemos soluções que conectam sistemas, automatizam fluxos de trabalho e criam processos 
+                        inteligentes que funcionam 24/7, garantindo consistência, velocidade e precisão em suas operações.
+                    </p>
+                    
+                    <div class="key-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Economia de Tempo</h3>
+                                <p>Reduza até 80% do tempo gasto em tarefas manuais e repetitivas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Aumento de Produtividade</h3>
+                                <p>Sua equipe pode focar em atividades estratégicas de maior valor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h3>Redução de Erros</h3>
+                                <p>Elimine erros humanos com processos automatizados e consistentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overview-visual">
+                    <div class="automation-visual">
+                        <div class="process-flow">
+                            <div class="process-step">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Entrada</span>
+                            </div>
+                            <div class="process-arrow">→</div>
+                            <div class="process-step">
+                                <i class="fas fa-cogs"></i>
+                                <span>Processamento</span>
+                            </div>
+                            <div class="process-arrow">→</div>
+                            <div class="process-step">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Resultado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Types -->
+    <section class="automation-types">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tipos de Automação que Oferecemos</h2>
+                <p>Soluções personalizadas para diferentes necessidades de automação</p>
+            </div>
+            
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>RPA (Robotic Process Automation)</h3>
+                    <p>Bots que executam tarefas repetitivas em sistemas existentes, como preenchimento de formulários, extração de dados e transferência entre sistemas.</p>
+                    <div class="type-examples">
+                        <span>Preenchimento automático</span>
+                        <span>Extração de dados</span>
+                        <span>Transferência entre sistemas</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Automação de Workflows</h3>
+                    <p>Fluxos de trabalho automatizados que conectam diferentes etapas de um processo, com aprovações, notificações e ações condicionais.</p>
+                    <div class="type-examples">
+                        <span>Aprovações automáticas</span>
+                        <span>Notificações inteligentes</span>
+                        <span>Fluxos condicionais</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Integração de Sistemas</h3>
+                    <p>Conectamos diferentes sistemas e aplicações para que trabalhem em harmonia, eliminando retrabalho e inconsistências.</p>
+                    <div class="type-examples">
+                        <span>APIs personalizadas</span>
+                        <span>Sincronização de dados</span>
+                        <span>Middleware inteligente</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>Automação de Comunicação</h3>
+                    <p>Envio automático de emails, SMS, WhatsApp e outras comunicações baseadas em eventos e condições específicas.</p>
+                    <div class="type-examples">
+                        <span>Email marketing</span>
+                        <span>Notificações SMS</span>
+                        <span>WhatsApp Business</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Automação Financeira</h3>
+                    <p>Processamento automático de faturas, conciliação bancária, geração de relatórios financeiros e controle de fluxo de caixa.</p>
+                    <div class="type-examples">
+                        <span>Conciliação bancária</span>
+                        <span>Geração de relatórios</span>
+                        <span>Controle de fluxo</span>
+                    </div>
+                </div>
+                
+                <div class="type-card">
+                    <div class="type-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Automação de Relatórios</h3>
+                    <p>Geração automática de relatórios, dashboards em tempo real e distribuição inteligente de informações gerenciais.</p>
+                    <div class="type-examples">
+                        <span>Relatórios automáticos</span>
+                        <span>Dashboards em tempo real</span>
+                        <span>Distribuição inteligente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="automation-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa metodologia de automação</h2>
+                <p>Processo estruturado para identificar, implementar e otimizar automações</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Mapeamento de Processos</h3>
+                        <p>Analisamos seus processos atuais para identificar gargalos, tarefas repetitivas e oportunidades de automação.</p>
+                        <ul class="step-details">
+                            <li>Levantamento de processos existentes</li>
+                            <li>Identificação de tarefas manuais</li>
+                            <li>Análise de tempo e recursos gastos</li>
+                            <li>Priorização por impacto e complexidade</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Análise de Viabilidade</h3>
+                        <p>Avaliamos a viabilidade técnica e o ROI de cada automação proposta.</p>
+                        <ul class="step-details">
+                            <li>Análise técnica de sistemas</li>
+                            <li>Cálculo de ROI esperado</li>
+                            <li>Definição de métricas de sucesso</li>
+                            <li>Cronograma de implementação</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Desenvolvimento da Automação</h3>
+                        <p>Criamos e configuramos as automações usando as melhores tecnologias disponíveis.</p>
+                        <ul class="step-details">
+                            <li>Desenvolvimento de scripts e bots</li>
+                            <li>Configuração de integrações</li>
+                            <li>Criação de interfaces de controle</li>
+                            <li>Testes em ambiente controlado</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Implementação Gradual</h3>
+                        <p>Implementamos as automações de forma gradual, minimizando riscos e impactos na operação.</p>
+                        <ul class="step-details">
+                            <li>Testes piloto com dados reais</li>
+                            <li>Treinamento da equipe</li>
+                            <li>Implementação em fases</li>
+                            <li>Monitoramento contínuo</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Otimização Contínua</h3>
+                        <p>Monitoramos performance e otimizamos continuamente para maximizar os benefícios.</p>
+                        <ul class="step-details">
+                            <li>Monitoramento de performance</li>
+                            <li>Análise de métricas e KPIs</li>
+                            <li>Ajustes e melhorias</li>
+                            <li>Expansão para novos processos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="automation-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>Casos de automação por setor</h2>
+                <p>Exemplos práticos de como a automação transforma diferentes áreas de negócio</p>
+            </div>
+            
+            <div class="cases-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="vendas">Vendas</button>
+                    <button class="tab-btn" data-tab="financeiro">Financeiro</button>
+                    <button class="tab-btn" data-tab="rh">Recursos Humanos</button>
+                    <button class="tab-btn" data-tab="marketing">Marketing</button>
+                    <button class="tab-btn" data-tab="operacoes">Operações</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="vendas">
+                        <div class="cases-grid">
+                            <div class="case-item">
+                                <h4>Qualificação Automática de Leads</h4>
+                                <p>Sistema que analisa leads automaticamente, pontua por critérios definidos e distribui para vendedores apropriados.</p>
+                                <div class="case-benefits">
+                                    <span>+40% conversão</span>
+                                    <span>-60% tempo de resposta</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Follow-up Inteligente</h4>
+                                <p>Sequências automáticas de follow-up por email e WhatsApp baseadas no comportamento do prospect.</p>
+                                <div class="case-benefits">
+                                    <span>+25% fechamento</span>
+                                    <span>100% follow-up</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Geração de Propostas</h4>
+                                <p>Criação automática de propostas comerciais personalizadas com base em templates e dados do cliente.</p>
+                                <div class="case-benefits">
+                                    <span>-80% tempo criação</span>
+                                    <span>Zero erros</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="financeiro">
+                        <div class="cases-grid">
+                            <div class="case-item">
+                                <h4>Conciliação Bancária</h4>
+                                <p>Automação completa da conciliação entre extratos bancários e sistema financeiro.</p>
+                                <div class="case-benefits">
+                                    <span>-90% tempo manual</span>
+                                    <span>99.9% precisão</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Cobrança Automática</h4>
+                                <p>Sistema de cobrança que envia lembretes, gera boletos e atualiza status automaticamente.</p>
+                                <div class="case-benefits">
+                                    <span>+30% recebimento</span>
+                                    <span>-50% inadimplência</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Relatórios Gerenciais</h4>
+                                <p>Geração automática de relatórios financeiros com distribuição por email para gestores.</p>
+                                <div class="case-benefits">
+                                    <span>Relatórios diários</span>
+                                    <span>Dados em tempo real</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="rh">
+                        <div class="cases-grid">
+                            <div class="case-item">
+                                <h4>Onboarding Automatizado</h4>
+                                <p>Processo completo de integração de novos funcionários com tarefas, documentos e treinamentos.</p>
+                                <div class="case-benefits">
+                                    <span>-70% tempo RH</span>
+                                    <span>100% padronização</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Controle de Ponto</h4>
+                                <p>Sistema automatizado de controle de ponto com cálculo de horas extras e relatórios.</p>
+                                <div class="case-benefits">
+                                    <span>Zero erros cálculo</span>
+                                    <span>Relatórios automáticos</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Avaliação de Performance</h4>
+                                <p>Automação do processo de avaliação com coleta de feedback e geração de relatórios.</p>
+                                <div class="case-benefits">
+                                    <span>+80% participação</span>
+                                    <span>Feedback estruturado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="marketing">
+                        <div class="cases-grid">
+                            <div class="case-item">
+                                <h4>Nutrição de Leads</h4>
+                                <p>Sequências automáticas de email marketing baseadas no comportamento e interesse do lead.</p>
+                                <div class="case-benefits">
+                                    <span>+50% engajamento</span>
+                                    <span>+35% conversão</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Segmentação Inteligente</h4>
+                                <p>Segmentação automática de contatos baseada em comportamento, dados demográficos e interações.</p>
+                                <div class="case-benefits">
+                                    <span>+60% relevância</span>
+                                    <span>-40% unsubscribe</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Relatórios de Campanha</h4>
+                                <p>Consolidação automática de métricas de diferentes canais em relatórios unificados.</p>
+                                <div class="case-benefits">
+                                    <span>Visão 360°</span>
+                                    <span>ROI em tempo real</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="operacoes">
+                        <div class="cases-grid">
+                            <div class="case-item">
+                                <h4>Gestão de Estoque</h4>
+                                <p>Reposição automática de estoque baseada em níveis mínimos e previsão de demanda.</p>
+                                <div class="case-benefits">
+                                    <span>-30% estoque parado</span>
+                                    <span>Zero ruptura</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Atendimento ao Cliente</h4>
+                                <p>Chatbot inteligente que resolve dúvidas comuns e direciona casos complexos para humanos.</p>
+                                <div class="case-benefits">
+                                    <span>24/7 disponibilidade</span>
+                                    <span>-60% tickets</span>
+                                </div>
+                            </div>
+                            <div class="case-item">
+                                <h4>Logística Inteligente</h4>
+                                <p>Otimização automática de rotas de entrega e agendamento de transportadoras.</p>
+                                <div class="case-benefits">
+                                    <span>-25% custo frete</span>
+                                    <span>+40% eficiência</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
+        <div class="container">
+            <div class="calculator-content">
+                <div class="calculator-text">
+                    <h2>Calcule o ROI da Automação</h2>
+                    <p>Veja quanto sua empresa pode economizar automatizando processos manuais</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label>Quantas horas por semana sua equipe gasta em tarefas repetitivas?</label>
+                            <input type="number" id="horasSemanais" placeholder="Ex: 20" min="1" max="168">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Qual o custo médio por hora da sua equipe? (R$)</label>
+                            <input type="number" id="custoHora" placeholder="Ex: 50" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Quantos funcionários executam essas tarefas?</label>
+                            <input type="number" id="funcionarios" placeholder="Ex: 5" min="1">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calcularROI()">Calcular Economia</button>
+                    </div>
+                </div>
+                
+                <div class="calculator-results" id="calculatorResults" style="display: none;">
+                    <h3>Potencial de Economia</h3>
+                    <div class="result-item">
+                        <span class="result-label">Economia Mensal:</span>
+                        <span class="result-value" id="economiaMensal">R$ 0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Economia Anual:</span>
+                        <span class="result-value" id="economiaAnual">R$ 0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Horas Liberadas/Mês:</span>
+                        <span class="result-value" id="horasLiberadas">0h</span>
+                    </div>
+                    <p class="result-note">*Cálculo baseado em 80% de automação das tarefas repetitivas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="automation-technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tecnologias de Automação</h2>
+                <p>Utilizamos as melhores ferramentas e plataformas para criar automações robustas</p>
+            </div>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>RPA Tools</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">UiPath</span>
+                        <span class="tech-item">Automation Anywhere</span>
+                        <span class="tech-item">Blue Prism</span>
+                        <span class="tech-item">Selenium</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Workflow Automation</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Zapier</span>
+                        <span class="tech-item">Microsoft Power Automate</span>
+                        <span class="tech-item">Integromat</span>
+                        <span class="tech-item">N8N</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>APIs & Integration</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">REST APIs</span>
+                        <span class="tech-item">GraphQL</span>
+                        <span class="tech-item">Webhooks</span>
+                        <span class="tech-item">Message Queues</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Programming</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">C#</span>
+                        <span class="tech-item">Java</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Cloud Platforms</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">AWS Lambda</span>
+                        <span class="tech-item">Azure Functions</span>
+                        <span class="tech-item">Google Cloud Functions</span>
+                        <span class="tech-item">Serverless Framework</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Esclarecemos as principais dúvidas sobre automação de processos</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quais processos podem ser automatizados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Praticamente qualquer processo repetitivo e baseado em regras pode ser automatizado. Isso inclui entrada de dados, geração de relatórios, envio de emails, processamento de documentos, aprovações, integrações entre sistemas e muito mais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo leva para implementar uma automação?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O tempo varia conforme a complexidade. Automações simples podem ser implementadas em 1-2 semanas, enquanto projetos mais complexos podem levar de 1-3 meses. Sempre começamos com um piloto para validar a solução.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>A automação vai substituir minha equipe?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não, a automação libera sua equipe de tarefas repetitivas para focar em atividades mais estratégicas e de maior valor. O objetivo é aumentar a produtividade e satisfação no trabalho, não substituir pessoas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como garantem a segurança dos dados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Implementamos criptografia, controles de acesso, logs de auditoria e seguimos as melhores práticas de segurança. Todas as automações são testadas em ambiente seguro antes da implementação em produção.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>E se algo der errado com a automação?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Todas as automações incluem tratamento de erros, logs detalhados e alertas automáticos. Oferecemos suporte técnico e monitoramento contínuo para garantir que tudo funcione perfeitamente.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o ROI típico de uma automação?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O ROI varia conforme o processo, mas tipicamente vemos retorno entre 3-12 meses. Muitos clientes economizam 60-80% do tempo gasto em tarefas manuais, além de reduzir erros e aumentar a satisfação da equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    Pronto para eliminar tarefas repetitivas e aumentar sua produtividade?
+                </h2>
+                <p class="cta-subtitle">
+                    Vamos analisar seus processos e mostrar como a automação pode transformar 
+                    sua operação, reduzir custos e liberar sua equipe para atividades estratégicas.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-secondary btn-large" onclick="window.location.href='../index.html#contato'">
+                        Automatizar Processos
+                        <span class="arrow">→</span>
+                    </button>
+                    <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
+                        Falar no WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact" id="floatingContactWrapper">
+        <div class="floating-menu" id="floatingMenu">
+            <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:contato@labregoia.com" class="floating-option email" aria-label="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+        <button class="floating-btn" id="floatingContact" aria-label="Contato">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Tabs functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and panels
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding panel
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // ROI Calculator
+        function calcularROI() {
+            const horasSemanais = parseFloat(document.getElementById('horasSemanais').value) || 0;
+            const custoHora = parseFloat(document.getElementById('custoHora').value) || 0;
+            const funcionarios = parseFloat(document.getElementById('funcionarios').value) || 0;
+            
+            if (horasSemanais > 0 && custoHora > 0 && funcionarios > 0) {
+                const horasMensais = horasSemanais * 4.33; // média de semanas por mês
+                const custoMensal = horasMensais * custoHora * funcionarios;
+                const economiaMensal = custoMensal * 0.8; // 80% de automação
+                const economiaAnual = economiaMensal * 12;
+                const horasLiberadas = horasMensais * funcionarios * 0.8;
+                
+                document.getElementById('economiaMensal').textContent = `R$ ${economiaMensal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                document.getElementById('economiaAnual').textContent = `R$ ${economiaAnual.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                document.getElementById('horasLiberadas').textContent = `${Math.round(horasLiberadas)}h`;
+                
+                document.getElementById('calculatorResults').style.display = 'block';
+            } else {
+                alert('Por favor, preencha todos os campos com valores válidos.');
+            }
+        }
+    </script>
+</body>
+</html>
+
