@@ -12,10 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Floating contact button with menu
-    const floatingContact = document.getElementById('floatingContact');
+    const floatingContactBtn = document.getElementById('floatingContact');
     const floatingContactWrapper = document.getElementById('floatingContactWrapper');
-    if (floatingContact) {
-        floatingContact.addEventListener('click', function(e) {
+    const floatingContactElement = document.querySelector('.floating-contact');
+    if (floatingContactBtn) {
+        floatingContactBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             if (floatingContactWrapper) {
                 floatingContactWrapper.classList.toggle('open');
@@ -120,14 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Show/hide floating button based on scroll position
-        const floatingContact = document.querySelector('.floating-contact');
-        if (floatingContact) {
+        if (floatingContactElement) {
             if (scrollTop > 300) {
-                floatingContact.style.opacity = '1';
-                floatingContact.style.visibility = 'visible';
+                floatingContactElement.style.opacity = '1';
+                floatingContactElement.style.visibility = 'visible';
             } else {
-                floatingContact.style.opacity = '0';
-                floatingContact.style.visibility = 'hidden';
+                floatingContactElement.style.opacity = '0';
+                floatingContactElement.style.visibility = 'hidden';
             }
         }
         
@@ -294,11 +294,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Initialize floating contact button visibility
-    const floatingContact = document.querySelector('.floating-contact');
-    if (floatingContact) {
-        floatingContact.style.opacity = '0';
-        floatingContact.style.visibility = 'hidden';
-        floatingContact.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
+    if (floatingContactElement) {
+        floatingContactElement.style.opacity = '0';
+        floatingContactElement.style.visibility = 'hidden';
+        floatingContactElement.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
     }
     
     // Add loading complete class to body
