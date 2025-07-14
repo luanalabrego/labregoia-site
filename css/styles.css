@@ -2482,3 +2482,57 @@ html {
     color: var(--primary-color);
     margin-bottom: 12px;
 }
+
+/* ===== Melhoria de layout para a página de Cases ===== */
+.featured-cases {
+    background: var(--gray-50);
+    padding: 80px 0;
+}
+
+.featured-case-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.cases-grid-section {
+    padding: 80px 0;
+}
+
+.cases-grid {
+    gap: 40px;
+}
+
+.cases-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background: var(--white);
+    border-radius: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .featured-case-card {
+        grid-template-columns: 1fr;
+    }
+}
