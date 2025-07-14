@@ -984,6 +984,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.875rem;
 }
 
+/* Remove default link styling inside footer */
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
 .footer-contact {
     display: flex;
     flex-direction: column;
