@@ -1790,7 +1790,7 @@ html {
     overflow: hidden;
 }
 
-.service-card::before, .case-card::before {
+.service-card::before, .case-card::before, .industry-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1802,7 +1802,7 @@ html {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover::before, .case-card:hover::before {
+.service-card:hover::before, .case-card:hover::before, .industry-card:hover::before {
     transform: scaleX(1);
 }
 
@@ -1811,7 +1811,7 @@ html {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon, .case-header .case-type i {
+.service-icon, .industry-icon, .case-header .case-type i {
     width: 64px;
     height: 64px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
@@ -1853,7 +1853,7 @@ html {
     font-weight: 500;
 }
 
-.service-results, .case-metrics {
+.service-results, .industry-stats, .case-metrics {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
