@@ -2993,3 +2993,58 @@ html {
     }
 }
 
+/* Service Modal */
+.service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+.service-modal.open {
+    display: flex;
+}
+
+.service-modal-content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.service-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.service-modal-close:hover {
+    color: var(--primary-color);
+}
+
+.service-details ul {
+    margin-top: 16px;
+    padding-left: 20px;
+}
+
+.service-details li {
+    margin-bottom: 8px;
+}
+

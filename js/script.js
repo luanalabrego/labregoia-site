@@ -151,6 +151,91 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe elements for animation
     const animatedElements = document.querySelectorAll('.service-card, .team-card, .differential, .step, .contact-form-container');
     animatedElements.forEach(el => observer.observe(el));
+
+    // Service details modal
+    const serviceModal = document.getElementById('serviceModal');
+    if (serviceModal) {
+        const serviceModalBody = document.getElementById('serviceModalBody');
+        const serviceModalClose = document.getElementById('serviceModalClose');
+
+        const serviceDetails = {
+            aplicativos: {
+                title: 'Aplicativos Sob Medida',
+                content: `
+                    <p>Desenvolvemos aplicativos web e mobile que eliminam planilhas e processos manuais, criando sistemas eficientes que escalam com seu crescimento.</p>
+                    <p>Nossos aplicativos priorizam a experiência do usuário e a eficiência operacional.</p>
+                    <ul>
+                        <li>Escalabilidade Garantida</li>
+                        <li>Acesso Multiplataforma</li>
+                        <li>Segurança Avançada</li>
+                    </ul>
+                `
+            },
+            automacao: {
+                title: 'Automação de Processos',
+                content: `
+                    <p>Eliminamos tarefas repetitivas através de automação inteligente, liberando sua equipe para o que realmente importa.</p>
+                    <p>Soluções que conectam sistemas e funcionam 24/7, garantindo consistência e precisão.</p>
+                    <ul>
+                        <li>Economia de Tempo</li>
+                        <li>Aumento de Produtividade</li>
+                        <li>Redução de Erros</li>
+                    </ul>
+                `
+            },
+            ia: {
+                title: 'Inteligência Artificial Aplicada',
+                content: `
+                    <p>Transformamos dados em insights acionáveis, otimizando decisões e automatizando processos complexos.</p>
+                    <p>Machine learning, NLP e visão computacional que evoluem com seu negócio.</p>
+                    <ul>
+                        <li>Decisões Inteligentes</li>
+                        <li>Previsões Precisas</li>
+                        <li>Automação Inteligente</li>
+                    </ul>
+                `
+            },
+            agentes: {
+                title: 'Agentes Inteligentes',
+                content: `
+                    <p>Chatbots e voicebots que entendem contexto e resolvem problemas complexos.</p>
+                    <p>Atendimento personalizado 24 horas por dia, 7 dias por semana.</p>
+                    <ul>
+                        <li>Disponibilidade 24/7</li>
+                        <li>Resposta Instantânea</li>
+                        <li>Escalabilidade Infinita</li>
+                    </ul>
+                `
+            }
+        };
+
+        function openServiceModal(key) {
+            const detail = serviceDetails[key];
+            if (!detail) return;
+            serviceModalBody.innerHTML = `<div class="service-details"><h2>${detail.title}</h2>${detail.content}</div>`;
+            serviceModal.classList.add('open');
+        }
+
+        document.querySelectorAll('.service-card[data-service]').forEach(card => {
+            card.addEventListener('click', () => {
+                openServiceModal(card.dataset.service);
+            });
+        });
+
+        function closeModal() {
+            serviceModal.classList.remove('open');
+        }
+
+        if (serviceModalClose) {
+            serviceModalClose.addEventListener('click', closeModal);
+        }
+
+        serviceModal.addEventListener('click', (e) => {
+            if (e.target === serviceModal) {
+                closeModal();
+            }
+        });
+    }
     
     // Button click handlers
     const buttons = document.querySelectorAll('.btn');
