@@ -89,7 +89,7 @@
             </div>
             
             <div class="services-grid">
-                <div class="service-card" onclick="window.location.href='aplicativos-sob-medida.html'">
+                <div class="service-card" data-service="aplicativos">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 
-                <div class="service-card" onclick="window.location.href='automacao-processos.html'">
+                <div class="service-card" data-service="automacao">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 
-                <div class="service-card" onclick="window.location.href='inteligencia-artificial.html'">
+                <div class="service-card" data-service="ia">
                     <div class="service-icon">
                         <i class="fas fa-brain"></i>
                     </div>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
                 
-                <div class="service-card" onclick="window.location.href='agentes-inteligentes.html'">
+                <div class="service-card" data-service="agentes">
                     <div class="service-icon">
                         <i class="fas fa-comments"></i>
                     </div>
@@ -215,6 +215,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Service Details Modal -->
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <button class="service-modal-close" id="serviceModalClose">&times;</button>
+            <div id="serviceModalBody"></div>
+        </div>
+    </div>
 
     <!-- Process Section -->
     <section class="process-section">
