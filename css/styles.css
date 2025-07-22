@@ -1648,6 +1648,11 @@ html {
     .contact-info {
         order: 2;
     }
+
+    /* Hide email and phone below the form on mobile */
+    .contact-details {
+        display: none;
+    }
     
     .contact-form-container {
         order: 1;
