@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-    flex: 0 0 270px;
+    flex: 0 0 250px;
     background: var(--white);
     padding: 40px 32px;
     border-radius: var(--border-radius-lg);
