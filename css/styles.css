@@ -450,6 +450,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
+    margin-top: 48px;
 }
 
 .service-card {
@@ -1941,7 +1942,7 @@ html {
 }
 
 /* Grids Responsivos */
-.services-grid, .cases-grid, .industries-grid {
+.cases-grid, .industries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
