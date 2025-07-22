@@ -446,13 +446,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
 }
 
 .service-card {
+    flex: 0 0 270px;
     background: var(--white);
     padding: 40px 32px;
     border-radius: var(--border-radius-lg);
@@ -764,12 +765,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .differentials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
 }
 
 .differential {
+    flex: 0 0 300px;
     display: flex;
     gap: 20px;
     padding: 32px;
@@ -1087,8 +1090,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .services-grid {
-        grid-template-columns: 1fr;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card {
+        flex: 0 0 100%;
     }
     
     .vitriny-content {
@@ -1107,7 +1113,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .differentials-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+    .differential,
+    .differential-card {
+        flex: 0 0 100%;
     }
     
     .team-grid {
@@ -1592,9 +1603,15 @@ html {
     }
     
     .services-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 24px;
-        justify-content: center;
+        align-items: center;
+    }
+    .service-card {
+        flex: 0 0 100%;
+    }
+    .service-card {
+        flex: 0 0 100%;
     }
     
     .vitriny-content {
@@ -1634,8 +1651,13 @@ html {
     }
     
     .differentials-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 24px;
+        align-items: center;
+    }
+    .differential,
+    .differential-card {
+        flex: 0 0 100%;
     }
     
     .team-grid {
@@ -2236,7 +2258,12 @@ html {
         gap: 24px;
     }
     
-    .services-grid, .cases-grid, .industries-grid {
+    .services-grid {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .cases-grid, .industries-grid {
         grid-template-columns: 1fr;
         gap: 24px;
         justify-content: center;
@@ -2484,6 +2511,7 @@ html {
     font-size: 20px;
 }
 .differential-card {
+    flex: 0 0 300px;
     text-align: center;
     background: #fff;
     padding: 32px;
