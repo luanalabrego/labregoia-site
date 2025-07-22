@@ -449,6 +449,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
+    justify-content: center;
 }
 
 .service-card {
@@ -1087,6 +1088,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .services-grid {
         grid-template-columns: 1fr;
+        justify-content: center;
     }
     
     .vitriny-content {
@@ -1592,6 +1594,7 @@ html {
     .services-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+        justify-content: center;
     }
     
     .vitriny-content {
@@ -1919,6 +1922,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 32px;
     margin-top: 48px;
+    justify-content: center;
 }
 
 .team-grid {
@@ -2235,6 +2239,7 @@ html {
     .services-grid, .cases-grid, .industries-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+        justify-content: center;
     }
     
     .process-timeline::before, .story-timeline::before {
