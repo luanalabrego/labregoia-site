@@ -708,6 +708,8 @@ h1, h2, h3, h4, h5, h6 {
     overflow: visible;
     transition: var(--transition);
     font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .benefit-icon {
@@ -737,6 +739,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
     margin-bottom: 0;
     letter-spacing: 0.05em;
+}
+
+/* Sequential animation for Vitriny benefits */
+.benefit.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.vitriny-benefits .benefit:nth-child(2).fade-in-up {
+    animation-delay: 0.2s;
+}
+
+.vitriny-benefits .benefit:nth-child(3).fade-in-up {
+    animation-delay: 0.4s;
 }
 
 .vitriny-images {
