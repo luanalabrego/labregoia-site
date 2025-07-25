@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .team-card, .differential, .step, .contact-form-container');
+    const animatedElements = document.querySelectorAll('.service-card, .team-card, .differential, .step, .contact-form-container, .benefit');
     animatedElements.forEach(el => observer.observe(el));
 
     // Fade in sections between page folds
