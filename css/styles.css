@@ -861,8 +861,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 0;
     top: 0;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: 50%;
     display: flex;
@@ -875,7 +875,7 @@ h1, h2, h3, h4, h5, h6 {
 .step-number {
     color: var(--white);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .timeline-content {
@@ -1811,13 +1811,13 @@ html {
     }
     
     .timeline-marker {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         left: 0;
     }
-    
+
     .step-number {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
     
     .timeline-content {
