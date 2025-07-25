@@ -1450,6 +1450,11 @@ html {
     justify-content: center;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
+    text-decoration: none;
+}
+
+.floating-option i {
+    font-size: 1.3rem;
 }
 
 .floating-option:hover {
@@ -1470,6 +1475,7 @@ html {
     cursor: pointer;
     box-shadow: var(--shadow-lg);
     transition: var(--transition);
+    animation: floatBtn 4s ease-in-out infinite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1478,10 +1484,16 @@ html {
 .floating-btn:hover {
     transform: scale(1.1);
     box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
 }
 
 .floating-btn:active {
     transform: scale(0.95);
+}
+
+@keyframes floatBtn {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 /* Responsive Design Updates */
