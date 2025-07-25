@@ -184,10 +184,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
+    background-color: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
     z-index: 1000;
     padding: 16px 0;
 }
@@ -216,11 +215,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
 }
 
-.nav-link {
+.header .nav-link {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--white);
     font-weight: 500;
     transition: var(--transition);
+}
+.header-scrolled .nav-link {
+    color: var(--text-primary);
 }
 
 .nav-link:hover {
@@ -348,9 +350,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white);
 }
 .hero-home .hero-title,
-.hero-home .hero-subtitle,
-.hero-home .badge {
+.hero-home .hero-subtitle {
     color: var(--white);
+}
+.hero-home .badge {
+    color: var(--primary-color);
 }
 .hero-home .gradient-text {
     background: linear-gradient(45deg, #fff, #f0f0f0);
@@ -375,6 +379,9 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.1;
     animation: float 6s ease-in-out infinite;
     color: var(--white);
+}
+.hero-home .floating-element i {
+    font-size: 3rem;
 }
 
 .hero-home .floating-element:nth-child(1) {
