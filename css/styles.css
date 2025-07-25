@@ -2561,7 +2561,7 @@ html {
 
 .problems-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 32px;
     margin-top: 40px;
 }
@@ -2570,6 +2570,7 @@ html {
     background: var(--white);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     padding: 24px;
     text-align: center;
     border-top: 4px solid var(--accent-color);
@@ -2656,7 +2657,7 @@ html {
 
 .results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 32px;
     margin-top: 40px;
 }
@@ -2666,6 +2667,7 @@ html {
     padding: 24px;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     text-align: center;
     border-top: 4px solid var(--accent-color);
 }
@@ -2949,7 +2951,7 @@ html {
 /* Vitriny product showcase */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
 }
 
@@ -2957,6 +2959,8 @@ html {
     background: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
     padding: 16px;
     text-align: center;
 }
@@ -2968,7 +2972,7 @@ html {
 .product-image {
     background: var(--gray-100);
     border-radius: var(--border-radius);
-    height: 100px;
+    height: 80px;
     margin-bottom: 8px;
 }
 
@@ -3053,14 +3057,16 @@ html {
 
 .metric-card {
     flex: 1;
-    min-width: 140px;
+    min-width: 120px;
     background: var(--white);
-    padding: 16px;
+    padding: 12px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
 }
 
 .metric-icon {
