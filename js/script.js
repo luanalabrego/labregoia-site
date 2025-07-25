@@ -309,6 +309,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     stats.forEach(stat => statsObserver.observe(stat));
 
+    // Floating particles in hero section
+    const heroFloating = document.querySelector('.hero-home .floating-elements');
+    if (heroFloating) {
+        function createHeroParticle() {
+            const particle = document.createElement('div');
+            particle.innerHTML = '<i class="fas fa-circle"></i>';
+            particle.style.position = 'absolute';
+            particle.style.fontSize = '0.5rem';
+            particle.style.opacity = '0.1';
+            particle.style.color = 'white';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.pointerEvents = 'none';
+            particle.style.animation = `floatUp ${3 + Math.random() * 3}s linear forwards`;
+            heroFloating.appendChild(particle);
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+        setInterval(createHeroParticle, 2000);
+    }
+
     // Simple carousel for Vitriny images
     const carouselInner = document.querySelector('.vitriny-carousel-inner');
     if (carouselInner) {
