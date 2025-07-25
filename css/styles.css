@@ -196,12 +196,12 @@ h1, h2, h3, h4, h5, h6 {
 .header .container {
     max-width: none;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
     box-shadow: var(--shadow);
     margin: 0;
-    padding: 12px 40px;
+    padding: 20px 60px;
     transition: var(--transition);
 }
 
@@ -216,9 +216,10 @@ h1, h2, h3, h4, h5, h6 {
 .header-scrolled .container {
     max-width: none;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.2);
     margin: 0;
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    padding: 20px 60px;
 }
 
 .nav-wrapper {
@@ -319,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.1;
     margin-bottom: 24px;
     color: var(--text-primary);
@@ -527,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
 }
 
@@ -601,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-title {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
@@ -637,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .vitriny-subtitle {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
     color: var(--primary-color);
 }
@@ -832,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .timeline-content h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
@@ -909,7 +910,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .differential-title {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 8px;
     color: var(--text-primary);
 }
@@ -986,7 +987,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-name {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 8px;
     color: var(--text-primary);
 }
@@ -1016,7 +1017,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 24px;
 }
 
@@ -1066,7 +1067,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-title {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
 }
 
@@ -1339,7 +1340,7 @@ html {
 
 .contact-info h3 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
@@ -1375,7 +1376,7 @@ html {
 
 .contact-details .contact-item strong {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 4px;
 }
@@ -1388,7 +1389,7 @@ html {
 /* Social Links */
 .social-links h4 {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
@@ -1404,11 +1405,20 @@ html {
     transition: var(--transition);
 }
 
-.social-icon.linkedin,
-.social-icon.instagram,
-.social-icon.whatsapp,
+.social-icon.linkedin {
+    color: #0077B5;
+}
+
+.social-icon.instagram {
+    color: #E4405F;
+}
+
+.social-icon.whatsapp {
+    color: #25D366;
+}
+
 .social-icon.youtube {
-    color: var(--accent-color);
+    color: #FF0000;
 }
 
 .social-icon:hover {
@@ -1523,7 +1533,10 @@ html {
     box-shadow: var(--shadow-xl);
 }
 
-.floating-option.whatsapp,
+.floating-option.whatsapp {
+    background-color: #25D366;
+}
+
 .floating-option.email {
     background-color: var(--accent-color);
 }
@@ -1886,7 +1899,7 @@ html {
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 24px;
     line-height: 1.1;
 }
@@ -1994,7 +2007,7 @@ html {
 
 .service-content h3, .case-card h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
@@ -2121,7 +2134,7 @@ html {
 
 .step-content h3, .timeline-content h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 12px;
     color: var(--text-primary);
 }
@@ -2257,7 +2270,7 @@ html {
 
 .member-info h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 8px;
 }
 
@@ -2526,7 +2539,7 @@ html {
 
 .methodology-card h3 {
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 12px;
 }
 
@@ -2755,7 +2768,7 @@ html {
 
 .feature-result {
     margin-top: 16px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .results-section {
@@ -2793,7 +2806,7 @@ html {
 }
 
 .result-label {
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 8px;
 }
 
