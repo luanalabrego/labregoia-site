@@ -120,15 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('header-scrolled');
         }
         
-        // Show/hide floating button based on scroll position
+        // Ensure floating button remains visible
         if (floatingContactElement) {
-            if (scrollTop > 300) {
-                floatingContactElement.style.opacity = '1';
-                floatingContactElement.style.visibility = 'visible';
-            } else {
-                floatingContactElement.style.opacity = '0';
-                floatingContactElement.style.visibility = 'hidden';
-            }
+            floatingContactElement.style.opacity = '1';
+            floatingContactElement.style.visibility = 'visible';
         }
         
         lastScrollTop = scrollTop;
@@ -380,8 +375,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize floating contact button visibility
     if (floatingContactElement) {
-        floatingContactElement.style.opacity = '0';
-        floatingContactElement.style.visibility = 'hidden';
+        floatingContactElement.style.opacity = '1';
+        floatingContactElement.style.visibility = 'visible';
         floatingContactElement.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
     }
     
