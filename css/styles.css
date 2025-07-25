@@ -556,20 +556,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-icon {
-    width: 64px;
-    height: 64px;
     margin: 0 auto 24px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    border-radius: var(--border-radius-lg);
+    font-size: 48px;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
     transition: var(--transition);
 }
 
 .service-card:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
+    color: var(--primary-dark);
+    transform: scale(1.1);
 }
 
 .service-title {
@@ -1948,7 +1946,8 @@ html {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon, .industry-icon, .case-header .case-type i {
+.industry-icon,
+.case-header .case-type i {
     width: 64px;
     height: 64px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
@@ -1959,6 +1958,16 @@ html {
     color: white;
     font-size: 24px;
     margin-bottom: 24px;
+}
+
+.service-icon {
+    margin: 0 auto 24px;
+    font-size: 48px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
 }
 
 .service-content h3, .case-card h3 {
