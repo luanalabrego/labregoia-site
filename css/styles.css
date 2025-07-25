@@ -194,6 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Give the header container a subtle background and rounded edges */
 .header .container {
+    position: relative;
     max-width: 1200px;
     width: 90%;
     background-color: rgba(255, 255, 255, 0.2);
@@ -439,6 +440,18 @@ h1, h2, h3, h4, h5, h6 {
     animation-delay: 4s;
 }
 
+/* Floating icons in header */
+.header-floating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
 /* Credibility */
 .credibility {
     padding: 80px 0;
@@ -601,17 +614,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-icon {
     margin: 0 auto 24px;
-    font-size: 48px;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
     color: var(--primary-color);
+    background: var(--gray-100);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .service-card:hover .service-icon {
     color: var(--primary-dark);
-    transform: scale(1.1);
+    background: var(--white);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
 }
 
 .service-title {
@@ -2013,11 +2033,16 @@ html {
 
 .service-icon {
     margin: 0 auto 24px;
-    font-size: 48px;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
     color: var(--primary-color);
+    background: var(--gray-100);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
