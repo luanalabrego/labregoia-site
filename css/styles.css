@@ -206,31 +206,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Style applied when page is scrolled */
+
 .header-scrolled {
-    box-shadow: var(--shadow);
+    box-shadow: none;
     background-color: transparent;
     backdrop-filter: none;
     top: 20px;
 }
 
+
 .header-scrolled .container {
     max-width: 1200px;
     width: 90%;
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    box-shadow: none;
     margin: 0 auto;
     border-radius: var(--border-radius-lg);
     padding: 20px 60px;
 }
 
+
 .nav-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 40px;
 }
 
 .logo-img {
     height: 28px;
+    margin-left: -10px;
+    margin-top: 4px;
 }
 
 .nav {
@@ -246,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 .header-scrolled .nav-link {
-    color: var(--text-primary);
+    color: var(--primary-light);
 }
 
 .nav-link:hover {
