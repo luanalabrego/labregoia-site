@@ -351,6 +351,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselInner = document.querySelector('.vitriny-carousel-inner');
     if (carouselInner) {
         const slides = carouselInner.querySelectorAll('.vitriny-image');
+        slides.forEach(slide => {
+            slide.style.width = '100%';
+        });
         let currentSlide = 0;
         const prevBtn = document.querySelector('.carousel-btn.prev');
         const nextBtn = document.querySelector('.carousel-btn.next');
