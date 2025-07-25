@@ -693,21 +693,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .benefit {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
     text-align: left;
-    padding: 8px 12px;
-    background: transparent;
-    border: 2px solid var(--accent-color);
+    padding: 6px 12px 6px 28px;
+    background: linear-gradient(var(--white), var(--white)) padding-box,
+                linear-gradient(90deg, var(--primary-color), var(--accent-color)) border-box;
+    border: 2px solid transparent;
     border-radius: var(--border-radius-lg);
     box-shadow: none;
     color: var(--accent-color);
+    overflow: visible;
     transition: var(--transition);
     font-size: 0.9rem;
 }
 
 .benefit-icon {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 1.2rem;
     width: 32px;
     height: 32px;
@@ -739,6 +746,8 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     border-radius: var(--border-radius-xl);
     box-shadow: none;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .vitriny-carousel-inner {
@@ -751,13 +760,18 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
-    color: var(--white);
+    background: rgba(96, 124, 249, 0.2);
+    color: var(--primary-color);
     border: none;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    background: rgba(96, 124, 249, 0.35);
 }
 
 .carousel-btn.prev {
