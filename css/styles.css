@@ -193,11 +193,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Give the header container a subtle background and rounded edges */
 .header .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    max-width: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(12px);
-    border-radius: var(--border-radius-lg);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
     box-shadow: var(--shadow);
-    margin: 0 20px;
+    margin: 0;
     padding: 8px 20px;
     transition: var(--transition);
 }
@@ -211,7 +213,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-scrolled .container {
-    background-color: rgba(255, 255, 255, 0.95);
+    max-width: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 }
 
 .nav-wrapper {
