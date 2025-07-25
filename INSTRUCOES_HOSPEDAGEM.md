@@ -172,7 +172,7 @@ Para alterar textos, imagens ou informações:
 ## 📞 Suporte
 
 ### Contatos da Labrego IA
-- **Email**: contato@labregoia.com
+- **Email**: contato@labregoia.com.br
 - **WhatsApp**: (11) 93442-7070
 
 ### Suporte Hostinger
