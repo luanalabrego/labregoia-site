@@ -326,6 +326,15 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0 20px 40px rgba(96, 124, 249, 0.15));
 }
 
+/* Home hero without logo */
+.hero-no-logo::before {
+    display: none;
+}
+.hero-no-logo .hero-content {
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+
 /* Credibility */
 .credibility {
     padding: 80px 0;
