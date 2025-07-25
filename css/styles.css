@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
-    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
     margin: 0 auto;
     padding: 20px 60px;
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     background-color: rgba(255, 255, 255, 0.2);
     margin: 0 auto;
-    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    border-radius: var(--border-radius-lg);
     padding: 20px 60px;
 }
 
@@ -338,6 +338,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-visual {
@@ -673,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
-.benefit-emoji {
+.benefit-icon {
     font-size: 1.2rem;
 }
 
