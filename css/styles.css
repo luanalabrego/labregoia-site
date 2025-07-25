@@ -48,7 +48,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Goodly', 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -189,19 +189,19 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: none;
     border-bottom: none;
     z-index: 1000;
-    padding: 16px 0;
+    padding: 0;
 }
 
 /* Give the header container a subtle background and rounded edges */
 .header .container {
     max-width: none;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(12px);
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
     box-shadow: var(--shadow);
     margin: 0;
-    padding: 8px 20px;
+    padding: 12px 40px;
     transition: var(--transition);
 }
 
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-scrolled .container {
     max-width: none;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.35);
     margin: 0;
     border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
 }
@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 24px;
     color: var(--text-primary);
@@ -527,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 16px;
 }
 
