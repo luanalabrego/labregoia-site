@@ -575,17 +575,17 @@ h1, h2, h3, h4, h5, h6 {
 .benefit {
     text-align: center;
     padding: 24px;
-    background: var(--white);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
-    border-top: 4px solid var(--accent-color);
+    color: var(--white);
     transition: var(--transition);
 }
 
 .benefit-icon {
     font-size: 32px;
-    color: var(--accent-color);
-    margin-bottom: 8px;
+    color: var(--white);
+    margin-bottom: 12px;
 }
 
 .benefit:hover {
@@ -596,14 +596,9 @@ h1, h2, h3, h4, h5, h6 {
 .benefit-title {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 4px;
+    color: var(--white);
+    margin-bottom: 0;
     letter-spacing: 0.05em;
-}
-
-.benefit-subtitle {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
 }
 
 .vitriny-images {
