@@ -567,25 +567,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .vitriny-benefits {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
 }
 
 .benefit {
-    text-align: center;
-    padding: 24px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--gray-100);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow);
-    color: var(--white);
+    color: var(--text-primary);
     transition: var(--transition);
 }
 
 .benefit-icon {
-    font-size: 32px;
-    color: var(--white);
-    margin-bottom: 12px;
+    font-size: 24px;
+    color: var(--primary-color);
 }
 
 .benefit:hover {
@@ -594,9 +595,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .benefit-title {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-primary);
     margin-bottom: 0;
     letter-spacing: 0.05em;
 }
