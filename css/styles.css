@@ -191,12 +191,27 @@ h1, h2, h3, h4, h5, h6 {
     padding: 16px 0;
 }
 
+/* Give the header container a subtle background and rounded edges */
+.header .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    margin: 0 20px;
+    padding: 8px 20px;
+    transition: var(--transition);
+}
+
 /* Style applied when page is scrolled */
 .header-scrolled {
     box-shadow: var(--shadow);
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
+    background-color: transparent;
+    backdrop-filter: none;
     border-bottom: 1px solid var(--border-color);
+}
+
+.header-scrolled .container {
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav-wrapper {
@@ -217,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .nav-link {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-primary);
     font-weight: 500;
     transition: var(--transition);
 }
