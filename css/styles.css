@@ -650,7 +650,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Vitriny */
 .vitriny {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    background: none;
 }
 
 .vitriny-content {
