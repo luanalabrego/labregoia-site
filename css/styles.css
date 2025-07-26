@@ -3353,6 +3353,48 @@ html {
     border-color: var(--primary-color);
 }
 
+.cases-gallery-section {
+    padding: 100px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.gallery-item {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-media img,
+.gallery-media iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+.gallery-info {
+    padding: 24px;
+}
+
+.gallery-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.gallery-info p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
 @media (max-width: 768px) {
     .featured-case-card {
         gap: 40px;
