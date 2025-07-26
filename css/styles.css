@@ -1229,6 +1229,14 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
 
+    .nav.nav-open .nav-link {
+        color: var(--text-primary);
+    }
+
+    .nav.nav-open .nav-link:hover {
+        color: var(--primary-light);
+    }
+
     .mobile-menu-btn.menu-open span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -1832,6 +1840,7 @@ html {
     
     .vitriny-images {
         padding: 0;
+        width: 100%;
     }
 
     .vitriny-image-large {
@@ -1927,6 +1936,7 @@ html {
     
     .vitriny-images {
         padding: 16px;
+        width: 100%;
     }
     
     .clients-track {
