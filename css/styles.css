@@ -919,6 +919,39 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
     margin: 0;
 }
+.methodology-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.methodology-icons .method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.methodology-icons .method i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+.methodology-icons .method-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.methodology-icons .method-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    max-width: 200px;
+}
+
 
 /* Differentials */
 .differentials {
