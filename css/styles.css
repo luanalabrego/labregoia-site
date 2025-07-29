@@ -580,16 +580,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
-    flex: 0 0 320px;
-    background: var(--white);
-    padding: 48px 40px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    flex: 0 0 250px;
+    background: transparent;
+    padding: 40px 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--accent-color);
 }
 
 .service-card::before {
@@ -609,30 +609,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
 }
 
 .service-icon {
     margin: 0 auto 24px;
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
     color: var(--white);
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    border-radius: 16px;
+    background: var(--accent-color);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .service-card:hover .service-icon {
     color: var(--white);
-    background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
-    transform: scale(1.1);
-    box-shadow: var(--shadow-xl);
+    background: var(--primary-light);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
 }
 
 .service-title {
@@ -2104,16 +2104,16 @@ html {
 
 .service-icon {
     margin: 0 auto 24px;
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
-    color: var(--white);
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    color: var(--primary-color);
+    background: var(--gray-100);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
@@ -2564,15 +2564,11 @@ html {
 .service-arrow {
     transition: all 0.3s ease;
     opacity: 0.6;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: var(--primary-color);
 }
 
 .service-card:hover .service-arrow {
     opacity: 1;
-    transform: translateX(6px);
-    color: var(--primary-light);
+    transform: translateX(4px);
 }
 
 /* Tabs para Expertise */
