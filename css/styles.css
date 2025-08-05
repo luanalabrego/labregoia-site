@@ -3770,12 +3770,18 @@ html {
 /* ===========================
    Estilos para “Nossa Abordagem”
    =========================== */
-.methodology .process-steps {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 24px;
+.methodology .process-carousel {
+  overflow: hidden;
   margin-top: 40px;
-  overflow-x: auto;
+  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+}
+
+.methodology .process-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll 40s linear infinite;
+  width: fit-content;
 }
 
 .methodology .process-step {
