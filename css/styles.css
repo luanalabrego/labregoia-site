@@ -3907,3 +3907,52 @@ html {
   margin-top: 32px;
 }
 
+/* ===== FIX: Nossa Abordagem — números centralizados e cards iguais ===== */
+.methodology .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  align-items: start;           /* todos começam na mesma altura */
+}
+
+.methodology .step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* centraliza conteúdo no card */
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  min-height: 220px;            /* altura consistente entre os cards */
+}
+
+.methodology .step-card .step-number {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: grid;                /* centraliza PERFECT */
+  place-items: center;
+  line-height: 1;               /* evita “subir/descer” por fonte */
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+  flex: 0 0 56px;
+}
+
+.methodology .step-card .step-title {
+  margin: 6px 0 4px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.methodology .step-card .step-desc {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;                 /* preenche o espaço e equaliza alturas */
+}
+
