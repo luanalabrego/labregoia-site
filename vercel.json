@@ -9,6 +9,7 @@
     { "source": "/vitriny", "destination": "/pages/vitriny.html" },
     { "source": "/sobre", "destination": "/pages/sobre.html" },
     { "source": "/cases", "destination": "/pages/cases.html" },
+    { "source": "/admin", "destination": "/pages/admin.html" },
     { "source": "/servicos", "destination": "/pages/servicos.html" }
   ],
   "redirects": [

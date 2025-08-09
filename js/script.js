@@ -318,6 +318,70 @@ document.addEventListener('DOMContentLoaded', function() {
 
     stats.forEach(stat => statsObserver.observe(stat));
 
+    // Case cards modal gallery
+    const caseModal = document.getElementById('caseModal');
+    const caseModalImg = document.getElementById('caseModalImg');
+    const casePrev = document.getElementById('casePrev');
+    const caseNext = document.getElementById('caseNext');
+    const caseClose = document.getElementById('caseClose');
+    let caseImages = [];
+    let caseIndex = 0;
+
+    function showCaseImage(index) {
+        caseIndex = (index + caseImages.length) % caseImages.length;
+        caseModalImg.src = caseImages[caseIndex];
+    }
+
+    function openCase(images) {
+        caseImages = images;
+        showCaseImage(0);
+        caseModal.classList.add('open');
+    }
+
+    function attachCaseCardEvents() {
+        document.querySelectorAll('.case-card').forEach(card => {
+            if (card.dataset.bound) return;
+            card.dataset.bound = 'true';
+            card.addEventListener('click', () => {
+                const imgs = card.dataset.images;
+                if (!imgs) return;
+                openCase(imgs.split(',').map(i => i.trim()));
+            });
+        });
+    }
+
+    attachCaseCardEvents();
+
+    if (casePrev) casePrev.addEventListener('click', () => showCaseImage(caseIndex - 1));
+    if (caseNext) caseNext.addEventListener('click', () => showCaseImage(caseIndex + 1));
+    if (caseClose) caseClose.addEventListener('click', () => caseModal.classList.remove('open'));
+    if (caseModal) {
+        caseModal.addEventListener('click', (e) => {
+            if (e.target === caseModal) caseModal.classList.remove('open');
+        });
+    }
+
+    // Load custom cases from localStorage
+    const customCases = JSON.parse(localStorage.getItem('customCases') || '[]');
+    const casesGrid = document.querySelector('.cases-grid');
+    if (casesGrid && customCases.length) {
+        customCases.forEach(c => {
+            const card = document.createElement('div');
+            card.className = 'case-card';
+            card.dataset.category = c.category || 'outro';
+            card.dataset.images = (c.images || []).join(',');
+            card.innerHTML = `
+                <div class="case-header">
+                    <div class="case-category">${c.category || ''}</div>
+                </div>
+                <h3>${c.title || ''}</h3>
+                <p>${c.description || ''}</p>
+            `;
+            casesGrid.appendChild(card);
+        });
+        attachCaseCardEvents();
+    }
+
     // Floating particles in hero section and header
     const heroFloating = document.querySelector('.hero-home .floating-elements');
     const headerFloating = document.querySelector('.header-floating');
