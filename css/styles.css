@@ -3956,16 +3956,24 @@ html {
   flex-grow: 1;                 /* preenche o espaço e equaliza alturas */
 }
 
-/* ===== Nossa Abordagem — centralizar a última linha ===== */
-.methodology .steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 280px); /* colunas fixas */
-  justify-content: center;                         /* centraliza as colunas no container */
-  gap: 24px;
+/* ===== Nossa Abordagem — 4 em cima e 3 centralizados embaixo ===== */
+@media (min-width: 1024px) {
+  .methodology .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .methodology .step-card {
+    width: 100%;
+    max-width: 280px; /* largura máxima para centralizar bonito */
+  }
+
+  /* centralizar a última linha com 3 elementos */
+  .methodology .steps-grid > :nth-last-child(-n+3):first-child {
+    grid-column-start: 2; /* desloca o primeiro dos 3 para a segunda coluna */
+  }
 }
 
-/* garante que o card respeita a coluna fixa */
-.methodology .step-card {
-  width: 280px;
-}
 
