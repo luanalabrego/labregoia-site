@@ -94,3 +94,44 @@
     if (e.key === 'ArrowRight') { index = (index + 1) % images.length; renderImage(); }
   }, { passive: true });
 })();
+
+// --- Carrossel de cases (setas esquerda/direita) ---
+(function () {
+  const rail = document.getElementById('casesGrid');
+  if (!rail) return;
+
+  const btnPrev = document.querySelector('[data-cases-prev]');
+  const btnNext = document.querySelector('[data-cases-next]');
+
+  function cardWidth() {
+    const card = rail.querySelector('.case-card');
+    if (!card) return 320;
+    const styles = getComputedStyle(rail);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0');
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateArrows() {
+    const maxScroll = rail.scrollWidth - rail.clientWidth - 1;
+    btnPrev && btnPrev.classList.toggle('is-disabled', rail.scrollLeft <= 0);
+    btnNext && btnNext.classList.toggle('is-disabled', rail.scrollLeft >= maxScroll);
+  }
+
+  function scrollByCards(dir = 1) {
+    rail.scrollBy({ left: dir * cardWidth(), behavior: 'smooth' });
+    setTimeout(updateArrows, 350);
+  }
+
+  btnPrev && btnPrev.addEventListener('click', () => scrollByCards(-1));
+  btnNext && btnNext.addEventListener('click', () => scrollByCards(1));
+  rail.addEventListener('scroll', updateArrows, { passive: true });
+
+  // teclado quando o rail tem foco
+  rail.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); scrollByCards(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); scrollByCards(1); }
+  });
+
+  // inicia estado das setas
+  updateArrows();
+})();
