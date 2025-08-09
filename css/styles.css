@@ -4134,3 +4134,57 @@ html {
 }
 .gallery-modal__thumbs img.is-active { opacity: 1; border-color: #6b7bff; }
 
+/* ===== CARROSSEL DE CASES ===== */
+.cases__carousel { position: relative; }
+
+.cases__carousel .cases__grid {
+  display: flex;                 /* vira linha horizontal */
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: .25rem .75rem 1rem;
+  scroll-padding-left: .75rem;
+  scroll-padding-right: .75rem;
+}
+
+/* cada card se comporta como “slide” */
+.cases__carousel .case-card {
+  flex: 0 0 clamp(260px, 30vw, 360px);
+  scroll-snap-align: start;
+}
+
+/* setas */
+.cases__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border: 0; border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  color: #fff; font-size: 28px; line-height: 1;
+  display: grid; place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  z-index: 2;
+}
+.cases__arrow:hover { background: rgba(0,0,0,.7); }
+.cases__arrow--prev { left: -8px; }
+.cases__arrow--next { right: -8px; }
+@media (max-width: 640px) {
+  .cases__arrow--prev { left: 4px; }
+  .cases__arrow--next { right: 4px; }
+}
+.cases__arrow.is-disabled { opacity: .35; cursor: not-allowed; pointer-events: none; }
+
+/* barra de rolagem (onde suportado) */
+.cases__carousel .cases__grid::-webkit-scrollbar { height: 8px; }
+.cases__carousel .cases__grid::-webkit-scrollbar-thumb { background: #ddd; border-radius: 8px; }
+@supports (scrollbar-width: thin) {
+  .cases__carousel .cases__grid { scrollbar-width: thin; scrollbar-color: #ddd transparent; }
+}
+
+/* opcional: modal mais baixo para não cobrir header */
+.gallery-modal__content { max-height: 90vh; margin-top: 5vh; }
+
