@@ -659,4 +659,17 @@ window.LabregoIA = {
 })();
 </script>
 
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  const scrollY = window.scrollY;
+
+  // altura de troca - ajusta conforme o tamanho do seu hero
+  if (scrollY > window.innerHeight - 80) {
+    header.classList.add("header-light");
+  } else {
+    header.classList.remove("header-light");
+  }
+});
+
+
 
