@@ -3956,6 +3956,20 @@ html {
   flex-grow: 1;                 /* preenche o espaço e equaliza alturas */
 }
 
+/* ===== Nossa Abordagem — centralizar a última linha ===== */
+.methodology .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px); /* colunas fixas */
+  justify-content: center;                         /* centraliza as colunas no container */
+  gap: 24px;
+}
+
+/* garante que o card respeita a coluna fixa */
+.methodology .step-card {
+  width: 280px;
+}
+
+
 /* ===== Nossa Abordagem — 4 em cima e 3 centralizados embaixo ===== */
 @media (min-width: 1024px) {
   .methodology .steps-grid {
