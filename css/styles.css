@@ -3990,4 +3990,16 @@ html {
   }
 }
 
+@media (min-width: 1024px) {
+  .methodology .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* desloca a última linha com 3 cards 1 coluna à direita */
+  .methodology .steps-grid > :nth-last-child(3):first-child {
+    grid-column-start: 2;
+  }
+}
 
