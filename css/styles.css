@@ -4069,3 +4069,89 @@ html {
   font-size: 1.25rem;
   margin: 6px
 
+/* ===== Behance-like Cases ===== */
+.cases-behance { padding: 80px 0; }
+.bh-carousel { position: relative; margin-top: 24px; }
+.bh-viewport { overflow: hidden; }
+.bh-track {
+  display: flex; gap: 24px;
+  transition: transform .45s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+
+/* Card */
+.bh-card {
+  flex: 0 0 var(--bh-w, 420px);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #0f0f12;
+  box-shadow: 0 14px 40px rgba(0,0,0,.12);
+  isolation: isolate;
+}
+.bh-card .bh-media { position: relative; aspect-ratio: 16/10; }
+.bh-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1); transition: transform .5s ease;
+}
+.bh-card::after {               /* glow sutil no topo */
+  content:""; position:absolute; inset:auto 0 0 0; height: 50%;
+  background: linear-gradient(0deg, rgba(0,0,0,.55), transparent 60%);
+  z-index: 1; pointer-events:none;
+}
+
+/* Overlay estilo Behance */
+.bh-overlay {
+  position: absolute; inset: auto 0 0 0;
+  padding: 18px 18px 16px;
+  color: #fff; z-index: 2;
+  transform: translateY(0);
+  transition: transform .35s ease;
+}
+.bh-chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 10px; border-radius:999px;
+  background: rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  font-weight:600; font-size:.85rem; margin-bottom:10px;
+}
+.bh-title{ font-size:1.25rem; margin:4px 0 6px; }
+.bh-desc{ opacity:.9; line-height:1.45; }
+.bh-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; list-style:none; padding:0; }
+.bh-tags li{
+  padding:4px 10px; border-radius:999px;
+  background: rgba(255,255,255,.12); font-size:.8rem;
+  border:1px solid rgba(255,255,255,.22);
+}
+
+/* Hover: zoom leve e overlay sobe (Behance feel) */
+.bh-card:hover img{ transform: scale(1.05); }
+.bh-card:hover .bh-overlay{ transform: translateY(-6px); }
+
+/* Arrows */
+.bh-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:44px; height:44px; border-radius:50%; border:none;
+  display:grid; place-items:center; cursor:pointer;
+  background: rgba(16,16,24,.5); color:#fff; font-size:26px;
+  backdrop-filter: blur(6px);
+  transition: transform .2s ease, background .2s ease, opacity .2s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+.bh-nav:hover{ background: rgba(96,124,249,.75); transform:translateY(-50%) scale(1.05); }
+.bh-nav:disabled{ opacity:.35; transform:translateY(-50%) scale(1); cursor:default; }
+.bh-nav.prev{ left:-8px; } .bh-nav.next{ right:-8px; }
+
+/* Dots */
+.bh-dots{ display:flex; gap:8px; justify-content:center; margin-top:14px; }
+.bh-dots button{
+  width:8px; height:8px; border-radius:50%; border:none; cursor:pointer;
+  background:#dadcfb; transition:transform .2s, background .2s;
+}
+.bh-dots button.active{ background: var(--primary-color); transform: scale(1.25); }
+
+/* Responsivo: largura dos cards */
+@media (max-width: 1200px){ .bh-card{ flex-basis: 380px; } }
+@media (max-width: 992px) { .bh-card{ flex-basis: 340px; } }
+@media (max-width: 768px) { .bh-card{ flex-basis: 86vw; } .bh-nav{ display:none; } }
+
