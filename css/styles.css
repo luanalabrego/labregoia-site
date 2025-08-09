@@ -4003,72 +4003,6 @@ html {
   }
 }
 
-/* ===== Cases Carousel ===== */
-.cases-carousel {
-  position: relative;
-  margin-top: 32px;
-}
-
-.cases-viewport {
-  overflow: hidden;
-  border-radius: 16px;
-  padding: 8px 0;
-}
-
-.cases-track {
-  display: flex;
-  gap: 24px;
-  will-change: transform;
-  transition: transform .45s cubic-bezier(.22,.61,.36,1);
-}
-
-/* Slide / Card */
-.case-slide {
-  flex: 0 0 var(--slide-w, 340px);
-  background: linear-gradient(#fff, #fff) padding-box,
-              linear-gradient(135deg, var(--primary-color), var(--accent-color)) border-box;
-  border: 1px solid transparent;
-  border-radius: 18px;
-  padding: 22px 22px 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-  transition: transform .25s ease, box-shadow .25s ease;
-  position: relative;
-  isolation: isolate;
-}
-
-.case-slide:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(0,0,0,.12);
-}
-
-/* pequeno brilho */
-.case-slide::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: radial-gradient(600px 120px at 20% 0%, rgba(96,124,249,.18), transparent 60%);
-  border-radius: 18px;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
-
-.case-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: .85rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  background: rgba(96,124,249,.10);
-  border: 1px solid rgba(96,124,249,.25);
-  padding: 6px 10px;
-  border-radius: 999px;
-  margin-bottom: 12px;
-}
-
-.case-title {
-  font-size: 1.25rem;
-  margin: 6px
-
 /* ===== Behance-like Cases ===== */
 .cases-behance { padding: 80px 0; }
 .bh-carousel { position: relative; margin-top: 24px; }
@@ -4154,4 +4088,3 @@ html {
 @media (max-width: 1200px){ .bh-card{ flex-basis: 380px; } }
 @media (max-width: 992px) { .bh-card{ flex-basis: 340px; } }
 @media (max-width: 768px) { .bh-card{ flex-basis: 86vw; } .bh-nav{ display:none; } }
-
