@@ -319,6 +319,7 @@
 
 
     <!-- Cases Section -->
+<!-- Cases Section -->
 <section id="cases" class="cases-behance">
   <div class="container">
     <div class="section-header">
@@ -327,55 +328,87 @@
       <p class="section-subtitle">Projetos reais com design e tecnologia de alto nível</p>
     </div>
 
-    <div class="bh-carousel">
+    <div class="bh-carousel" data-cases>
       <button class="bh-nav prev" aria-label="Anterior">‹</button>
 
       <div class="bh-viewport">
         <div class="bh-track">
-          <!-- CARD -->
-          <article class="bh-card">
+          <!-- CARD: Vitriny -->
+          <article
+            class="bh-card"
+            data-title="Vitriny AI — Conversão +47%"
+            data-subtitle="E-commerce com IA, aumento de ticket e redução de abandono."
+            data-tags="Next.js,IA,Checkout"
+            data-gallery='[
+              "assets/cases/vitriny/01-cover.jpg",
+              "assets/cases/vitriny/02-home.jpg",
+              "assets/cases/vitriny/03-plp.jpg",
+              "assets/cases/vitriny/04-pdp.jpg",
+              "assets/cases/vitriny/05-checkout.jpg"
+            ]'>
             <div class="bh-media">
-              <img src="assets/vitriny-cover.jpg" alt="Vitriny AI">
+              <img src="assets/vitriny-cover.jpg" alt="Vitriny AI" loading="lazy">
             </div>
             <div class="bh-overlay">
               <div class="bh-chip"><i class="fas fa-cart-shopping"></i> E-commerce</div>
               <h3 class="bh-title">Vitriny AI — Conversão +47%</h3>
               <p class="bh-desc">E-commerce com IA, aumento de ticket e redução de abandono.</p>
-              <ul class="bh-tags">
-                <li>Next.js</li><li>IA</li><li>Checkout</li>
-              </ul>
+              <ul class="bh-tags"><li>Next.js</li><li>IA</li><li>Checkout</li></ul>
             </div>
           </article>
 
-          <article class="bh-card">
+          <!-- CARD: Antifraude -->
+          <article
+            class="bh-card"
+            data-title="IA Antifraude — Fraudes −85%"
+            data-subtitle="Detecção em tempo real com 99,2% de precisão."
+            data-tags="Python,Streams,ML"
+            data-gallery='[
+              "assets/cases/antifraude/01-dashboard.jpg",
+              "assets/cases/antifraude/02-alerting.jpg",
+              "assets/cases/antifraude/03-rules.jpg",
+              "assets/cases/antifraude/04-insights.jpg"
+            ]'>
             <div class="bh-media">
-              <img src="assets/dansa-cover.jpg" alt="IA Antifraude">
+              <img src="assets/dansa-cover.jpg" alt="IA Antifraude" loading="lazy">
             </div>
             <div class="bh-overlay">
               <div class="bh-chip"><i class="fas fa-shield-halved"></i> Financeiro</div>
               <h3 class="bh-title">IA Antifraude — Fraudes −85%</h3>
               <p class="bh-desc">Detecção em tempo real com 99,2% de precisão.</p>
-              <ul class="bh-tags">
-                <li>Python</li><li>Stream</li><li>ML</li>
-              </ul>
+              <ul class="bh-tags"><li>Python</li><li>Streams</li><li>ML</li></ul>
             </div>
           </article>
 
-          <article class="bh-card">
+          <!-- CARD: RPA -->
+          <article
+            class="bh-card"
+            data-title="RPA — 80% mais rápido"
+            data-subtitle="Automação de processos e redução de custos."
+            data-tags="n8n,GCP,APIs"
+            data-gallery='[
+              "assets/cases/rpa/01-flow.jpg",
+              "assets/cases/rpa/02-run.jpg",
+              "assets/cases/rpa/03-monitoring.jpg"
+            ]'>
             <div class="bh-media">
-              <img src="assets/cases/rpa-cover.jpg" alt="RPA">
+              <img src="assets/cases/rpa-cover.jpg" alt="RPA" loading="lazy">
             </div>
             <div class="bh-overlay">
               <div class="bh-chip"><i class="fas fa-robot"></i> Operações</div>
               <h3 class="bh-title">RPA — 80% mais rápido</h3>
               <p class="bh-desc">Automação de processos e redução de custos.</p>
-              <ul class="bh-tags">
-                <li>n8n</li><li>GCP</li><li>APIs</li>
-              </ul>
+              <ul class="bh-tags"><li>n8n</li><li>GCP</li><li>APIs</li></ul>
             </div>
           </article>
 
-          <!-- adicione mais artigos conforme precisar -->
+          <!-- Exemplo de futuro card (só duplicar e ajustar os paths/infos) -->
+          <!--
+          <article class="bh-card" data-title="Projeto X" data-subtitle="Resumo"
+                   data-tags="Tag1,Tag2" data-gallery='["img1.jpg","img2.jpg"]'>
+            ...
+          </article>
+          -->
         </div>
       </div>
 
@@ -385,6 +418,16 @@
     <div class="bh-dots" aria-hidden="true"></div>
   </div>
 </section>
+
+<!-- Modal de Galeria (pode ficar no final do body) -->
+<div class="case-modal" id="caseModal" aria-hidden="true" role="dialog" aria-label="Galeria do projeto">
+  <button class="close" data-modal-close aria-label="Fechar">×</button>
+  <button class="nav prev" data-modal-prev aria-label="Imagem anterior">‹</button>
+  <img id="caseModalImg" src="" alt="">
+  <button class="nav next" data-modal-next aria-label="Próxima imagem">›</button>
+  <div class="case-modal-caption" id="caseModalCaption"></div>
+  <div class="case-modal-thumbs" id="caseModalThumbs"></div>
+</div>
 
 
 
