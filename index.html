@@ -319,111 +319,96 @@
 
 
     <!-- Cases Section -->
-    <section id="cases" class="homepage-cases">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Resultados Comprovados</div>
-                <h2 class="section-title">Cases de sucesso que transformaram negócios</h2>
-                <p class="section-subtitle">Projetos reais que demonstram o impacto da inteligência artificial nos resultados das empresas</p>
+<section id="cases" class="homepage-cases">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge">Resultados Comprovados</div>
+      <h2 class="section-title">Cases de sucesso que transformaram negócios</h2>
+      <p class="section-subtitle">Projetos reais que demonstram o impacto da inteligência artificial nos resultados das empresas</p>
+    </div>
+
+    <div class="cases-carousel">
+      <button class="cases-nav prev" aria-label="Anterior">‹</button>
+
+      <div class="cases-viewport">
+        <div class="cases-track">
+          <!-- SLIDE 1 -->
+          <article class="case-slide">
+            <header class="case-chip">
+              <i class="fas fa-cart-shopping"></i> E-commerce
+            </header>
+
+            <h3 class="case-title">Vitriny AI — Conversão +47%</h3>
+
+            <div class="case-visual phone">
+              <img src="assets/cases/vitriny-app.png" alt="Tela do app Vitriny AI">
             </div>
 
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-category">E-commerce</div>
-                        <div class="case-type">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Vitriny AI</span>
-                        </div>
-                    </div>
-                    <h3 class="case-title">Conversão 47% maior</h3>
-                    <p class="case-description">
-                        Loja virtual que reduziu abandono de carrinho e aumentou o ticket médio com o Vitriny AI, 
-                        gerando R$ 2.3M em vendas adicionais no primeiro ano.
-                    </p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <span class="metric-value">+47%</span>
-                            <span class="metric-label">Conversão</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">-35%</span>
-                            <span class="metric-label">Abandono</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">+120%</span>
-                            <span class="metric-label">Ticket médio</span>
-                        </div>
-                    </div>
-                </div>
+            <p class="case-teaser">
+              Loja virtual com IA que aumentou ticket e reduziu abandono de carrinho.
+            </p>
+          </article>
 
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-category">Financeiro</div>
-                        <div class="case-type">
-                            <i class="fas fa-university"></i>
-                            <span>IA Antifraude</span>
-                        </div>
-                    </div>
-                    <h3 class="case-title">Fraudes -85%</h3>
-                    <p class="case-description">
-                        Banco que adotou detecção em tempo real e diminuiu drasticamente as perdas por fraude, 
-                        economizando R$ 15M anuais em prejuízos.
-                    </p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <span class="metric-value">-85%</span>
-                            <span class="metric-label">Fraudes</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">99.2%</span>
-                            <span class="metric-label">Precisão</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">R$ 15M</span>
-                            <span class="metric-label">Economia anual</span>
-                        </div>
-                    </div>
-                </div>
+          <!-- SLIDE 2 -->
+          <article class="case-slide">
+            <header class="case-chip">
+              <i class="fas fa-shield-halved"></i> Financeiro
+            </header>
 
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-category">Operações</div>
-                        <div class="case-type">
-                            <i class="fas fa-robot"></i>
-                            <span>RPA</span>
-                        </div>
-                    </div>
-                    <h3 class="case-title">Processos 80% mais rápidos</h3>
-                    <p class="case-description">
-                        Robôs que executam tarefas repetitivas, liberando equipes para focar em estratégia e 
-                        reduzindo custos operacionais em 60%.
-                    </p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <span class="metric-value">+80%</span>
-                            <span class="metric-label">Velocidade</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">-60%</span>
-                            <span class="metric-label">Custos</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">24/7</span>
-                            <span class="metric-label">Operação</span>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="case-title">IA Antifraude — Fraudes −85%</h3>
+
+            <div class="case-visual phone">
+              <img src="assets/cases/antifraude-app.png" alt="Tela do app Antifraude">
             </div>
 
-            <div class="cases-cta">
-                <button class="btn btn-outline" onclick="window.open('pages/cases.html', '_blank')">
-                    Ver Todos os Cases
-                    <span class="arrow">→</span>
-                </button>
+            <p class="case-teaser">
+              Detecção em tempo real com precisão de 99,2% e milhões em economia anual.
+            </p>
+          </article>
+
+          <!-- SLIDE 3 -->
+          <article class="case-slide">
+            <header class="case-chip">
+              <i class="fas fa-robot"></i> Operações
+            </header>
+
+            <h3 class="case-title">RPA — Processos 80% mais rápidos</h3>
+
+            <div class="case-visual phone">
+              <img src="assets/cases/rpa-app.png" alt="Tela do app RPA">
             </div>
+
+            <p class="case-teaser">
+              Robôs tirando o peso do operacional e liberando o time pro estratégico.
+            </p>
+          </article>
+
+          <!-- SLIDE 4 (exemplo extra) -->
+          <article class="case-slide">
+            <header class="case-chip">
+              <i class="fas fa-hospital-user"></i> Saúde
+            </header>
+
+            <h3 class="case-title">Triage AI — SLA −40%</h3>
+
+            <div class="case-visual phone">
+              <img src="assets/cases/triage-app.png" alt="Tela do app Triage AI">
+            </div>
+
+            <p class="case-teaser">
+              Priorização automática de atendimentos e redução no tempo de resposta.
+            </p>
+          </article>
         </div>
-    </section>
+      </div>
+
+      <button class="cases-nav next" aria-label="Próximo">›</button>
+    </div>
+
+    <div class="cases-dots" aria-hidden="true"></div>
+  </div>
+</section>
+
 
     <!-- Depoimentos -->
     <section class="testimonials">
