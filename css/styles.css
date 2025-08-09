@@ -4091,10 +4091,17 @@ html {
 .gallery-modal[aria-hidden="false"] { display: grid; place-items: center; }
 .gallery-modal__backdrop { position: absolute; inset: 0; background: rgba(10,10,20,.55); backdrop-filter: blur(4px); }
 .gallery-modal__content {
-  position: relative; z-index: 2; width: min(1100px, 92vw);
-  background: #fff; border-radius: 22px; overflow: hidden;
+  position: relative;
+  z-index: 2;
+  width: min(1100px, 92vw);
+  max-height: 90vh; /* 🔹 altura máxima de 90% da tela */
+  margin-top: 5vh;  /* 🔹 afastamento do topo para não colar no header */
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
   box-shadow: 0 30px 80px rgba(0,0,0,.35);
-  display: grid; grid-template-rows: auto auto 1fr auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
 }
 .gallery-modal__close {
   position: absolute; right: 10px; top: 10px;
