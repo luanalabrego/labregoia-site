@@ -476,3 +476,92 @@ window.LabregoIA = {
     openContactModal,
     showFormMessage
 };
+
+<script>
+(function(){
+  const root = document.querySelector('.bh-carousel');
+  if(!root) return;
+
+  const viewport = root.querySelector('.bh-viewport');
+  const track    = root.querySelector('.bh-track');
+  const slides   = Array.from(track.children);
+  const prev     = root.querySelector('.bh-nav.prev');
+  const next     = root.querySelector('.bh-nav.next');
+  const dotsWrap = root.nextElementSibling; // .bh-dots
+
+  let index = 0, perView = 3, gap = 24;
+
+  function calcPerView(w){
+    if (w >= 1200) return 3;
+    if (w >= 900)  return 3;
+    if (w >= 700)  return 2;
+    return 1;
+  }
+
+  function layout(){
+    const w = viewport.clientWidth;
+    perView = calcPerView(w);
+    const slideW = (w - (perView-1)*gap) / perView;
+    slides.forEach(s => s.style.setProperty('--bh-w', slideW+'px'));
+    buildDots();
+    index = Math.min(index, Math.max(0, slides.length - perView));
+    update();
+  }
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    const pages = Math.max(1, Math.ceil(slides.length / perView));
+    for(let i=0;i<pages;i++){
+      const b=document.createElement('button');
+      if(i===Math.floor(index/perView)) b.classList.add('active');
+      b.onclick=()=>goTo(i*perView);
+      dotsWrap.appendChild(b);
+    }
+  }
+
+  function update(){
+    const first = slides[0].getBoundingClientRect();
+    const second= slides[1]?slides[1].getBoundingClientRect():first;
+    const step  = second.left - first.left; // largura + gap
+    track.style.transform = `translateX(${-index*step}px)`;
+    prev.disabled = index<=0;
+    next.disabled = index >= slides.length - perView;
+
+    const page = Math.floor(index/perView);
+    const dots = dotsWrap.querySelectorAll('button');
+    dots.forEach((d,i)=>d.classList.toggle('active', i===page));
+  }
+
+  function goTo(i){ index=Math.max(0,Math.min(i,slides.length-perView)); update(); }
+  prev.addEventListener('click', ()=>goTo(index - perView));
+  next.addEventListener('click', ()=>goTo(index + perView));
+  window.addEventListener('resize', layout);
+
+  // swipe (mobile)
+  let startX=0, drag=false;
+  viewport.addEventListener('pointerdown', e=>{
+    drag=true; startX=e.clientX; viewport.setPointerCapture(e.pointerId);
+    track.style.transition='none';
+  });
+  function end(e){
+    if(!drag) return; drag=false; track.style.transition='';
+    const delta=(e.clientX??startX)-startX, thr=60;
+    if(delta<-thr) goTo(index+1);
+    else if(delta>thr) goTo(index-1);
+    else update();
+  }
+  viewport.addEventListener('pointermove', e=>{
+    if(!drag) return;
+    const dx=e.clientX-startX;
+    const first=slides[0].getBoundingClientRect();
+    const second=slides[1]?slides[1].getBoundingClientRect():first;
+    const step=second.left-first.left;
+    track.style.transform=`translateX(${(-index*step)+dx}px)`;
+  });
+  viewport.addEventListener('pointerup', end);
+  viewport.addEventListener('pointercancel', end);
+  viewport.addEventListener('pointerleave', end);
+
+  layout();
+})();
+</script>
