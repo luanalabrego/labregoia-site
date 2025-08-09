@@ -253,16 +253,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     transition: var(--transition);
 }
-.header-scrolled .nav-link {
-    color: var(--primary-light);
-}
-
 .nav-link:hover {
     color: var(--primary-light);
 }
 
-.header-scrolled .nav-link:hover {
+/* Header color variants for contrast */
+.header-light .nav-link {
+    color: var(--primary-light);
+}
+
+.header-light .nav-link:hover {
     color: var(--primary-dark);
+}
+
+.header-dark .nav-link {
+    color: var(--white);
 }
 
 /* Active navigation link */

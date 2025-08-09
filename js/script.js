@@ -110,24 +110,53 @@ document.addEventListener('DOMContentLoaded', function() {
     // Header scroll effect
     const header = document.querySelector('.header');
     let lastScrollTop = 0;
-    
+
+    const darkSections = document.querySelectorAll('.hero-home, .services-hero, .cases-hero, .about-hero, .final-cta');
+
+    function updateHeaderColor() {
+        const headerHeight = header.offsetHeight;
+        const scrollPos = window.scrollY + headerHeight;
+        let inDarkSection = false;
+
+        darkSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top + window.scrollY;
+            const sectionBottom = sectionTop + rect.height;
+            if (scrollPos >= sectionTop && scrollPos <= sectionBottom) {
+                inDarkSection = true;
+            }
+        });
+
+        if (inDarkSection) {
+            header.classList.add('header-dark');
+            header.classList.remove('header-light');
+        } else {
+            header.classList.add('header-light');
+            header.classList.remove('header-dark');
+        }
+    }
+
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         if (scrollTop > 100) {
             header.classList.add('header-scrolled');
         } else {
             header.classList.remove('header-scrolled');
         }
-        
+
+        updateHeaderColor();
+
         // Ensure floating button remains visible
         if (floatingContactElement) {
             floatingContactElement.style.opacity = '1';
             floatingContactElement.style.visibility = 'visible';
         }
-        
+
         lastScrollTop = scrollTop;
     });
+
+    updateHeaderColor();
     
     // Intersection Observer for animations
     const observerOptions = {
