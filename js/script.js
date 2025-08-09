@@ -659,17 +659,33 @@ window.LabregoIA = {
 })();
 </script>
 
-window.addEventListener("scroll", function () {
+// Troca cor do header conforme você sai do HERO (fundo escuro) para as seções claras
+(function () {
   const header = document.querySelector(".header");
-  const scrollY = window.scrollY;
+  const hero = document.querySelector(".hero"); // sua primeira seção tem .hero e .hero-home
 
-  // altura de troca - ajusta conforme o tamanho do seu hero
-  if (scrollY > window.innerHeight - 80) {
-    header.classList.add("header-light");
-  } else {
-    header.classList.remove("header-light");
+  function updateHeader() {
+    const y = window.scrollY || window.pageYOffset;
+
+    // aplica estilo de "scrolled" assim que rolar um pouco
+    if (y > 8) header.classList.add("header-scrolled");
+    else header.classList.remove("header-scrolled");
+
+    // quando passar da altura do HERO, liga o modo claro do header
+    if (hero) {
+      const headerH = header.offsetHeight || 80;
+      const threshold = hero.offsetHeight - headerH; // base do hero
+      if (y >= threshold) header.classList.add("header-light");
+      else header.classList.remove("header-light");
+    } else {
+      // páginas sem hero: sempre claro
+      header.classList.add("header-light");
+    }
   }
-});
 
-
+  // roda na carga e em scroll/resize (cobre caso abra já em #servicos)
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("resize", updateHeader);
+})();
 
