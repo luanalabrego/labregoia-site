@@ -319,105 +319,91 @@
 
 
     <!-- Cases Section -->
-<!-- Cases Section -->
-<section id="cases" class="cases-behance">
+ <!-- ===== CASES ===== -->
+<section id="cases" class="cases">
   <div class="container">
-    <div class="section-header">
-      <div class="badge">Resultados Comprovados</div>
-      <h2 class="section-title">Cases de sucesso que transformaram negócios</h2>
-      <p class="section-subtitle">Projetos reais com design e tecnologia de alto nível</p>
-    </div>
+    <header class="cases__header">
+      <h2>Projetos em Destaque</h2>
+      <p>Alguns dos trabalhos recentes combinando automação, UX e IA.</p>
+    </header>
 
-    <div class="bh-carousel" data-cases>
-      <button class="bh-nav prev" aria-label="Anterior">‹</button>
-
-      <div class="bh-viewport">
-        <div class="bh-track">
-          <!-- CARD: Vitriny -->
-          <article
-            class="bh-card"
-            data-title="Vitriny AI — Conversão +47%"
-            data-subtitle="E-commerce com IA, aumento de ticket e redução de abandono."
-            data-tags="Next.js,IA,Checkout"
-            data-gallery='[
-              "assets/cases/vitriny/01-cover.jpg",
-              "assets/cases/vitriny/02-home.jpg",
-              "assets/cases/vitriny/03-plp.jpg",
-              "assets/cases/vitriny/04-pdp.jpg",
-              "assets/cases/vitriny/05-checkout.jpg"
-            ]'>
-            <div class="bh-media">
-              <img src="assets/vitriny-cover.jpg" alt="Vitriny AI" loading="lazy">
-            </div>
-            <div class="bh-overlay">
-              <div class="bh-chip"><i class="fas fa-cart-shopping"></i> E-commerce</div>
-              <h3 class="bh-title">Vitriny AI — Conversão +47%</h3>
-              <p class="bh-desc">E-commerce com IA, aumento de ticket e redução de abandono.</p>
-              <ul class="bh-tags"><li>Next.js</li><li>IA</li><li>Checkout</li></ul>
-            </div>
-          </article>
-
-          <!-- CARD: Antifraude -->
-          <article
-            class="bh-card"
-            data-title="IA Antifraude — Fraudes −85%"
-            data-subtitle="Detecção em tempo real com 99,2% de precisão."
-            data-tags="Python,Streams,ML"
-            data-gallery='[
-              "assets/cases/antifraude/01-dashboard.jpg",
-              "assets/cases/antifraude/02-alerting.jpg",
-              "assets/cases/antifraude/03-rules.jpg",
-              "assets/cases/antifraude/04-insights.jpg"
-            ]'>
-            <div class="bh-media">
-              <img src="assets/dansa-cover.jpg" alt="IA Antifraude" loading="lazy">
-            </div>
-            <div class="bh-overlay">
-              <div class="bh-chip"><i class="fas fa-shield-halved"></i> Financeiro</div>
-              <h3 class="bh-title">IA Antifraude — Fraudes −85%</h3>
-              <p class="bh-desc">Detecção em tempo real com 99,2% de precisão.</p>
-              <ul class="bh-tags"><li>Python</li><li>Streams</li><li>ML</li></ul>
-            </div>
-          </article>
-
-          <!-- CARD: RPA -->
-          <article
-            class="bh-card"
-            data-title="RPA — 80% mais rápido"
-            data-subtitle="Automação de processos e redução de custos."
-            data-tags="n8n,GCP,APIs"
-            data-gallery='[
-              "assets/cases/rpa/01-flow.jpg",
-              "assets/cases/rpa/02-run.jpg",
-              "assets/cases/rpa/03-monitoring.jpg"
-            ]'>
-            <div class="bh-media">
-              <img src="assets/cases/rpa-cover.jpg" alt="RPA" loading="lazy">
-            </div>
-            <div class="bh-overlay">
-              <div class="bh-chip"><i class="fas fa-robot"></i> Operações</div>
-              <h3 class="bh-title">RPA — 80% mais rápido</h3>
-              <p class="bh-desc">Automação de processos e redução de custos.</p>
-              <ul class="bh-tags"><li>n8n</li><li>GCP</li><li>APIs</li></ul>
-            </div>
-          </article>
-
-          <!-- Exemplo de futuro card (só duplicar e ajustar os paths/infos) -->
-          <!--
-          <article class="bh-card" data-title="Projeto X" data-subtitle="Resumo"
-                   data-tags="Tag1,Tag2" data-gallery='["img1.jpg","img2.jpg"]'>
-            ...
-          </article>
-          -->
+    <div class="cases__grid">
+      <!-- Card 1 -->
+      <article class="case-card"
+        data-title="CRM Iled Produções"
+        data-images='[
+          "assets/cases/iled/01.jpg",
+          "assets/cases/iled/02.jpg",
+          "assets/cases/iled/03.jpg"
+        ]'
+        data-tags="CRM, Automação, WhatsApp">
+        <div class="case-card__media">
+          <img src="assets/cases/iled/thumb.jpg" alt="CRM Iled Produções" loading="lazy" decoding="async" width="800" height="500">
+          <span class="case-card__badge">CRM</span>
         </div>
-      </div>
+        <div class="case-card__body">
+          <h3>CRM Iled Produções</h3>
+          <p>Distribuição de leads, SLA dinâmico e integração com WhatsApp para registrar histórico.</p>
+        </div>
+      </article>
 
-      <button class="bh-nav next" aria-label="Próximo">›</button>
+      <!-- Card 2 -->
+      <article class="case-card"
+        data-title="Vitriny Landing"
+        data-images='[
+          "assets/cases/vitriny/01.jpg",
+          "assets/cases/vitriny/02.jpg",
+          "assets/cases/vitriny/03.jpg"
+        ]'
+        data-tags="Landing, Conversão, Teste A/B">
+        <div class="case-card__media">
+          <img src="assets/cases/vitriny/thumb.jpg" alt="Vitriny Landing" loading="lazy" decoding="async" width="800" height="500">
+          <span class="case-card__badge">Landing</span>
+        </div>
+        <div class="case-card__body">
+          <h3>Vitriny Landing</h3>
+          <p>Landing focada em conversão com prova social e CTAs claros.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="case-card"
+        data-title="Dashboard de KPIs"
+        data-images='[
+          "assets/cases/dashboard/01.jpg",
+          "assets/cases/dashboard/02.jpg"
+        ]'
+        data-tags="Dashboard, KPIs, Data Viz">
+        <div class="case-card__media">
+          <img src="assets/cases/dashboard/thumb.jpg" alt="Dashboard de KPIs" loading="lazy" decoding="async" width="800" height="500">
+          <span class="case-card__badge">Dashboard</span>
+        </div>
+        <div class="case-card__body">
+          <h3>Dashboard de KPIs</h3>
+          <p>Métricas em tempo real por funil e produtividade por consultor.</p>
+        </div>
+      </article>
     </div>
-
-    <div class="bh-dots" aria-hidden="true"></div>
   </div>
 </section>
+
+<!-- Modal de Galeria -->
+<div class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Galeria de projeto">
+  <div class="gallery-modal__backdrop" data-close></div>
+  <div class="gallery-modal__content" role="document">
+    <button class="gallery-modal__close" aria-label="Fechar" data-close>&times;</button>
+    <div class="gallery-modal__meta">
+      <h3 class="gallery-modal__title"></h3>
+      <div class="gallery-modal__tags"></div>
+    </div>
+    <div class="gallery-modal__viewport">
+      <button class="gallery-modal__nav gallery-modal__nav--prev" aria-label="Anterior" data-prev>&lsaquo;</button>
+      <img class="gallery-modal__image" alt="">
+      <button class="gallery-modal__nav gallery-modal__nav--next" aria-label="Próxima" data-next>&rsaquo;</button>
+    </div>
+    <div class="gallery-modal__thumbs" aria-label="Miniaturas"></div>
+  </div>
+</div>
 
 <!-- Modal de Galeria (pode ficar no final do body) -->
 <div class="case-modal" id="caseModal" aria-hidden="true" role="dialog" aria-label="Galeria do projeto">
@@ -753,91 +739,7 @@
                 <p>&copy; 2024 Labrego IA. Todos os direitos reservados.</p>
             </div>
         </div>
-        <!-- ===== CASES ===== -->
-<section id="cases" class="cases">
-  <div class="container">
-    <header class="cases__header">
-      <h2>Projetos em Destaque</h2>
-      <p>Alguns dos trabalhos recentes combinando automação, UX e IA.</p>
-    </header>
-
-    <div class="cases__grid">
-      <!-- Card 1 -->
-      <article class="case-card"
-        data-title="CRM Iled Produções"
-        data-images='[
-          "assets/cases/iled/01.jpg",
-          "assets/cases/iled/02.jpg",
-          "assets/cases/iled/03.jpg"
-        ]'
-        data-tags="CRM, Automação, WhatsApp">
-        <div class="case-card__media">
-          <img src="assets/cases/iled/thumb.jpg" alt="CRM Iled Produções" loading="lazy" decoding="async" width="800" height="500">
-          <span class="case-card__badge">CRM</span>
-        </div>
-        <div class="case-card__body">
-          <h3>CRM Iled Produções</h3>
-          <p>Distribuição de leads, SLA dinâmico e integração com WhatsApp para registrar histórico.</p>
-        </div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="case-card"
-        data-title="Vitriny Landing"
-        data-images='[
-          "assets/cases/vitriny/01.jpg",
-          "assets/cases/vitriny/02.jpg",
-          "assets/cases/vitriny/03.jpg"
-        ]'
-        data-tags="Landing, Conversão, Teste A/B">
-        <div class="case-card__media">
-          <img src="assets/cases/vitriny/thumb.jpg" alt="Vitriny Landing" loading="lazy" decoding="async" width="800" height="500">
-          <span class="case-card__badge">Landing</span>
-        </div>
-        <div class="case-card__body">
-          <h3>Vitriny Landing</h3>
-          <p>Landing focada em conversão com prova social e CTAs claros.</p>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="case-card"
-        data-title="Dashboard de KPIs"
-        data-images='[
-          "assets/cases/dashboard/01.jpg",
-          "assets/cases/dashboard/02.jpg"
-        ]'
-        data-tags="Dashboard, KPIs, Data Viz">
-        <div class="case-card__media">
-          <img src="assets/cases/dashboard/thumb.jpg" alt="Dashboard de KPIs" loading="lazy" decoding="async" width="800" height="500">
-          <span class="case-card__badge">Dashboard</span>
-        </div>
-        <div class="case-card__body">
-          <h3>Dashboard de KPIs</h3>
-          <p>Métricas em tempo real por funil e produtividade por consultor.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Modal de Galeria -->
-<div class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Galeria de projeto">
-  <div class="gallery-modal__backdrop" data-close></div>
-  <div class="gallery-modal__content" role="document">
-    <button class="gallery-modal__close" aria-label="Fechar" data-close>&times;</button>
-    <div class="gallery-modal__meta">
-      <h3 class="gallery-modal__title"></h3>
-      <div class="gallery-modal__tags"></div>
-    </div>
-    <div class="gallery-modal__viewport">
-      <button class="gallery-modal__nav gallery-modal__nav--prev" aria-label="Anterior" data-prev>&lsaquo;</button>
-      <img class="gallery-modal__image" alt="">
-      <button class="gallery-modal__nav gallery-modal__nav--next" aria-label="Próxima" data-next>&rsaquo;</button>
-    </div>
-    <div class="gallery-modal__thumbs" aria-label="Miniaturas"></div>
-  </div>
-</div>
+       
 
     </footer>
 
