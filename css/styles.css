@@ -4088,3 +4088,28 @@ html {
 @media (max-width: 1200px){ .bh-card{ flex-basis: 380px; } }
 @media (max-width: 992px) { .bh-card{ flex-basis: 340px; } }
 @media (max-width: 768px) { .bh-card{ flex-basis: 86vw; } .bh-nav{ display:none; } }
+
+/* Aumenta contraste no rodapé dos cards Behance */
+.bh-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.35) 40%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Garante que todo o texto da overlay fique por cima do gradiente */
+.bh-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 18px;
+  color: #fff; /* letras sempre brancas para máximo contraste */
+}
+
