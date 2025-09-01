@@ -4455,3 +4455,68 @@ html {
 @supports (scrollbar-width: thin) {
   .cases--vitrine .cases__grid { scrollbar-width: thin; scrollbar-color: #ddd transparent; }
 }
+/* ===== VITRINE FIX PACK (clean/light) — sobrescreve regras antigas ===== */
+
+/* cards claros, sem véu, título/etiqueta FORA da imagem */
+.cases--vitrine { padding: 80px 0; background: var(--gray-50); }
+
+.cases--vitrine .cases__grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 28px;
+}
+@media (max-width: 768px){ .cases--vitrine .cases__grid{ gap: 20px; } }
+
+.cases--vitrine .case-card {
+  grid-column: span 6;
+  background: #fff !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow) !important;
+}
+@media (min-width: 1100px){
+  .cases--vitrine .case-card:nth-child(3n+1){ grid-column: span 7; }
+  .cases--vitrine .case-card:nth-child(3n+2){ grid-column: span 5; }
+  .cases--vitrine .case-card:nth-child(3n+3){ grid-column: span 6; }
+}
+@media (max-width: 768px){ .cases--vitrine .case-card{ grid-column: span 12; } }
+
+.cases--vitrine .case-card__inner { display:block; width:100%; padding:0; border:0; background:none; cursor:pointer; text-align:left; }
+
+/* mata o degradê escuro que estava voltando */
+.cases--vitrine .case-card__media { position:relative; overflow:hidden; border-bottom: 1px solid var(--border-color); border-radius: 20px 20px 0 0; }
+.cases--vitrine .case-card__media::after { content: none !important; display:none !important; }
+
+.cases--vitrine .case-card__media img{
+  width:100%; height: clamp(220px, 30vw, 340px); object-fit: cover;
+  transform: scale(1.02); transition: transform .45s ease;
+  filter: none !important;
+}
+.cases--vitrine .case-card:hover .case-card__media img{ transform: scale(1.06); }
+
+/* título/etiqueta FORA da imagem (antes estava absolute por cima) */
+.cases--vitrine .case-card__caption{
+  position: static !important;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; padding: 14px 16px 0;
+}
+.cases--vitrine .case-card__title{ color: var(--text-primary) !important; font-weight: 600; font-size: 1.1rem; }
+.cases--vitrine .case-card__badge{
+  color: var(--primary-color) !important;
+  background: rgba(96,124,249,.08) !important;
+  border: 1px solid rgba(96,124,249,.25) !important;
+  border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 600;
+}
+
+/* descrição */
+.cases--vitrine .case-card__body{ padding: 8px 16px 16px; }
+.cases--vitrine .case-card__body p{ color: var(--text-secondary); font-size:.95rem; margin:0; }
+
+/* modal mantém tema escuro neutro e thumbs na sua cor */
+.vitrine-modal__backdrop{ background: rgba(0,0,0,.5) !important; }
+.vitrine-modal__viewport{ background:#0f111a !important; }
+.vitrine-modal__thumbs{ background:#0f111a !important; border-top:1px solid rgba(255,255,255,.06); }
+.vitrine-modal__thumbs button.is-active img{ outline:2px solid var(--primary-color) !important; }
+.vitrine-modal__progress span{ background: linear-gradient(90deg, var(--primary-color), var(--accent-color)) !important; }
