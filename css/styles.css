@@ -4520,3 +4520,121 @@ html {
 .vitrine-modal__thumbs{ background:#0f111a !important; border-top:1px solid rgba(255,255,255,.06); }
 .vitrine-modal__thumbs button.is-active img{ outline:2px solid var(--primary-color) !important; }
 .vitrine-modal__progress span{ background: linear-gradient(90deg, var(--primary-color), var(--accent-color)) !important; }
+
+/* ===== Cena do bloco ===== */
+.cases.cases--vitrine {
+  position: relative;
+  padding-block: clamp(32px, 4vw, 64px);
+  background:
+    radial-gradient(1200px 600px at 0% -10%, rgba(96,124,249,0.10), transparent 60%),
+    radial-gradient(1200px 600px at 100% 110%, rgba(156,70,224,0.10), transparent 60%);
+  overflow: hidden;
+}
+
+/* ===== Carrossel (mantém o que já tinha) ===== */
+:root{ --cases-gap:24px; --cases-per-view:1; }
+@media (min-width:640px){ :root{ --cases-per-view:2; } }
+@media (min-width:1024px){ :root{ --cases-per-view:3; } }
+
+.cases__viewport{ position:relative; margin-top:16px; }
+.cases__track{
+  display:flex; gap:var(--cases-gap);
+  overflow-x:auto; scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch; padding:8px 6px 16px;
+  scrollbar-width:none;
+}
+.cases__track::-webkit-scrollbar{ display:none; }
+.cases__track > .case-card{
+  flex:0 0 calc((100% - (var(--cases-gap)*(var(--cases-per-view)-1)))/var(--cases-per-view));
+  scroll-snap-align:start;
+}
+
+/* ===== Card com “aura” e hover elegante ===== */
+.case-card__inner{
+  --radius:18px;
+  position: relative;
+  display:flex; flex-direction:column; height:100%;
+  background: linear-gradient(180deg,#fff, #fafafa);
+  border-radius: var(--radius);
+  border:1px solid rgba(0,0,0,.06);
+  box-shadow:
+    0 10px 30px rgba(17,23,41,.08),
+    inset 0 1px 0 rgba(255,255,255,.6);
+  overflow:hidden;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s;
+  isolation:isolate;
+}
+.case-card__inner::before{
+  /* borda de luz suave */
+  content:"";
+  position:absolute; inset:-1px;
+  border-radius: calc(var(--radius) + 2px);
+  padding:1px; pointer-events:none;
+  background: linear-gradient(135deg, rgba(96,124,249,.5), rgba(156,70,224,.45));
+  -webkit-mask: 
+     linear-gradient(#000 0 0) content-box, 
+     linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity:.0; transition:opacity .35s;
+}
+.case-card__inner:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(17,23,41,.12);
+}
+.case-card__inner:hover::before{ opacity:.8; }
+
+/* Imagem consistente */
+.case-card__media{ overflow:hidden; }
+.case-card__media img{
+  width:100%; display:block;
+  aspect-ratio:16/10; object-fit:cover;
+  transform: scale(1.01);
+  transition: transform .5s ease;
+}
+.case-card__inner:hover .case-card__media img{ transform: scale(1.06); }
+
+/* Texto */
+.case-card__caption, .case-card__body { padding:14px 16px; }
+.case-card__caption{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+}
+.case-card__title{ font-weight:700; letter-spacing:.2px; }
+.case-card__badge{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 10px; border-radius:999px;
+  background: rgba(96,124,249,.10);
+  color:#543285; font-size:12px; font-weight:600;
+  border:1px solid rgba(96,124,249,.25);
+  backdrop-filter: blur(2px);
+}
+.case-card__body{ color:#3b3b3b; margin-top:auto; }
+
+/* ===== Botões de navegação “glass” ===== */
+.cases__nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  z-index:2; width:44px; height:44px; border-radius:999px; border:1px solid rgba(255,255,255,.6);
+  background: rgba(255,255,255,.7);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(17,23,41,.18);
+  cursor:pointer; display:grid; place-items:center;
+  transition: transform .2s ease, background .2s ease;
+}
+.cases__nav:hover{ transform: translateY(-50%) scale(1.06); background:#fff; }
+.cases__nav--prev{ left:-8px; } .cases__nav--next{ right:-8px; }
+@media (max-width:639px){ .cases__nav--prev{ left:4px; } .cases__nav--next{ right:4px; } }
+.cases__nav[disabled]{ opacity:.45; pointer-events:none; }
+
+/* ===== Dots ===== */
+.cases__dots{
+  display:flex; justify-content:center; gap:10px;
+  margin-top:16px;
+}
+.cases__dot{
+  width:8px; height:8px; border-radius:999px;
+  background: rgba(0,0,0,.15);
+  transition: width .25s ease, background .25s ease;
+}
+.cases__dot[aria-current="true"]{
+  width:24px; background: linear-gradient(90deg, #607cf9, #9c46e0);
+}
+
