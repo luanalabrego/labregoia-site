@@ -37,6 +37,19 @@
 
     /* ===== Carrossel ===== */
     .cases__viewport{ position:relative; margin-top:16px; }
+    <div class="cases__viewport">
+  <button class="cases__nav cases__nav--prev" aria-label="Anterior">‹</button>
+
+  <div class="cases__track" aria-label="Carrossel de projetos">
+    <!-- seus <article class="case-card"> ... -->
+  </div>
+
+  <button class="cases__nav cases__nav--next" aria-label="Próximo">›</button>
+</div>
+
+<!-- ADICIONE ESTA LINHA -->
+<div class="cases__dots" aria-label="Paginação do carrossel"></div>
+
     .cases__track{
       display:flex;
       gap:var(--cases-gap);
