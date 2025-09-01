@@ -703,5 +703,59 @@
       updateArrows();
     })();
   </script>
+  <!-- JS DO CARROSSEL COM DOTS -->
+  <script>
+    (function initCasesCarousel(){
+      const viewport = document.querySelector('.cases__viewport');
+      if (!viewport) return;
+
+      const track = viewport.querySelector('.cases__track');
+      const prev  = viewport.querySelector('.cases__nav--prev');
+      const next  = viewport.querySelector('.cases__nav--next');
+      const dotsWrap = document.querySelector('.cases__dots');
+
+      function pageCount(){ return Math.max(1, Math.round(track.scrollWidth / track.clientWidth)); }
+      function renderDots(){
+        const n = pageCount(); dotsWrap.innerHTML = '';
+        for (let i=0;i<n;i++){
+          const b = document.createElement('button');
+          b.className = 'cases__dot'; b.type='button';
+          b.setAttribute('aria-label', `Ir para página ${i+1}`);
+          b.addEventListener('click', ()=> scrollToPage(i));
+          dotsWrap.appendChild(b);
+        }
+        updateUI();
+      }
+      function currentPage(){ return Math.round(track.scrollLeft / track.clientWidth); }
+      function scrollToPage(i){ track.scrollTo({ left: i*track.clientWidth, behavior:'smooth' }); }
+      function updateArrows(){
+        const maxScroll = track.scrollWidth - track.clientWidth - 2;
+        prev.toggleAttribute('disabled', track.scrollLeft <= 0);
+        next.toggleAttribute('disabled', track.scrollLeft >= maxScroll);
+      }
+      function updateDots(){
+        const dots = dotsWrap.querySelectorAll('.cases__dot');
+        const idx = Math.min(dots.length-1, currentPage());
+        dots.forEach((d,i)=> d.setAttribute('aria-current', i===idx ? 'true':'false'));
+      }
+      function updateUI(){ updateArrows(); updateDots(); }
+      function scrollByPage(dir){ track.scrollBy({ left: track.clientWidth*dir, behavior:'smooth' }); }
+
+      next.addEventListener('click', ()=>scrollByPage(+1));
+      prev.addEventListener('click', ()=>scrollByPage(-1));
+      track.addEventListener('scroll', updateUI, { passive:true });
+      window.addEventListener('resize', ()=> renderDots());
+
+      viewport.tabIndex=0;
+      viewport.addEventListener('keydown', (e)=>{
+        if (e.key==='ArrowRight') scrollByPage(+1);
+        if (e.key==='ArrowLeft')  scrollByPage(-1);
+      });
+
+      renderDots();
+    })();
+  </script>
+</body>
+</html>
 </body>
 </html>
