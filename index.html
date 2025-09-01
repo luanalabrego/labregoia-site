@@ -1,826 +1,583 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA</title>
-    <meta name="description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
-    <meta name="keywords" content="desenvolvimento de apps, desenvolvimento de sistemas, automação de processos, agentes inteligentes, inteligência artificial, IA, tecnologia">
-    <link rel="canonical" href="https://labregoia.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Labrego IA">
-    <meta property="og:title" content="Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA">
-    <meta property="og:description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
-    <meta property="og:url" content="https://labregoia.com/">
-    <meta property="og:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA">
-    <meta name="twitter:description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
-    <meta name="twitter:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Goodly:wght@400;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Labrego IA",
-        "url": "https://labregoia.com/",
-        "logo": "https://labregoia.com/assets/LogoPrincipal-1.png",
-        "sameAs": [
-            "https://www.linkedin.com/company/labrego-ia",
-            "https://www.instagram.com/labregoia",
-            "https://wa.me/11934427070",
-            "https://www.youtube.com/@labregoia"
-        ]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA</title>
+  <meta name="description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
+  <meta name="keywords" content="desenvolvimento de apps, desenvolvimento de sistemas, automação de processos, agentes inteligentes, inteligência artificial, IA, tecnologia">
+  <link rel="canonical" href="https://labregoia.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Labrego IA">
+  <meta property="og:title" content="Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA">
+  <meta property="og:description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
+  <meta property="og:url" content="https://labregoia.com/">
+  <meta property="og:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Labrego IA - Desenvolvimento de Apps, Sistemas e Automação com IA">
+  <meta name="twitter:description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
+  <meta name="twitter:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Goodly:wght@400;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Labrego IA",
+    "url": "https://labregoia.com/",
+    "logo": "https://labregoia.com/assets/LogoPrincipal-1.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/labrego-ia",
+      "https://www.instagram.com/labregoia",
+      "https://wa.me/11934427070",
+      "https://www.youtube.com/@labregoia"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="assets/LogoPrincipal-1.png" alt="Logo Labrego IA" class="logo-img">
-                </div>
-                <nav class="nav">
-                    <a href="#inicio" class="nav-link">Início</a>
-                    <a href="#servicos" class="nav-link">Serviços</a>
-                    <a href="#vitriny" class="nav-link">Vitriny</a>
-                    <a href="#sobre" class="nav-link">Sobre</a>
-                    <a href="#cases" class="nav-link">Cases</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </nav>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="floating-elements header-floating"></div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <img src="assets/LogoPrincipal-1.png" alt="Logo Labrego IA" class="logo-img">
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="hero hero-no-logo hero-home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="badge">Inteligência Artificial</div>
-                <h1 class="hero-title">
-                    Sua empresa pronta para
-                    <span class="gradient-text">crescer com inteligência artificial</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Desenvolvemos soluções digitais personalizadas para acelerar seus resultados
-                    e automatizar rotinas de forma inteligente.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary btn-large" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'})">
-                        Conheça nossas Soluções
-                        <span class="arrow">→</span>
-                    </button>
-                    <button class="btn btn-secondary btn-large" onclick="document.getElementById('cases').scrollIntoView({behavior: 'smooth'})">
-                        Ver Cases de Sucesso
-                    </button>
-                </div>
-            </div>
-            <div class="floating-elements"></div>
-        </div>
-    </section>
-
-    <!-- Credibilidade -->
-    <section class="credibility">
-        <div class="container">
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">+15</div>
-                    <div class="stat-label">Anos de experiência</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">+R$ 20M</div>
-                    <div class="stat-label">Em economia gerada</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">+50</div>
-                    <div class="stat-label">PROJETOS ENTREGUES</div>
-                </div>
-            </div>
-                <!-- Clients Section -->
-    <section class="clients">
-        <div class="container">
-            <h3 class="clients-title">Confiança de grandes marcas</h3>
-            <div class="clients-carousel">
-                <div class="clients-track">
-                    <div class="client-logo">
-                        <img src="assets/1.png" alt="Cliente 1">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/2.png" alt="Cliente 2">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/3.png" alt="Cliente 3">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/4.png" alt="Cliente 4">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/5.png" alt="Cliente 5">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/6.png" alt="Cliente 6">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/7.png" alt="Cliente 7">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/8.png" alt="Cliente 8">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/9.png" alt="Cliente 9">
-                        </div>
-                    <!-- Duplicar para efeito infinito -->
-                    <div class="client-logo">
-                        <img src="assets/1.png" alt="Cliente 1">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/2.png" alt="Cliente 2">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/3.png" alt="Cliente 3">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/4.png" alt="Cliente 4">
-                    </div>
-                    <div class="client-logo">
-                        <img src="assets/5.png" alt="Cliente 5">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </section>
-
-    <!-- Serviços -->
-    <section id="servicos" class="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Nossos Serviços</div>
-                <h2 class="section-title">Soluções tecnológicas que geram resultados reais</h2>
-                <p class="section-subtitle">
-                    Cada projeto é desenvolvido estrategicamente para resolver desafios específicos 
-                    e impulsionar o crescimento sustentável do seu negócio com ROI comprovado.
-                </p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="service-title">Aplicativos Sob Medida</h3>
-                    <p class="service-description">
-                        Sistemas web e mobile para escalar vendas e operações, eliminando controles manuais e aumentando a produtividade em até 300%.
-                    </p>
-                    <div class="service-benefits">
-                        <span class="benefit-tag">Redução de custos</span>
-                        <span class="benefit-tag">Escalabilidade</span>
-                        <span class="benefit-tag">Integração completa</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-gears"></i>
-                    </div>
-                    <h3 class="service-title">Automação de Processos</h3>
-                    <p class="service-description">
-                        Projetos focados em automação inteligente, eficiência operacional e redução de erros humanos em até 95%.
-                    </p>
-                    <div class="service-benefits">
-                        <span class="benefit-tag">Economia de tempo</span>
-                        <span class="benefit-tag">Menos erros</span>
-                        <span class="benefit-tag">ROI garantido</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="service-title">Inteligência Artificial Aplicada</h3>
-                    <p class="service-description">
-                        IA que decide, organiza, gera insights e transforma dados em ação estratégica para tomada de decisões inteligentes.
-                    </p>
-                    <div class="service-benefits">
-                        <span class="benefit-tag">Decisões inteligentes</span>
-                        <span class="benefit-tag">Análise preditiva</span>
-                        <span class="benefit-tag">Vantagem competitiva</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="service-title">Agentes Inteligentes</h3>
-                    <p class="service-description">
-                        IA conversacional para atendimento e suporte, trabalhando 24h por dia com taxa de resolução de 90%.
-                    </p>
-                    <div class="service-benefits">
-                        <span class="benefit-tag">Atendimento 24/7</span>
-                        <span class="benefit-tag">Satisfação do cliente</span>
-                        <span class="benefit-tag">Redução de custos</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- ===== Nossa Abordagem ===== -->
-<section id="metodologia" class="methodology">
-  <div class="container">
-    <div class="section-header">
-      <div class="badge">Nossa Abordagem</div>
-      <h2 class="section-title">Metodologia comprovada para resultados excepcionais</h2>
-      <p class="section-subtitle">
-        Processo estruturado que combina estratégia, tecnologia e execução para transformar negócios.
-      </p>
-    </div>
-
-    <!-- Progress rail -->
-    <div class="method-rail" aria-hidden="true"></div>
-
-    <ol class="steps-grid">
-      <li class="step-card">
-        <span class="step-number">01</span>
-        <h3 class="step-title">Diagnóstico Completo</h3>
-        <p class="step-desc">Análise profunda da sua realidade, objetivos e identificação de oportunidades.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">02</span>
-        <h3 class="step-title">Planejamento Estratégico</h3>
-        <p class="step-desc">Roadmap com cronograma, recursos e indicadores de sucesso.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">03</span>
-        <h3 class="step-title">Design & Protótipo</h3>
-        <p class="step-desc">Prototipagem interativa para validar fluxos e experiência de usuário.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">04</span>
-        <h3 class="step-title">Desenvolvimento Ágil</h3>
-        <p class="step-desc">Entregas incrementais com feedback contínuo e alta adaptabilidade.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">05</span>
-        <h3 class="step-title">Testes & Qualidade</h3>
-        <p class="step-desc">Validação de performance, segurança e usabilidade em cada entrega.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">06</span>
-        <h3 class="step-title">Deploy & Treinamento</h3>
-        <p class="step-desc">Publicação segura e capacitação da equipe para operação autônoma.</p>
-      </li>
-
-      <li class="step-card">
-        <span class="step-number">07</span>
-        <h3 class="step-title">Suporte Contínuo</h3>
-        <p class="step-desc">Acompanhamento, ajustes e otimizações para resultados duradouros.</p>
-      </li>
-    </ol>
-
-    <div class="method-cta">
-      <button class="btn btn-primary btn-large" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-        Quero aplicar essa metodologia
-        <span class="arrow">→</span>
-      </button>
-    </div>
-  </div>
-</section>
-
-
-
-
-    <!-- Cases Section -->
-<!-- ===== CASES ===== -->
-<!-- ===== CASES (Vitrine) ===== -->
-<section id="cases" class="cases cases--vitrine">
-  <div class="container">
-    <header class="cases__header">
-      <div class="badge">Portfólio</div>
-      <h2 class="section-title">Projetos em Destaque</h2>
-      <p class="section-subtitle">Uma vitrine interativa dos nossos trabalhos mais recentes</p>
-    </header>
-
-    <div class="cases__grid" aria-label="Lista de projetos">
-      <!-- Card 1 -->
-    <!-- Card 1 -->
-<article class="case-card"
-  data-title="Sistema de Gestão Dan-sa"
-  data-tags="CRM, Financeiro, Aulas Online"
-  data-images='[
-    "assets/case01/case01.png",
-    "assets/case01/case02.png",
-    "assets/case01/case03.png",
-    "assets/case01/case04.png",
-    "assets/case01/case05.png",
-    "assets/case01/case06.png",
-    "assets/case01/case07.png"
-  ]'>
-  <button class="case-card__inner" aria-label="Abrir caso: Sistema de Gestão Dan-sa">
-    <figure class="case-card__media">
-      <img src="assets/case01/case07.png" alt="Sistema de Gestão Dan-sa" loading="lazy" decoding="async" width="800" height="500">
-    </figure>
-    <div class="case-card__caption">
-      <span class="case-card__title">Sistema de Gestão Dan-sa</span>
-      <span class="case-card__badge">Sistema de Gestão</span>
-    </div>
-    <div class="case-card__body">
-      <p>CRM, funil de vendas, financeiro e aulas online.</p>
-    </div>
-  </button>
-</article>
-
-<!-- Card 2 -->
-<article class="case-card"
-  data-title="Cout Barbershop"
-  data-tags="Barbearia, PDV, Agendamentos, Estoque"
-  data-images='[
-    "assets/case02/case02_05.png",
-    "assets/case02/case02_08.png",
-    "assets/case02/case02_04.png",
-    "assets/case02/case02_01.png",
-    "assets/case02/case02_06.png",
-    "assets/case02/case02_07.png"
-  ]'>
-  <button class="case-card__inner" aria-label="Abrir caso: Cout Barbershop">
-    <figure class="case-card__media">
-      <img src="assets/case02/case02_04.png" alt="Cout Barbershop - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
-    </figure>
-    <div class="case-card__caption">
-      <span class="case-card__title">Cout Barbershop</span>
-      <span class="case-card__badge">Sistema de Gestão</span>
-    </div>
-    <div class="case-card__body">
-      <p>PDV, agenda inteligente, controle de estoque e relatórios.</p>
-    </div>
-  </button>
-</article>
-
-<!-- Card 3 -->
-<article class="case-card"
-  data-title="Vitriny AI"
-  data-tags="IA, Transformação de Imagens, SaaS"
-  data-images='[
-    "assets/case03/case03_01.png",
-    "assets/case03/case03_02.png",
-    "assets/case03/case03_03.png",
-    "assets/case03/case03_04.png",
-    "assets/case03/case03_05.png",
-    "assets/case03/case03_06.png",
-    "assets/case03/case03_07.png",
-    "assets/case03/case03_08.png"
-  ]'>
-  <button class="case-card__inner" aria-label="Abrir caso: Vitriny AI">
-    <figure class="case-card__media">
-      <img src="assets/case03/case03_01.png" alt="Vitriny AI - Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
-    </figure>
-    <div class="case-card__caption">
-      <span class="case-card__title">Vitriny AI</span>
-      <span class="case-card__badge">Inteligência Artificial</span>
-    </div>
-    <div class="case-card__body">
-      <p>Geração de imagens profissionais com alta produtividade.</p>
-    </div>
-  </button>
-</article>
-
-<!-- Card 4 -->
-<article class="case-card"
-  data-title="Grow Properties"
-  data-tags="Leilões, Real Estate, Investimentos"
-  data-images='[
-    "assets/case04/case04_01.png",
-    "assets/case04/case04_02.png",
-    "assets/case04/case04_03.png",
-    "assets/case04/case04_04.png",
-    "assets/case04/case04_05.png",
-    "assets/case04/case04_06.png",
-    "assets/case04/case04_07.png",
-    "assets/case04/case04_08.png",
-    "assets/case04/case04_09.png",
-    "assets/case04/case04_10.png",
-    "assets/case04/case04_11.png"
-  ]'>
-  <button class="case-card__inner" aria-label="Abrir caso: Grow Properties">
-    <figure class="case-card__media">
-      <img src="assets/case04/case04_03.png" alt="Grow Properties - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
-    </figure>
-    <div class="case-card__caption">
-      <span class="case-card__title">Grow Properties</span>
-      <span class="case-card__badge">Real Estate</span>
-    </div>
-    <div class="case-card__body">
-      <p>Gestão de leilões, imóveis e investidores com indicadores.</p>
-    </div>
-  </button>
-</article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== MODAL (Tela Cheia) ===== -->
-<div id="vitrineModal" class="vitrine-modal" aria-hidden="true" role="dialog" aria-label="Galeria do projeto">
-  <div class="vitrine-modal__backdrop" data-close></div>
-
-  <div class="vitrine-modal__shell" role="document">
-    <header class="vitrine-modal__topbar">
-      <div class="vitrine-modal__meta">
-        <h3 class="vitrine-modal__title"></h3>
-        <div class="vitrine-modal__tags" aria-label="Tags do projeto"></div>
-      </div>
-
-      <div class="vitrine-modal__controls">
-        <button class="vitrine-btn" data-fs-toggle aria-label="Alternar tela cheia">
-          <i class="fas fa-expand"></i>
-        </button>
-        <span class="vitrine-counter" aria-live="polite">1 / 1</span>
-        <button class="vitrine-btn" data-close aria-label="Fechar (Esc)">
-          <i class="fas fa-times"></i>
+        <nav class="nav">
+          <a href="#inicio" class="nav-link">Início</a>
+          <a href="#servicos" class="nav-link">Serviços</a>
+          <a href="#vitriny" class="nav-link">Vitriny</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#cases" class="nav-link">Cases</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span><span></span><span></span>
         </button>
       </div>
-    </header>
-
-    <main class="vitrine-modal__viewport">
-      <button class="vitrine-nav vitrine-nav--prev" data-prev aria-label="Anterior">‹</button>
-      <img class="vitrine-image" alt="">
-      <button class="vitrine-nav vitrine-nav--next" data-next aria-label="Próxima">›</button>
-    </main>
-
-    <footer class="vitrine-modal__thumbs" aria-label="Miniaturas"></footer>
-    <div class="vitrine-modal__progress" aria-hidden="true"><span></span></div>
-  </div>
-</div>
-
-
-
-
-
-
-    <!-- Depoimentos -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Depoimentos</div>
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Nossa barbearia se transformou com a solução da Labrego IA. Hoje temos controle total dos serviços e indicadores pelo celular, sem depender de planilhas. Os agendamentos são feitos de forma autônoma pelos clientes, e até a lanchonete foi integrada ao sistema. A parceria com a Luana e sua equipe trouxe inovação, agilidade e uma gestão muito mais moderna."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Thiago</h4>
-                            <span>Investidor e sócio, Barbearia Cout</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Profissionalismo excepcional. Entregaram exatamente o que prometeram, no prazo e com qualidade superior."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Ana Costa</h4>
-                            <span>Diretora, InnovaCorp</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"A automação implementada nos economizou 40 horas semanais e eliminou praticamente todos os erros manuais."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Roberto Lima</h4>
-                            <span>Gerente, LogiSmart</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Sobre -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Nossa Equipe</div>
-                <h2 class="section-title">
-                    Somos seu time: pensamos junto, vestimos a camisa!
-                </h2>
-                <p class="section-subtitle">
-                    Não somos apenas fornecedores de tecnologia — somos parceiros estratégicos no crescimento do seu negócio.
-                </p>
-            </div>
-            
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="assets/Lucas.jpg" alt="Lucas" />
-                    </div>
-                    <h3 class="team-name">Lucas</h3>
-                    <p class="team-role">Co-fundador</p>
-                    <p class="team-description">
-                        Mais de 15 anos de experiência em grandes corporações. Atualização contínua em IA, automações e tecnologias emergentes.
-                    </p>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="assets/Luana.jpg" alt="Luana" />
-                    </div>
-                    <h3 class="team-name">Luana</h3>
-                    <p class="team-role">Fundadora</p>
-                    <p class="team-description">
-                        Especialista em projetos focados em automação, eficiência operacional e redução de erros. Visão estratégica de negócios.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Entre em Contato</div>
-                <h2 class="section-title">Vamos conversar sobre seu projeto</h2>
-                <p class="section-subtitle">
-                    Estamos prontos para transformar suas ideias em soluções digitais inovadoras
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Fale Conosco</h3>
-                    <p>Nossa equipe está sempre disponível para esclarecer dúvidas e apresentar as melhores soluções para seu negócio.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
-                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Email</strong>
-                                <p>contato@labregoia.com.br</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <strong>Telefone</strong>
-                                <p>11 93442-7070</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <h4>Siga-nos</h4>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/company/labrego-ia" class="social-icon linkedin" aria-label="LinkedIn" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://www.instagram.com/labregoia" class="social-icon instagram" aria-label="Instagram" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://wa.me/11934427070" class="social-icon whatsapp" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@labregoia" class="social-icon youtube" aria-label="YouTube" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Empresa</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Serviço de interesse</label>
-                            <select id="service" name="service">
-                                <option value="">Selecione um serviço</option>
-                                <option value="aplicativos">Aplicativos Sob Medida</option>
-                                <option value="automacao">Automação de Processos</option>
-                                <option value="ia">Inteligência Artificial Aplicada</option>
-                                <option value="agentes">Agentes Inteligentes</option>
-                                <option value="vitriny">Vitriny</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Conte-nos sobre seu projeto..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">
-                            Enviar Mensagem
-                            <span class="arrow">→</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">
-                    Pronto para impulsionar sua operação com a Labrego IA?
-                </h2>
-                <p class="cta-subtitle">
-                    Aceleramos resultados com soluções digitais sob medida e inteligência artificial aplicada ao seu negócio.
-                </p>
-                <div class="cta-buttons">
-                    <button class="btn btn-secondary btn-large" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
-                        Fale Conosco Agora
-                        <span class="arrow">→</span>
-                    </button>
-                    <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">
-                        Agendar Reunião
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="assets/LogoPrincipal-1.png" alt="Logo Labrego IA" class="footer-logo">
-                    <p class="footer-description">
-                        Soluções digitais sob medida com inteligência artificial.
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Serviços</h3>
-                    <ul class="footer-links">
-                        <li><a href="#servicos">Aplicativos Sob Medida</a></li>
-                        <li><a href="#servicos">Automação de Processos</a></li>
-                        <li><a href="#servicos">Inteligência Artificial</a></li>
-                        <li><a href="#servicos">Agentes Inteligentes</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Produtos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#vitriny">Vitriny AI</a></li>
-                        <li><a href="#servicos">Desenvolvimento Custom</a></li>
-                    </ul>
-                </div>
-                
-                
-                <div class="footer-section">
-                    <h3 class="footer-title">Contato</h3>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <span class="contact-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
-                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                            </span>
-                            <span>contato@labregoia.com.br</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                            </span>
-                            <span>11 93442-7070</span>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/company/labrego-ia" class="social-icon linkedin" aria-label="LinkedIn" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://www.instagram.com/labregoia" class="social-icon instagram" aria-label="Instagram" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://wa.me/11934427070" class="social-icon whatsapp" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@labregoia" class="social-icon youtube" aria-label="YouTube" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Labrego IA. Todos os direitos reservados.</p>
-            </div>
-        </div>
-       
-
-    </footer>
-
-    <!-- Floating Contact Button -->
-    <div class="floating-contact" id="floatingContactWrapper">
-        <div class="floating-menu" id="floatingMenu">
-            <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="mailto:contato@labregoia.com.br" class="floating-option email" aria-label="Email">
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-        <button class="floating-btn" id="floatingContact" aria-label="Contato">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
+      <div class="floating-elements header-floating"></div>
     </div>
+  </header>
 
-    <script src="js/script.js"></script>
-    <script src="js/cases-vitrine.js" defer></script>
+  <!-- Hero -->
+  <section id="inicio" class="hero hero-no-logo hero-home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="badge">Inteligência Artificial</div>
+        <h1 class="hero-title">
+          Sua empresa pronta para
+          <span class="gradient-text">crescer com inteligência artificial</span>
+        </h1>
+        <p class="hero-subtitle">
+          Desenvolvemos soluções digitais personalizadas para acelerar seus resultados
+          e automatizar rotinas de forma inteligente.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-large" onclick="document.getElementById('servicos').scrollIntoView({behavior: 'smooth'})">
+            Conheça nossas Soluções <span class="arrow">→</span>
+          </button>
+          <button class="btn btn-secondary btn-large" onclick="document.getElementById('cases').scrollIntoView({behavior: 'smooth'})">
+            Ver Cases de Sucesso
+          </button>
+        </div>
+      </div>
+      <div class="floating-elements"></div>
+    </div>
+  </section>
 
+  <!-- Credibilidade + Clientes -->
+  <section class="credibility">
+    <div class="container">
+      <div class="stats">
+        <div class="stat"><div class="stat-number">+15</div><div class="stat-label">Anos de experiência</div></div>
+        <div class="stat"><div class="stat-number">+R$ 20M</div><div class="stat-label">Em economia gerada</div></div>
+        <div class="stat"><div class="stat-number">+50</div><div class="stat-label">PROJETOS ENTREGUES</div></div>
+      </div>
+      <section class="clients">
+        <div class="container">
+          <h3 class="clients-title">Confiança de grandes marcas</h3>
+          <div class="clients-carousel">
+            <div class="clients-track">
+              <div class="client-logo"><img src="assets/1.png" alt="Cliente 1"></div>
+              <div class="client-logo"><img src="assets/2.png" alt="Cliente 2"></div>
+              <div class="client-logo"><img src="assets/3.png" alt="Cliente 3"></div>
+              <div class="client-logo"><img src="assets/4.png" alt="Cliente 4"></div>
+              <div class="client-logo"><img src="assets/5.png" alt="Cliente 5"></div>
+              <div class="client-logo"><img src="assets/6.png" alt="Cliente 6"></div>
+              <div class="client-logo"><img src="assets/7.png" alt="Cliente 7"></div>
+              <div class="client-logo"><img src="assets/8.png" alt="Cliente 8"></div>
+              <div class="client-logo"><img src="assets/9.png" alt="Cliente 9"></div>
+              <!-- duplicados p/ loop -->
+              <div class="client-logo"><img src="assets/1.png" alt="Cliente 1"></div>
+              <div class="client-logo"><img src="assets/2.png" alt="Cliente 2"></div>
+              <div class="client-logo"><img src="assets/3.png" alt="Cliente 3"></div>
+              <div class="client-logo"><img src="assets/4.png" alt="Cliente 4"></div>
+              <div class="client-logo"><img src="assets/5.png" alt="Cliente 5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 
+  <!-- Serviços -->
+  <section id="servicos" class="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Nossos Serviços</div>
+        <h2 class="section-title">Soluções tecnológicas que geram resultados reais</h2>
+        <p class="section-subtitle">
+          Cada projeto é desenvolvido estrategicamente para resolver desafios específicos 
+          e impulsionar o crescimento sustentável do seu negócio com ROI comprovado.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="service-title">Aplicativos Sob Medida</h3>
+          <p class="service-description">Sistemas web e mobile para escalar vendas e operações, eliminando controles manuais e aumentando a produtividade em até 300%.</p>
+          <div class="service-benefits">
+            <span class="benefit-tag">Redução de custos</span>
+            <span class="benefit-tag">Escalabilidade</span>
+            <span class="benefit-tag">Integração completa</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-gears"></i></div>
+          <h3 class="service-title">Automação de Processos</h3>
+          <p class="service-description">Projetos focados em automação inteligente, eficiência operacional e redução de erros humanos em até 95%.</p>
+          <div class="service-benefits">
+            <span class="benefit-tag">Economia de tempo</span>
+            <span class="benefit-tag">Menos erros</span>
+            <span class="benefit-tag">ROI garantido</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="service-title">Inteligência Artificial Aplicada</h3>
+          <p class="service-description">IA que decide, organiza, gera insights e transforma dados em ação estratégica para tomada de decisões inteligentes.</p>
+          <div class="service-benefits">
+            <span class="benefit-tag">Decisões inteligentes</span>
+            <span class="benefit-tag">Análise preditiva</span>
+            <span class="benefit-tag">Vantagem competitiva</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3 class="service-title">Agentes Inteligentes</h3>
+          <p class="service-description">IA conversacional para atendimento e suporte, trabalhando 24h por dia com taxa de resolução de 90%.</p>
+          <div class="service-benefits">
+            <span class="benefit-tag">Atendimento 24/7</span>
+            <span class="benefit-tag">Satisfação do cliente</span>
+            <span class="benefit-tag">Redução de custos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nossa Abordagem -->
+  <section id="metodologia" class="methodology">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Nossa Abordagem</div>
+        <h2 class="section-title">Metodologia comprovada para resultados excepcionais</h2>
+        <p class="section-subtitle">Processo estruturado que combina estratégia, tecnologia e execução para transformar negócios.</p>
+      </div>
+
+      <div class="method-rail" aria-hidden="true"></div>
+
+      <ol class="steps-grid">
+        <li class="step-card"><span class="step-number">01</span><h3 class="step-title">Diagnóstico Completo</h3><p class="step-desc">Análise profunda da sua realidade, objetivos e identificação de oportunidades.</p></li>
+        <li class="step-card"><span class="step-number">02</span><h3 class="step-title">Planejamento Estratégico</h3><p class="step-desc">Roadmap com cronograma, recursos e indicadores de sucesso.</p></li>
+        <li class="step-card"><span class="step-number">03</span><h3 class="step-title">Design & Protótipo</h3><p class="step-desc">Prototipagem interativa para validar fluxos e experiência de usuário.</p></li>
+        <li class="step-card"><span class="step-number">04</span><h3 class="step-title">Desenvolvimento Ágil</h3><p class="step-desc">Entregas incrementais com feedback contínuo e alta adaptabilidade.</p></li>
+        <li class="step-card"><span class="step-number">05</span><h3 class="step-title">Testes & Qualidade</h3><p class="step-desc">Validação de performance, segurança e usabilidade em cada entrega.</p></li>
+        <li class="step-card"><span class="step-number">06</span><h3 class="step-title">Deploy & Treinamento</h3><p class="step-desc">Publicação segura e capacitação da equipe para operação autônoma.</p></li>
+        <li class="step-card"><span class="step-number">07</span><h3 class="step-title">Suporte Contínuo</h3><p class="step-desc">Acompanhamento, ajustes e otimizações para resultados duradouros.</p></li>
+      </ol>
+
+      <div class="method-cta">
+        <button class="btn btn-primary btn-large" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+          Quero aplicar essa metodologia <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases (Vitrine) -->
+  <section id="cases" class="cases cases--vitrine">
+    <div class="container">
+      <header class="cases__header">
+        <div class="badge">Portfólio</div>
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <p class="section-subtitle">Uma vitrine interativa dos nossos trabalhos mais recentes</p>
+      </header>
+
+      <div class="cases__grid" aria-label="Lista de projetos">
+        <!-- Card 1 -->
+        <article class="case-card"
+          data-title="Sistema de Gestão Dan-sa"
+          data-tags="CRM, Financeiro, Aulas Online"
+          data-images='[
+            "assets/case01/case01.png",
+            "assets/case01/case02.png",
+            "assets/case01/case03.png",
+            "assets/case01/case04.png",
+            "assets/case01/case05.png",
+            "assets/case01/case06.png",
+            "assets/case01/case07.png"
+          ]'>
+          <button class="case-card__inner" aria-label="Abrir caso: Sistema de Gestão Dan-sa">
+            <figure class="case-card__media">
+              <img src="assets/case01/case07.png" alt="Sistema de Gestão Dan-sa" loading="lazy" decoding="async" width="800" height="500">
+            </figure>
+            <div class="case-card__caption">
+              <span class="case-card__title">Sistema de Gestão Dan-sa</span>
+              <span class="case-card__badge">Sistema de Gestão</span>
+            </div>
+            <div class="case-card__body">
+              <p>CRM, funil de vendas, financeiro e aulas online.</p>
+            </div>
+          </button>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="case-card"
+          data-title="Cout Barbershop"
+          data-tags="Barbearia, PDV, Agendamentos, Estoque"
+          data-images='[
+            "assets/case02/case02_05.png",
+            "assets/case02/case02_08.png",
+            "assets/case02/case02_04.png",
+            "assets/case02/case02_01.png",
+            "assets/case02/case02_06.png",
+            "assets/case02/case02_07.png"
+          ]'>
+          <button class="case-card__inner" aria-label="Abrir caso: Cout Barbershop">
+            <figure class="case-card__media">
+              <img src="assets/case02/case02_04.png" alt="Cout Barbershop - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+            </figure>
+            <div class="case-card__caption">
+              <span class="case-card__title">Cout Barbershop</span>
+              <span class="case-card__badge">Sistema de Gestão</span>
+            </div>
+            <div class="case-card__body">
+              <p>PDV, agenda inteligente, controle de estoque e relatórios.</p>
+            </div>
+          </button>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="case-card"
+          data-title="Vitriny AI"
+          data-tags="IA, Transformação de Imagens, SaaS"
+          data-images='[
+            "assets/case03/case03_01.png",
+            "assets/case03/case03_02.png",
+            "assets/case03/case03_03.png",
+            "assets/case03/case03_04.png",
+            "assets/case03/case03_05.png",
+            "assets/case03/case03_06.png",
+            "assets/case03/case03_07.png",
+            "assets/case03/case03_08.png"
+          ]'>
+          <button class="case-card__inner" aria-label="Abrir caso: Vitriny AI">
+            <figure class="case-card__media">
+              <img src="assets/case03/case03_01.png" alt="Vitriny AI - Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
+            </figure>
+            <div class="case-card__caption">
+              <span class="case-card__title">Vitriny AI</span>
+              <span class="case-card__badge">Inteligência Artificial</span>
+            </div>
+            <div class="case-card__body">
+              <p>Geração de imagens profissionais com alta produtividade.</p>
+            </div>
+          </button>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="case-card"
+          data-title="Grow Properties"
+          data-tags="Leilões, Real Estate, Investimentos"
+          data-images='[
+            "assets/case04/case04_01.png",
+            "assets/case04/case04_02.png",
+            "assets/case04/case04_03.png",
+            "assets/case04/case04_04.png",
+            "assets/case04/case04_05.png",
+            "assets/case04/case04_06.png",
+            "assets/case04/case04_07.png",
+            "assets/case04/case04_08.png",
+            "assets/case04/case04_09.png",
+            "assets/case04/case04_10.png",
+            "assets/case04/case04_11.png"
+          ]'>
+          <button class="case-card__inner" aria-label="Abrir caso: Grow Properties">
+            <figure class="case-card__media">
+              <img src="assets/case04/case04_03.png" alt="Grow Properties - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+            </figure>
+            <div class="case-card__caption">
+              <span class="case-card__title">Grow Properties</span>
+              <span class="case-card__badge">Real Estate</span>
+            </div>
+            <div class="case-card__body">
+              <p>Gestão de leilões, imóveis e investidores com indicadores.</p>
+            </div>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal (Tela Cheia) -->
+  <div id="vitrineModal" class="vitrine-modal" aria-hidden="true" role="dialog" aria-label="Galeria do projeto">
+    <div class="vitrine-modal__backdrop" data-close></div>
+    <div class="vitrine-modal__shell" role="document">
+      <header class="vitrine-modal__topbar">
+        <div class="vitrine-modal__meta">
+          <h3 class="vitrine-modal__title"></h3>
+          <div class="vitrine-modal__tags" aria-label="Tags do projeto"></div>
+        </div>
+        <div class="vitrine-modal__controls">
+          <button class="vitrine-btn" data-fs-toggle aria-label="Alternar tela cheia"><i class="fas fa-expand"></i></button>
+          <span class="vitrine-counter" aria-live="polite">1 / 1</span>
+          <button class="vitrine-btn" data-close aria-label="Fechar (Esc)"><i class="fas fa-times"></i></button>
+        </div>
+      </header>
+      <main class="vitrine-modal__viewport">
+        <button class="vitrine-nav vitrine-nav--prev" data-prev aria-label="Anterior">‹</button>
+        <img class="vitrine-image" alt="">
+        <button class="vitrine-nav vitrine-nav--next" data-next aria-label="Próxima">›</button>
+      </main>
+      <footer class="vitrine-modal__thumbs" aria-label="Miniaturas"></footer>
+      <div class="vitrine-modal__progress" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Depoimentos -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Depoimentos</div>
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Nossa barbearia se transformou com a solução da Labrego IA. Hoje temos controle total dos serviços e indicadores pelo celular, sem depender de planilhas. Os agendamentos são feitos de forma autônoma pelos clientes, e até a lanchonete foi integrada ao sistema. A parceria com a Luana e sua equipe trouxe inovação, agilidade e uma gestão muito mais moderna."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info">
+              <h4>Thiago</h4><span>Investidor e sócio, Barbearia Cout</span>
+            </div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content"><p>"Profissionalismo excepcional. Entregaram exatamente o que prometeram, no prazo e com qualidade superior."</p></div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info"><h4>Ana Costa</h4><span>Diretora, InnovaCorp</span></div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-content"><p>"A automação implementada nos economizou 40 horas semanais e eliminou praticamente todos os erros manuais."</p></div>
+          <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div class="author-info"><h4>Roberto Lima</h4><span>Gerente, LogiSmart</span></div>
+          </div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Nossa Equipe</div>
+        <h2 class="section-title">Somos seu time: pensamos junto, vestimos a camisa!</h2>
+        <p class="section-subtitle">Não somos apenas fornecedores de tecnologia — somos parceiros estratégicos no crescimento do seu negócio.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar"><img src="assets/Lucas.jpg" alt="Lucas" /></div>
+          <h3 class="team-name">Lucas</h3>
+          <p class="team-role">Co-fundador</p>
+          <p class="team-description">Mais de 15 anos de experiência em grandes corporações. Atualização contínua em IA, automações e tecnologias emergentes.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="assets/Luana.jpg" alt="Luana" /></div>
+          <h3 class="team-name">Luana</h3>
+          <p class="team-role">Fundadora</p>
+          <p class="team-description">Especialista em projetos focados em automação, eficiência operacional e redução de erros. Visão estratégica de negócios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Entre em Contato</div>
+        <h2 class="section-title">Vamos conversar sobre seu projeto</h2>
+        <p class="section-subtitle">Estamos prontos para transformar suas ideias em soluções digitais inovadoras</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Fale Conosco</h3>
+          <p>Nossa equipe está sempre disponível para esclarecer dúvidas e apresentar as melhores soluções para seu negócio.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div><strong>Email</strong><p>contato@labregoia.com.br</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+              </div>
+              <div><strong>Telefone</strong><p>11 93442-7070</p></div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h4>Siga-nos</h4>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/company/labrego-ia" class="social-icon linkedin" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/labregoia" class="social-icon instagram" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/11934427070" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.youtube.com/@labregoia" class="social-icon youtube" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group"><label for="name">Nome completo</label><input type="text" id="name" name="name" required></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+            <div class="form-group"><label for="phone">Telefone</label><input type="tel" id="phone" name="phone"></div>
+            <div class="form-group"><label for="company">Empresa</label><input type="text" id="company" name="company"></div>
+            <div class="form-group">
+              <label for="service">Serviço de interesse</label>
+              <select id="service" name="service">
+                <option value="">Selecione um serviço</option>
+                <option value="aplicativos">Aplicativos Sob Medida</option>
+                <option value="automacao">Automação de Processos</option>
+                <option value="ia">Inteligência Artificial Aplicada</option>
+                <option value="agentes">Agentes Inteligentes</option>
+                <option value="vitriny">Vitriny</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Mensagem</label><textarea id="message" name="message" rows="4" placeholder="Conte-nos sobre seu projeto..."></textarea></div>
+            <button type="submit" class="btn btn-primary btn-large">Enviar Mensagem <span class="arrow">→</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Pronto para impulsionar sua operação com a Labrego IA?</h2>
+        <p class="cta-subtitle">Aceleramos resultados com soluções digitais sob medida e inteligência artificial aplicada ao seu negócio.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-secondary btn-large" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+            Fale Conosco Agora <span class="arrow">→</span>
+          </button>
+          <button class="btn btn-outline-white btn-large" onclick="window.open('https://wa.me/11934427070', '_blank')">Agendar Reunião</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <img src="assets/LogoPrincipal-1.png" alt="Logo Labrego IA" class="footer-logo">
+          <p class="footer-description">Soluções digitais sob medida com inteligência artificial.</p>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Serviços</h3>
+          <ul class="footer-links">
+            <li><a href="#servicos">Aplicativos Sob Medida</a></li>
+            <li><a href="#servicos">Automação de Processos</a></li>
+            <li><a href="#servicos">Inteligência Artificial</a></li>
+            <li><a href="#servicos">Agentes Inteligentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Produtos</h3>
+          <ul class="footer-links">
+            <li><a href="#vitriny">Vitriny AI</a></li>
+            <li><a href="#servicos">Desenvolvimento Custom</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Contato</h3>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span>contato@labregoia.com.br</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <span>11 93442-7070</span>
+            </div>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/company/labrego-ia" class="social-icon linkedin" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/labregoia" class="social-icon instagram" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/11934427070" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.youtube.com/@labregoia" class="social-icon youtube" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Labrego IA. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact -->
+  <div class="floating-contact" id="floatingContactWrapper">
+    <div class="floating-menu" id="floatingMenu">
+      <a href="https://wa.me/11934427070" target="_blank" class="floating-option whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:contato@labregoia.com.br" class="floating-option email" aria-label="Email"><i class="far fa-envelope"></i></a>
+    </div>
+    <button class="floating-btn" id="floatingContact" aria-label="Contato">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/cases-vitrine.js" defer></script>
 </body>
 </html>
-
