@@ -309,120 +309,152 @@
 
     <!-- Cases Section -->
 <!-- ===== CASES ===== -->
-<section id="cases" class="cases">
+<!-- ===== CASES (Vitrine) ===== -->
+<section id="cases" class="cases cases--vitrine">
   <div class="container">
     <header class="cases__header">
-      <h2>Projetos em Destaque</h2>
-      <p>Projetos 100% customizados de acordo com as suas necessidades</p>
+      <div class="badge">Portfólio</div>
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <p class="section-subtitle">Uma vitrine interativa dos nossos trabalhos mais recentes</p>
     </header>
 
-    <div class="cases__carousel">
-      <button class="cases__arrow cases__arrow--prev" aria-label="Anterior" data-cases-prev>‹</button>
+    <div class="cases__grid" aria-label="Lista de projetos">
+      <!-- Card 1 -->
+      <article class="case-card"
+        data-title="Sistema de Gestão Dan-sa"
+        data-tags="CRM, Financeiro, Aulas Online"
+        data-images='[
+          "assets/case01/case01.png",
+          "assets/case01/case02.png",
+          "assets/case01/case03.png",
+          "assets/case01/case04.png",
+          "assets/case01/case05.png",
+          "assets/case01/case06.png",
+          "assets/case01/case07.png"
+        ]'>
+        <button class="case-card__inner" aria-label="Abrir caso: Sistema de Gestão Dan-sa">
+          <figure class="case-card__media">
+            <img src="assets/case01/case07.png" alt="Sistema de Gestão Dan-sa" loading="lazy" decoding="async" width="800" height="500">
+            <figcaption class="case-card__caption">
+              <span class="case-card__title">Sistema de Gestão Dan-sa</span>
+              <span class="case-card__badge">Sistema de Gestão</span>
+            </figcaption>
+          </figure>
+        </button>
+      </article>
 
-      <div class="cases__grid" id="casesGrid" tabindex="0" aria-label="Lista de projetos">
-        <!-- Card 1 -->
-        <article class="case-card"
-          data-title="Sistema de Gestão Dan-sa"
-          data-images='[
-            "assets/case01/case01.png",
-            "assets/case01/case02.png",
-            "assets/case01/case03.png",
-            "assets/case01/case04.png",
-            "assets/case01/case05.png",
-            "assets/case01/case06.png",
-            "assets/case01/case07.png"
-          ]'
-          data-tags="CRM, Financeiro, Aulas Online">
-          <div class="case-card__media">
-            <img src="assets/case01/case07.png" alt="Sistema de gestão Dan-sa " loading="lazy" decoding="async" width="800" height="500">
-            <span class="case-card__badge">Sistema de Gestão</span>
-          </div>
-          <div class="case-card__body">
-            <h3>Sistema de Gestão Dan-sa</h3>
-            <p>CRM, funil de vendas, gestão financeira, Plataforma de aulas on-line, Gestão de estoques e integração com Marketplaces</p>
-          </div>
-        </article>
+      <!-- Card 2 -->
+      <article class="case-card"
+        data-title="Cout Barbershop"
+        data-tags="Barbearia, PDV, Agendamentos, Estoque"
+        data-images='[
+          "assets/case02/case02_05.png",
+          "assets/case02/case02_08.png",
+          "assets/case02/case02_04.png",
+          "assets/case02/case02_01.png",
+          "assets/case02/case02_06.png",
+          "assets/case02/case02_07.png"
+        ]'>
+        <button class="case-card__inner" aria-label="Abrir caso: Cout Barbershop">
+          <figure class="case-card__media">
+            <img src="assets/case02/case02_04.png" alt="Cout Barbershop - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+            <figcaption class="case-card__caption">
+              <span class="case-card__title">Cout Barbershop</span>
+              <span class="case-card__badge">Sistema de Gestão</span>
+            </figcaption>
+          </figure>
+        </button>
+      </article>
 
-        <!-- Card 2 -->
-        <article class="case-card"
-          data-title="Cout Barbershop"
-          data-images='[
-            "assets/case02/case02_05.png",
-            "assets/case02/case02_08.png",
-            "assets/case02/case02_04.png",
-            "assets/case02/case02_01.png",
-            "assets/case02/case02_06.png",
-            "assets/case02/case02_07.png"
-          ]'
-          data-tags="Barbearia, Sistema de Gestão, PDV, Gestão de estoques, Sistema de agendamentos">
-          <div class="case-card__media">
-            <img src="assets/case02/case02_04.png" alt="Cout Barbershop Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
-            <span class="case-card__badge">Sistema de Gestão</span>
-          </div>
-          <div class="case-card__body">
-            <h3>Cout Barbershop</h3>
-            <p>Sistema para gestão de barbearias em Expansão - Sistema próprio</p>
-          </div>
-        </article>
+      <!-- Card 3 -->
+      <article class="case-card"
+        data-title="Vitriny AI"
+        data-tags="IA, Transformação de Imagens, SaaS"
+        data-images='[
+          "assets/case03/case03_01.png",
+          "assets/case03/case03_02.png",
+          "assets/case03/case03_03.png",
+          "assets/case03/case03_04.png",
+          "assets/case03/case03_05.png",
+          "assets/case03/case03_06.png",
+          "assets/case03/case03_07.png",
+          "assets/case03/case03_08.png"
+        ]'>
+        <button class="case-card__inner" aria-label="Abrir caso: Vitriny AI">
+          <figure class="case-card__media">
+            <img src="assets/case03/case03_01.png" alt="Vitriny AI - Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
+            <figcaption class="case-card__caption">
+              <span class="case-card__title">Vitriny AI</span>
+              <span class="case-card__badge">Inteligência Artificial</span>
+            </figcaption>
+          </figure>
+        </button>
+      </article>
 
-        <!-- Card 3 -->
-        <article class="case-card"
-          data-title="Vitriny AI"
-          data-images='[
-            "assets/case03/case03_01.png",
-            "assets/case03/case03_02.png",
-            "assets/case03/case03_03.png",
-            "assets/case03/case03_04.png",
-            "assets/case03/case03_05.png",
-            "assets/case03/case03_06.png",
-            "assets/case03/case03_07.png",
-            "assets/case03/case03_08.png"
-          ]'
-          data-tags="Transformação de imagens, Inteligencia artificial, Saas, Marketplace, Studio">
-          <div class="case-card__media">
-            <img src="assets/case03/case03_01.png" alt="Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
-            <span class="case-card__badge">Inteligencia Artificial</span>
-          </div>
-          <div class="case-card__body">
-            <h3>Vitriny AI</h3>
-            <p>Geração de imagens profissionais com alta produtividade</p>
-          </div>
-        </article>
-
-          <!-- Card 4 -->
-        <article class="case-card"
-          data-title="Grow Properties"
-          data-images='[
-            "assets/case04/case04_01.png",
-            "assets/case04/case04_02.png",
-            "assets/case04/case04_03.png",
-            "assets/case04/case04_04.png",
-            "assets/case04/case04_05.png",
-            "assets/case04/case04_06.png",
-            "assets/case04/case04_07.png",
-            "assets/case04/case04_08.png",
-            "assets/case04/case04_09.png",
-            "assets/case04/case04_10.png",
-            "assets/case04/case04_11.png"
-          ]'
-          data-tags="Leilões, Real State, Sistema de Gestão, Investimentos">
-          <div class="case-card__media">
-            <img src="assets/case04/case04_03.png" alt="Sistema de Gestão no ramo de Real State" loading="lazy" decoding="async" width="800" height="500">
-            <span class="case-card__badge">Real State</span>
-          </div>
-          <div class="case-card__body">
-            <h3>Grow Properties</h3>
-            <p>Sistema de Gestão para empresas do ramo de Real State</p>
-          </div>
-        </article>
-
-        <!-- 🔹 Adicione mais artigos aqui duplicando o padrão acima -->
-      </div>
-
-      <button class="cases__arrow cases__arrow--next" aria-label="Próximo" data-cases-next>›</button>
+      <!-- Card 4 -->
+      <article class="case-card"
+        data-title="Grow Properties"
+        data-tags="Leilões, Real Estate, Investimentos"
+        data-images='[
+          "assets/case04/case04_01.png",
+          "assets/case04/case04_02.png",
+          "assets/case04/case04_03.png",
+          "assets/case04/case04_04.png",
+          "assets/case04/case04_05.png",
+          "assets/case04/case04_06.png",
+          "assets/case04/case04_07.png",
+          "assets/case04/case04_08.png",
+          "assets/case04/case04_09.png",
+          "assets/case04/case04_10.png",
+          "assets/case04/case04_11.png"
+        ]'>
+        <button class="case-card__inner" aria-label="Abrir caso: Grow Properties">
+          <figure class="case-card__media">
+            <img src="assets/case04/case04_03.png" alt="Grow Properties - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+            <figcaption class="case-card__caption">
+              <span class="case-card__title">Grow Properties</span>
+              <span class="case-card__badge">Real Estate</span>
+            </figcaption>
+          </figure>
+        </button>
+      </article>
     </div>
   </div>
 </section>
+
+<!-- ===== MODAL (Tela Cheia) ===== -->
+<div id="vitrineModal" class="vitrine-modal" aria-hidden="true" role="dialog" aria-label="Galeria do projeto">
+  <div class="vitrine-modal__backdrop" data-close></div>
+
+  <div class="vitrine-modal__shell" role="document">
+    <header class="vitrine-modal__topbar">
+      <div class="vitrine-modal__meta">
+        <h3 class="vitrine-modal__title"></h3>
+        <div class="vitrine-modal__tags" aria-label="Tags do projeto"></div>
+      </div>
+
+      <div class="vitrine-modal__controls">
+        <button class="vitrine-btn" data-fs-toggle aria-label="Alternar tela cheia">
+          <i class="fas fa-expand"></i>
+        </button>
+        <span class="vitrine-counter" aria-live="polite">1 / 1</span>
+        <button class="vitrine-btn" data-close aria-label="Fechar (Esc)">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="vitrine-modal__viewport">
+      <button class="vitrine-nav vitrine-nav--prev" data-prev aria-label="Anterior">‹</button>
+      <img class="vitrine-image" alt="">
+      <button class="vitrine-nav vitrine-nav--next" data-next aria-label="Próxima">›</button>
+    </main>
+
+    <footer class="vitrine-modal__thumbs" aria-label="Miniaturas"></footer>
+    <div class="vitrine-modal__progress" aria-hidden="true"><span></span></div>
+  </div>
+</div>
+
 
 <!-- Modal de Galeria -->
 <div class="gallery-modal" aria-hidden="true" role="dialog" aria-label="Galeria de projeto">
