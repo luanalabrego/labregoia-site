@@ -18,12 +18,80 @@
   <meta name="twitter:description" content="Desenvolvimento de aplicativos, sistemas e agentes inteligentes com automação de processos para impulsionar seu negócio.">
   <meta name="twitter:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
 
+  <!-- seu CSS principal -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Goodly:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ESTILOS DO CARROSSEL (pode mover para seu styles.css se preferir) -->
+  <style>
+    :root{
+      --cases-gap:24px;
+      --cases-per-view:1;
+    }
+    @media (min-width:640px){ :root{ --cases-per-view:2; } }
+    @media (min-width:1024px){ :root{ --cases-per-view:3; } }
+
+    /* ===== Carrossel ===== */
+    .cases__viewport{ position:relative; margin-top:16px; }
+    .cases__track{
+      display:flex;
+      gap:var(--cases-gap);
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      padding-bottom:8px;
+    }
+    .cases__track > .case-card{
+      flex:0 0 calc((100% - (var(--cases-gap) * (var(--cases-per-view) - 1))) / var(--cases-per-view));
+      scroll-snap-align:start;
+    }
+    .cases__track::-webkit-scrollbar{ height:8px; }
+    .cases__track::-webkit-scrollbar-thumb{ background:transparent; }
+
+    /* ===== Cards iguais ===== */
+    .case-card__inner{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      border-radius:16px;
+      background:#fff;
+      box-shadow:0 6px 24px rgba(0,0,0,.06);
+      overflow:hidden;
+      text-align:left;
+    }
+    .case-card__media img{
+      width:100%;
+      display:block;
+      aspect-ratio:16/10;   /* garante a mesma altura visual */
+      object-fit:cover;     /* corta excesso mantendo foco */
+    }
+    .case-card__caption,.case-card__body{ padding:14px 16px; }
+    .case-card__title{ font-weight:600; }
+    .case-card__badge{
+      display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px;
+      background:#efeefe; color:#543285; font-size:12px;
+    }
+    .case-card__body{ margin-top:auto; }
+
+    /* ===== Setas ===== */
+    .cases__nav{
+      position:absolute; top:50%; transform:translateY(-50%);
+      z-index:2; width:42px; height:42px; border-radius:999px; border:none;
+      background:#fff; box-shadow:0 6px 24px rgba(0,0,0,.12);
+      cursor:pointer; display:grid; place-items:center;
+    }
+    .cases__nav--prev{ left:-8px; }
+    .cases__nav--next{ right:-8px; }
+    @media (max-width:639px){
+      .cases__nav--prev{ left:4px; }
+      .cases__nav--next{ right:4px; }
+    }
+    .cases__nav[disabled]{ opacity:.4; pointer-events:none; }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -113,7 +181,7 @@
               <div class="client-logo"><img src="assets/7.png" alt="Cliente 7"></div>
               <div class="client-logo"><img src="assets/8.png" alt="Cliente 8"></div>
               <div class="client-logo"><img src="assets/9.png" alt="Cliente 9"></div>
-              <!-- duplicados p/ loop -->
+              <!-- duplicados para loop contínuo -->
               <div class="client-logo"><img src="assets/1.png" alt="Cliente 1"></div>
               <div class="client-logo"><img src="assets/2.png" alt="Cliente 2"></div>
               <div class="client-logo"><img src="assets/3.png" alt="Cliente 3"></div>
@@ -220,118 +288,125 @@
         <p class="section-subtitle">Uma vitrine interativa dos nossos trabalhos mais recentes</p>
       </header>
 
-      <div class="cases__grid" aria-label="Lista de projetos">
-        <!-- Card 1 -->
-        <article class="case-card"
-          data-title="Sistema de Gestão Dan-sa"
-          data-tags="CRM, Financeiro, Aulas Online"
-          data-images='[
-            "assets/case01/case01.png",
-            "assets/case01/case02.png",
-            "assets/case01/case03.png",
-            "assets/case01/case04.png",
-            "assets/case01/case05.png",
-            "assets/case01/case06.png",
-            "assets/case01/case07.png"
-          ]'>
-          <button class="case-card__inner" aria-label="Abrir caso: Sistema de Gestão Dan-sa">
-            <figure class="case-card__media">
-              <img src="assets/case01/case07.png" alt="Sistema de Gestão Dan-sa" loading="lazy" decoding="async" width="800" height="500">
-            </figure>
-            <div class="case-card__caption">
-              <span class="case-card__title">Sistema de Gestão Dan-sa</span>
-              <span class="case-card__badge">Sistema de Gestão</span>
-            </div>
-            <div class="case-card__body">
-              <p>CRM, funil de vendas, financeiro e aulas online.</p>
-            </div>
-          </button>
-        </article>
+      <!-- CARROSSEL: substitui o antigo .cases__grid -->
+      <div class="cases__viewport">
+        <button class="cases__nav cases__nav--prev" aria-label="Anterior">‹</button>
 
-        <!-- Card 2 -->
-        <article class="case-card"
-          data-title="Cout Barbershop"
-          data-tags="Barbearia, PDV, Agendamentos, Estoque"
-          data-images='[
-            "assets/case02/case02_05.png",
-            "assets/case02/case02_08.png",
-            "assets/case02/case02_04.png",
-            "assets/case02/case02_01.png",
-            "assets/case02/case02_06.png",
-            "assets/case02/case02_07.png"
-          ]'>
-          <button class="case-card__inner" aria-label="Abrir caso: Cout Barbershop">
-            <figure class="case-card__media">
-              <img src="assets/case02/case02_04.png" alt="Cout Barbershop - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
-            </figure>
-            <div class="case-card__caption">
-              <span class="case-card__title">Cout Barbershop</span>
-              <span class="case-card__badge">Sistema de Gestão</span>
-            </div>
-            <div class="case-card__body">
-              <p>PDV, agenda inteligente, controle de estoque e relatórios.</p>
-            </div>
-          </button>
-        </article>
+        <div class="cases__track" aria-label="Carrossel de projetos">
+          <!-- Card 1 -->
+          <article class="case-card"
+            data-title="Sistema de Gestão Dan-sa"
+            data-tags="CRM, Financeiro, Aulas Online"
+            data-images='[
+              "assets/case01/case01.png",
+              "assets/case01/case02.png",
+              "assets/case01/case03.png",
+              "assets/case01/case04.png",
+              "assets/case01/case05.png",
+              "assets/case01/case06.png",
+              "assets/case01/case07.png"
+            ]'>
+            <button class="case-card__inner" aria-label="Abrir caso: Sistema de Gestão Dan-sa">
+              <figure class="case-card__media">
+                <img src="assets/case01/case07.png" alt="Sistema de Gestão Dan-sa" loading="lazy" decoding="async" width="800" height="500">
+              </figure>
+              <div class="case-card__caption">
+                <span class="case-card__title">Sistema de Gestão Dan-sa</span>
+                <span class="case-card__badge">Sistema de Gestão</span>
+              </div>
+              <div class="case-card__body">
+                <p>CRM, funil de vendas, financeiro e aulas online.</p>
+              </div>
+            </button>
+          </article>
 
-        <!-- Card 3 -->
-        <article class="case-card"
-          data-title="Vitriny AI"
-          data-tags="IA, Transformação de Imagens, SaaS"
-          data-images='[
-            "assets/case03/case03_01.png",
-            "assets/case03/case03_02.png",
-            "assets/case03/case03_03.png",
-            "assets/case03/case03_04.png",
-            "assets/case03/case03_05.png",
-            "assets/case03/case03_06.png",
-            "assets/case03/case03_07.png",
-            "assets/case03/case03_08.png"
-          ]'>
-          <button class="case-card__inner" aria-label="Abrir caso: Vitriny AI">
-            <figure class="case-card__media">
-              <img src="assets/case03/case03_01.png" alt="Vitriny AI - Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
-            </figure>
-            <div class="case-card__caption">
-              <span class="case-card__title">Vitriny AI</span>
-              <span class="case-card__badge">Inteligência Artificial</span>
-            </div>
-            <div class="case-card__body">
-              <p>Geração de imagens profissionais com alta produtividade.</p>
-            </div>
-          </button>
-        </article>
+          <!-- Card 2 -->
+          <article class="case-card"
+            data-title="Cout Barbershop"
+            data-tags="Barbearia, PDV, Agendamentos, Estoque"
+            data-images='[
+              "assets/case02/case02_05.png",
+              "assets/case02/case02_08.png",
+              "assets/case02/case02_04.png",
+              "assets/case02/case02_01.png",
+              "assets/case02/case02_06.png",
+              "assets/case02/case02_07.png"
+            ]'>
+            <button class="case-card__inner" aria-label="Abrir caso: Cout Barbershop">
+              <figure class="case-card__media">
+                <img src="assets/case02/case02_04.png" alt="Cout Barbershop - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+              </figure>
+              <div class="case-card__caption">
+                <span class="case-card__title">Cout Barbershop</span>
+                <span class="case-card__badge">Sistema de Gestão</span>
+              </div>
+              <div class="case-card__body">
+                <p>PDV, agenda inteligente, controle de estoque e relatórios.</p>
+              </div>
+            </button>
+          </article>
 
-        <!-- Card 4 -->
-        <article class="case-card"
-          data-title="Grow Properties"
-          data-tags="Leilões, Real Estate, Investimentos"
-          data-images='[
-            "assets/case04/case04_01.png",
-            "assets/case04/case04_02.png",
-            "assets/case04/case04_03.png",
-            "assets/case04/case04_04.png",
-            "assets/case04/case04_05.png",
-            "assets/case04/case04_06.png",
-            "assets/case04/case04_07.png",
-            "assets/case04/case04_08.png",
-            "assets/case04/case04_09.png",
-            "assets/case04/case04_10.png",
-            "assets/case04/case04_11.png"
-          ]'>
-          <button class="case-card__inner" aria-label="Abrir caso: Grow Properties">
-            <figure class="case-card__media">
-              <img src="assets/case04/case04_03.png" alt="Grow Properties - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
-            </figure>
-            <div class="case-card__caption">
-              <span class="case-card__title">Grow Properties</span>
-              <span class="case-card__badge">Real Estate</span>
-            </div>
-            <div class="case-card__body">
-              <p>Gestão de leilões, imóveis e investidores com indicadores.</p>
-            </div>
-          </button>
-        </article>
+          <!-- Card 3 -->
+          <article class="case-card"
+            data-title="Vitriny AI"
+            data-tags="IA, Transformação de Imagens, SaaS"
+            data-images='[
+              "assets/case03/case03_01.png",
+              "assets/case03/case03_02.png",
+              "assets/case03/case03_03.png",
+              "assets/case03/case03_04.png",
+              "assets/case03/case03_05.png",
+              "assets/case03/case03_06.png",
+              "assets/case03/case03_07.png",
+              "assets/case03/case03_08.png"
+            ]'>
+            <button class="case-card__inner" aria-label="Abrir caso: Vitriny AI">
+              <figure class="case-card__media">
+                <img src="assets/case03/case03_01.png" alt="Vitriny AI - Geração de imagens por IA" loading="lazy" decoding="async" width="800" height="500">
+              </figure>
+              <div class="case-card__caption">
+                <span class="case-card__title">Vitriny AI</span>
+                <span class="case-card__badge">Inteligência Artificial</span>
+              </div>
+              <div class="case-card__body">
+                <p>Geração de imagens profissionais com alta produtividade.</p>
+              </div>
+            </button>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="case-card"
+            data-title="Grow Properties"
+            data-tags="Leilões, Real Estate, Investimentos"
+            data-images='[
+              "assets/case04/case04_01.png",
+              "assets/case04/case04_02.png",
+              "assets/case04/case04_03.png",
+              "assets/case04/case04_04.png",
+              "assets/case04/case04_05.png",
+              "assets/case04/case04_06.png",
+              "assets/case04/case04_07.png",
+              "assets/case04/case04_08.png",
+              "assets/case04/case04_09.png",
+              "assets/case04/case04_10.png",
+              "assets/case04/case04_11.png"
+            ]'>
+            <button class="case-card__inner" aria-label="Abrir caso: Grow Properties">
+              <figure class="case-card__media">
+                <img src="assets/case04/case04_03.png" alt="Grow Properties - Sistema de Gestão" loading="lazy" decoding="async" width="800" height="500">
+              </figure>
+              <div class="case-card__caption">
+                <span class="case-card__title">Grow Properties</span>
+                <span class="case-card__badge">Real Estate</span>
+              </div>
+              <div class="case-card__body">
+                <p>Gestão de leilões, imóveis e investidores com indicadores.</p>
+              </div>
+            </button>
+          </article>
+        </div>
+
+        <button class="cases__nav cases__nav--next" aria-label="Próximo">›</button>
       </div>
     </div>
   </section>
@@ -576,8 +651,44 @@
     </button>
   </div>
 
-  <!-- Scripts -->
+  <!-- Seus scripts existentes -->
   <script src="js/script.js"></script>
   <script src="js/cases-vitrine.js" defer></script>
+
+  <!-- JS DO CARROSSEL (pode mover para js/script.js) -->
+  <script>
+    (function initCasesCarousel(){
+      const viewport = document.querySelector('.cases__viewport');
+      if (!viewport) return;
+
+      const track = viewport.querySelector('.cases__track');
+      const prev  = viewport.querySelector('.cases__nav--prev');
+      const next  = viewport.querySelector('.cases__nav--next');
+
+      function updateArrows(){
+        const maxScroll = track.scrollWidth - track.clientWidth - 2;
+        prev.toggleAttribute('disabled', track.scrollLeft <= 0);
+        next.toggleAttribute('disabled', track.scrollLeft >= maxScroll);
+      }
+      function scrollByPage(dir){
+        track.scrollBy({ left: track.clientWidth * dir, behavior: 'smooth' });
+      }
+
+      next.addEventListener('click', () => scrollByPage(+1));
+      prev.addEventListener('click', () => scrollByPage(-1));
+
+      track.addEventListener('scroll', updateArrows, { passive:true });
+      window.addEventListener('resize', updateArrows);
+
+      // teclado quando o container estiver focado
+      viewport.tabIndex = 0;
+      viewport.addEventListener('keydown', (e)=>{
+        if (e.key === 'ArrowRight') scrollByPage(+1);
+        if (e.key === 'ArrowLeft')  scrollByPage(-1);
+      });
+
+      updateArrows();
+    })();
+  </script>
 </body>
 </html>
