@@ -4216,3 +4216,242 @@ html {
 
 /* (opcional) deixa o ícone do menu mobile escuro nesse estado também */
 .header.header-light .mobile-menu-btn span { background-color: var(--text-primary); }
+/* ============================
+   VITRINE DE CASES — NAMESPACED
+   ============================ */
+
+/* Seção / grid */
+.cases--vitrine {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(96,124,249,0.05), rgba(156,70,224,0.05));
+}
+
+.cases--vitrine .cases__header .badge {
+  background: rgba(96,124,249,0.08);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Grid responsivo com “masonry” simples */
+.cases--vitrine .cases__grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 22px;
+}
+
+.cases--vitrine .case-card {
+  grid-column: span 6;
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: none;
+}
+
+@media (min-width: 900px){
+  .cases--vitrine .case-card:nth-child(3n+1){ grid-column: span 7; }
+  .cases--vitrine .case-card:nth-child(3n+2){ grid-column: span 5; }
+  .cases--vitrine .case-card:nth-child(3n+3){ grid-column: span 6; }
+}
+
+/* Card visual */
+.cases--vitrine .case-card__inner{
+  display:block; width:100%;
+  padding:0; border:0; background:none; cursor:pointer; text-align:left;
+}
+
+.cases--vitrine .case-card__media{
+  position:relative; border-radius:20px; overflow:hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-xl);
+}
+
+.cases--vitrine .case-card__media img{
+  width:100%; height:340px; object-fit:cover; display:block;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), filter .6s;
+  filter: saturate(.98) contrast(1.02) brightness(.98);
+}
+
+.cases--vitrine .case-card__media::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%);
+  opacity:.85; transition: opacity .4s;
+}
+
+.cases--vitrine .case-card__caption{
+  position:absolute; left:16px; right:16px; bottom:16px; z-index:2;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+}
+
+.cases--vitrine .case-card__title{
+  color:#fff; font-weight:700; font-size: clamp(18px, 2.2vw, 24px);
+  letter-spacing:.2px;
+}
+
+.cases--vitrine .case-card__badge{
+  color:#fff; font-size:12px; font-weight:600; padding:6px 10px;
+  border:1px solid rgba(255,255,255,.22); border-radius:999px;
+  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+  backdrop-filter: blur(6px);
+}
+
+.cases--vitrine .case-card__media:hover img{ transform: scale(1.06); filter: saturate(1.03) brightness(1); }
+.cases--vitrine .case-card__media:hover::after{ opacity: .95; }
+
+/* ============================
+   MODAL TELA CHEIA (namespaced)
+   ============================ */
+
+.vitrine-modal{
+  position: fixed; inset:0; display:none;
+  z-index: 9999; color: var(--text-primary);
+}
+
+.vitrine-modal[aria-hidden="false"]{ display:block; }
+
+.vitrine-modal__backdrop{
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(6px);
+}
+
+.vitrine-modal__shell{
+  position:relative; height:100%; width:100%;
+  display:flex; flex-direction:column; pointer-events:none;
+}
+
+.vitrine-modal__topbar{
+  position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between;
+  padding: 18px 22px; gap:16px; pointer-events:auto;
+}
+
+.vitrine-modal__meta{ display:flex; flex-direction:column; gap:6px; }
+
+.vitrine-modal__title{
+  font-size: clamp(18px, 2vw, 22px); font-weight:800; letter-spacing:.3px;
+  color: var(--white);
+}
+
+.vitrine-modal__tags{
+  color: #e9e9ff;
+  font-size:14px;
+  opacity: .9;
+}
+
+.vitrine-modal__controls{ display:flex; align-items:center; gap:10px; }
+
+.vitrine-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  height:36px; width:36px; border:1px solid rgba(255,255,255,.2); border-radius:10px;
+  background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+  color:#fff; cursor:pointer;
+}
+
+.vitrine-counter{ font-size:14px; color:#eaeaff; opacity:.85; }
+
+.vitrine-modal__viewport{
+  position:relative; flex:1; min-height:0; display:flex; align-items:center; justify-content:center;
+  padding: 12px; pointer-events:auto;
+}
+
+.vitrine-image{
+  max-width: 92vw; max-height: 78vh; width:auto; height:auto; border-radius:16px;
+  box-shadow: var(--shadow-xl); background: #05080f;
+  object-fit: contain;
+  transition: opacity .25s ease;
+}
+
+.vitrine-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  height:56px; width:56px; border-radius:50%; border:1px solid rgba(255,255,255,.25);
+  background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+  color:#fff; font-size:28px; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; user-select:none;
+}
+.vitrine-nav--prev{ left:18px; }
+.vitrine-nav--next{ right:18px; }
+
+.vitrine-modal__thumbs{
+  display:flex; gap:10px; padding: 12px 18px 22px; overflow:auto; scrollbar-width:thin;
+  pointer-events:auto; background: rgba(0,0,0,.5);
+}
+.vitrine-modal__thumbs button{
+  border:0; padding:0; background:none; cursor:pointer; position:relative;
+  border-radius:10px; overflow:hidden; outline: none;
+}
+.vitrine-modal__thumbs img{
+  width:104px; height:64px; object-fit:cover; display:block; opacity:.9; transition:opacity .2s, transform .2s, outline-color .2s;
+  outline: 2px solid transparent;
+}
+.vitrine-modal__thumbs button.is-active img{
+  outline-color: var(--primary-color);
+  opacity:1; transform: translateY(-2px);
+}
+
+.vitrine-modal__progress{
+  position:absolute; left:0; right:0; top:0; height:3px; background:rgba(255,255,255,.12);
+}
+.vitrine-modal__progress span{
+  display:block; height:100%;
+  width:0%; background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transition: width .25s ease;
+}
+
+/* Acessibilidade/foco */
+.vitrine-nav:focus, .vitrine-btn:focus, .cases--vitrine .case-card__inner:focus {
+  outline:2px solid var(--primary-color); outline-offset:2px;
+}
+@media (hover: hover){
+  .vitrine-nav:hover{ transform:translateY(-50%) scale(1.05); }
+  .vitrine-btn:hover{ transform: scale(1.05); }
+}
+
+/* ============================
+   CARROSSEL HORIZONTAL (setas)
+   ============================ */
+.cases--vitrine .cases__carousel { position: relative; }
+.cases--vitrine .cases__carousel .cases__grid {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: .25rem .75rem 1rem;
+  scroll-padding-left: .75rem;
+  scroll-padding-right: .75rem;
+}
+.cases--vitrine .cases__carousel .case-card {
+  flex: 0 0 clamp(260px, 30vw, 360px);
+  scroll-snap-align: start;
+}
+.cases--vitrine .cases__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border: 0; border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  color: #fff; font-size: 28px; line-height: 1;
+  display: grid; place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  z-index: 2;
+}
+.cases--vitrine .cases__arrow:hover { background: rgba(0,0,0,.7); }
+.cases--vitrine .cases__arrow--prev { left: -8px; }
+.cases--vitrine .cases__arrow--next { right: -8px; }
+@media (max-width: 640px) {
+  .cases--vitrine .cases__arrow--prev { left: 4px; }
+  .cases--vitrine .cases__arrow--next { right: 4px; }
+}
+.cases--vitrine .cases__arrow.is-disabled { opacity: .35; cursor: not-allowed; pointer-events: none; }
+
+/* barra de rolagem opcional */
+.cases--vitrine .cases__grid::-webkit-scrollbar { height: 8px; }
+.cases--vitrine .cases__grid::-webkit-scrollbar-thumb { background: #ddd; border-radius: 8px; }
+@supports (scrollbar-width: thin) {
+  .cases--vitrine .cases__grid { scrollbar-width: thin; scrollbar-color: #ddd transparent; }
+}
