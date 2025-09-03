@@ -27,5 +27,9 @@
       ]
     }
   ],
-  "functions": {}
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node@5.3.20"
+    }
+  }
 }
