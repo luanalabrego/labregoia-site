@@ -570,7 +570,6 @@ window.LabregoIA = {
     showFormMessage
 };
 
-<script>
 (function(){
   const root = document.querySelector('.bh-carousel');
   if(!root) return;
@@ -657,7 +656,6 @@ window.LabregoIA = {
 
   layout();
 })();
-</script>
 
 // Troca cor do header conforme você sai do HERO (fundo escuro) para as seções claras
 (function () {
