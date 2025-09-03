@@ -4543,7 +4543,7 @@ html {
   position: absolute;
   inset: 0;
   background: url("../assets/hero-bg.png") center/cover no-repeat; /* <-- caminho corrigido */
-  opacity: .25;
+  opacity: .5;
   z-index: 0;
 }
 
