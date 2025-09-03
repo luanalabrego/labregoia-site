@@ -507,10 +507,27 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3));
 }
 
-/* Home page hero gradient */
+/* Home page hero: imagem de fundo com gradiente sobreposto */
 .hero-home {
-    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+    background: url("../assets/hero-bg.png") center/cover no-repeat;
     color: var(--white);
+}
+
+.hero-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-home .hero-content,
+.hero-home .floating-elements {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-home .hero-title,
@@ -4532,24 +4549,6 @@ html {
 
 /* opcional: modal mais baixo para não cobrir header */
 .gallery-modal__content { max-height: 90vh; margin-top: 5vh; }
-/* ==== HERO: imagem de fundo com 50% ==== */
-.hero-home {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-home::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../assets/hero-bg.png") center/cover no-repeat; /* <-- caminho corrigido */
-  opacity: .5;
-  z-index: 0;
-}
-
-.hero-home .floating-elements { z-index: 1; }
-.hero-home .hero-content { position: relative; z-index: 2; }
-
 /* Header sobre fundo claro */
 .header.header-light .nav-link { color: var(--text-primary); }
 .header.header-light .nav-link:hover { color: var(--primary-color); }
