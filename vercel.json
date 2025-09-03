@@ -26,5 +26,10 @@
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/**.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
