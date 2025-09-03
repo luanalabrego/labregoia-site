@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17509441764"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17509441764');
+  </script>
+
+    <meta charset="UTF-8">
+    <title>Painel Administrativo - Cases</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .admin-container {max-width:600px;margin:80px auto;padding:20px;}
+        .admin-container form {display:flex;flex-direction:column;gap:10px;}
+        .admin-container input, .admin-container textarea {padding:10px;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav-logo">Labrego IA</a>
+        </nav>
+    </header>
+    <div class="admin-container">
+        <h1>Adicionar Case</h1>
+        <form id="caseForm">
+            <input type="text" name="title" placeholder="Título" required>
+            <input type="text" name="category" placeholder="Categoria" required>
+            <textarea name="description" placeholder="Descrição" required></textarea>
+            <input type="file" name="images" accept="image/*" multiple required>
+            <button type="submit" class="btn btn-primary">Salvar Case</button>
+        </form>
+        <p id="saveMessage" style="display:none;">Case salvo! Veja em cases.</p>
+    </div>
+    <script>
+    document.getElementById('caseForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const fd = new FormData(this);
+        const title = fd.get('title');
+        const category = fd.get('category');
+        const description = fd.get('description');
+        const files = fd.getAll('images');
+        Promise.all(files.map(file => new Promise(res => {
+            const reader = new FileReader();
+            reader.onload = () => res(reader.result);
+            reader.readAsDataURL(file);
+        }))).then(images => {
+            const stored = JSON.parse(localStorage.getItem('customCases') || '[]');
+            stored.push({title, category, description, images});
+            localStorage.setItem('customCases', JSON.stringify(stored));
+            document.getElementById('saveMessage').style.display = 'block';
+            this.reset();
+        });
+    });
+    </script>
+</body>
+</html>

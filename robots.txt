@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /server.log
+Disallow: /.git/
+Disallow: /backup/
+
+Sitemap: https://labregoia.com/sitemap.xml
+
