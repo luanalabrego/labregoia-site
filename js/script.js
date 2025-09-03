@@ -60,20 +60,45 @@ document.addEventListener('DOMContentLoaded', function() {
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Enviando...';
             
-            // Simulate form submission
-            setTimeout(() => {
+            // Send form data to backend endpoint
+            const payload = {
+                entry: [{
+                    changes: [{
+                        field: 'leadgen',
+                        value: {
+                            leadgen_id: `contact_form_${Date.now()}`,
+                            page_id: 'website',
+                            form_id: 'contact',
+                            created_time: new Date().toISOString(),
+                            contact: data
+                        }
+                    }]
+                }]
+            };
+
+            fetch('/api/meta/webhooks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json().catch(() => ({}));
+            })
+            .then(() => {
+                showFormMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                showFormMessage('Ocorreu um erro ao enviar sua mensagem. Tente novamente.', 'error');
+            })
+            .finally(() => {
                 contactForm.classList.remove('loading');
                 submitBtn.innerHTML = originalText;
-                
-                // Show success message
-                showFormMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Log form data (in a real application, this would be sent to a server)
-                console.log('Form submitted:', data);
-            }, 2000);
+            });
         });
     }
     
