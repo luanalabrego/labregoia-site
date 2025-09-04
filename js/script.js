@@ -61,25 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = 'Enviando...';
             
             // Send form data to backend endpoint
-            const payload = {
-                entry: [{
-                    changes: [{
-                        field: 'leadgen',
-                        value: {
-                            leadgen_id: `contact_form_${Date.now()}`,
-                            page_id: 'website',
-                            form_id: 'contact',
-                            created_time: new Date().toISOString(),
-                            contact: data
-                        }
-                    }]
-                }]
-            };
-
-            fetch('/api/meta/webhooks', {
+            fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(data)
             })
             .then(response => {
                 if (!response.ok) {
