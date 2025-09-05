@@ -10,9 +10,18 @@ module.exports = async (req, res) => {
   const { name, email, phone, company, service, message } = req.body || {};
 
   const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, SMTP_FROM } = process.env;
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.error('Missing SMTP configuration');
+
+  const requiredKeys = ['SMTP_HOST', 'SMTP_USER', 'SMTP_PASS'];
+  const missingRequired = requiredKeys.filter((key) => !process.env[key]);
+  const optionalMissing = ['SMTP_FROM'].filter((key) => !process.env[key]);
+
+  if (missingRequired.length) {
+    console.error('Missing required SMTP configuration keys:', missingRequired.join(', '));
     return res.status(500).json({ error: 'Email service not configured' });
+  }
+
+  if (optionalMissing.length) {
+    console.warn('Missing optional SMTP configuration keys:', optionalMissing.join(', '));
   }
 
   const transporter = nodemailer.createTransport({
