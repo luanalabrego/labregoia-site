@@ -125,6 +125,18 @@ Configure emails como `contato@seudominio.com`:
 2. Crie contas de email
 3. Configure no cliente de email
 
+### Formulário de Contato
+Para que o formulário de contato envie mensagens por email é necessário configurar um serviço SMTP. Crie um arquivo `.env` com as seguintes variáveis (veja `.env.example`):
+```
+SMTP_HOST=seu_servidor
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=seu_usuario
+SMTP_PASS=sua_senha
+SMTP_FROM=no-reply@seudominio.com
+```
+Em produção, defina essas variáveis no painel de hospedagem ou na plataforma (por exemplo, Vercel) que executará a função em `api/contact.js`.
+
 ### Backup
 Configure backup automático:
 1. Vá em **Backup** no hPanel
