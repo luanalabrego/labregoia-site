@@ -31,61 +31,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Validate required fields
-            if (!data.name || !data.email) {
-                showFormMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
-                return;
-            }
-            
-            // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                showFormMessage('Por favor, insira um email válido.', 'error');
-                return;
-            }
-            
-            // Show loading state
-            contactForm.classList.add('loading');
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Enviando...';
-            
-            // Send form data to backend endpoint
-            fetch('/api/contact', {
+    // Contact form submission
+    document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+
+        const data = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
+            company: form.company.value.trim(),
+            service: form.service.value,
+            message: form.message.value.trim()
+        };
+
+        try {
+            const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json().catch(() => ({}));
-            })
-            .then(() => {
-                showFormMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-                contactForm.reset();
-            })
-            .catch(error => {
-                console.error('Form submission error:', error);
-                showFormMessage('Ocorreu um erro ao enviar sua mensagem. Tente novamente.', 'error');
-            })
-            .finally(() => {
-                contactForm.classList.remove('loading');
-                submitBtn.innerHTML = originalText;
+                body: JSON.stringify(data),
             });
-        });
-    }
+
+            const body = await res.json().catch(() => ({}));
+            if (!res.ok) throw new Error(body?.error || `HTTP ${res.status}`);
+
+            alert('Mensagem enviada! Retornaremos em breve.');
+            form.reset();
+        } catch (err) {
+            console.error('Form submission error:', err);
+            alert(`Falha ao enviar: ${err.message}`);
+        }
+    });
     
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -530,32 +506,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Form message display function
-function showFormMessage(message, type) {
-    const contactForm = document.getElementById('contactForm');
-    if (!contactForm) return;
-    
-    // Remove existing messages
-    const existingMessage = contactForm.querySelector('.form-success, .form-error');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Create new message
-    const messageDiv = document.createElement('div');
-    messageDiv.className = type === 'success' ? 'form-success' : 'form-error';
-    messageDiv.textContent = message;
-    
-    // Insert message at the beginning of the form
-    contactForm.insertBefore(messageDiv, contactForm.firstChild);
-    
-    // Auto-remove message after 5 seconds
-    setTimeout(() => {
-        if (messageDiv.parentNode) {
-            messageDiv.remove();
-        }
-    }, 5000);
-}
 
 // Utility functions
 function scrollToTop() {
@@ -576,8 +526,7 @@ function openContactModal() {
 // Export functions for potential use in other scripts
 window.LabregoIA = {
     scrollToTop,
-    openContactModal,
-    showFormMessage
+    openContactModal
 };
 
 (function(){

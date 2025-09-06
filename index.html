@@ -62,21 +62,9 @@
     @media (min-width:1024px){ :root{ --cases-per-view:3; } }
 
     /* ===== Carrossel ===== */
-    .cases__viewport{ position:relative; margin-top:16px; }
-    <div class="cases__viewport">
-  <button class="cases__nav cases__nav--prev" aria-label="Anterior">‹</button>
+      .cases__viewport{ position:relative; margin-top:16px; }
 
-  <div class="cases__track" aria-label="Carrossel de projetos">
-    <!-- seus <article class="case-card"> ... -->
-  </div>
-
-  <button class="cases__nav cases__nav--next" aria-label="Próximo">›</button>
-</div>
-
-<!-- ADICIONE ESTA LINHA -->
-<div class="cases__dots" aria-label="Paginação do carrossel"></div>
-
-    .cases__track{
+      .cases__track{
       display:flex;
       gap:var(--cases-gap);
       overflow-x:auto;
@@ -517,6 +505,7 @@
 
         <button class="cases__nav cases__nav--next" aria-label="Próximo">›</button>
       </div>
+      <div class="cases__dots" aria-label="Paginação do carrossel"></div>
     </div>
   </section>
 
