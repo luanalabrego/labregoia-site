@@ -66,7 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (successModal) {
                 const firstName = data.name.split(' ')[0];
                 document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
-                document.getElementById('successModalMessage').textContent = `Olá ${firstName}, recebemos sua mensagem e em breve entraremos em contato.`;
+                document.getElementById('successModalMessage').textContent = `Recebemos seu contato com carinho 💜
+Em breve nossa equipe vai falar com você para entender melhor suas ideias e apresentar as melhores soluções.`;
                 successModal.classList.add('open');
             } else {
                 alert('Mensagem enviada! Retornaremos em breve.');
