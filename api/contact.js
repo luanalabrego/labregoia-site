@@ -1,7 +1,7 @@
 // /api/contact.js  (Vercel Serverless Function)
 import nodemailer from 'nodemailer';
 
-export const config = { runtime: 'nodejs18.x' }; // força Node (não Edge)
+export const config = { runtime: 'nodejs' }; // força Node (não Edge)
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
