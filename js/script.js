@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Success modal for contact form
+    const successModal = document.getElementById('successModal');
+    const successModalClose = document.getElementById('successModalClose');
+    successModalClose?.addEventListener('click', () => successModal.classList.remove('open'));
+    successModal?.addEventListener('click', (e) => {
+        if (e.target === successModal) successModal.classList.remove('open');
+    });
+
     // Contact form submission
     document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -55,7 +63,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const body = await res.json().catch(() => ({}));
             if (!res.ok) throw new Error(body?.error || `HTTP ${res.status}`);
 
-            alert('Mensagem enviada! Retornaremos em breve.');
+            if (successModal) {
+                const firstName = data.name.split(' ')[0];
+                document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
+                document.getElementById('successModalMessage').textContent = `Olá ${firstName}, recebemos sua mensagem e em breve entraremos em contato.`;
+                successModal.classList.add('open');
+            } else {
+                alert('Mensagem enviada! Retornaremos em breve.');
+            }
             form.reset();
         } catch (err) {
             console.error('Form submission error:', err);
