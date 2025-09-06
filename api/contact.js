@@ -1,50 +1,53 @@
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+// /api/contact.js  (Vercel Serverless Function)
+import nodemailer from 'nodemailer';
 
-module.exports = async (req, res) => {
+export const config = { runtime: 'nodejs18.x' }; // força Node (não Edge)
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-
-  const { name, email, phone, company, service, message } = req.body || {};
-
-  const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, SMTP_FROM } = process.env;
-
-  const requiredKeys = ['SMTP_HOST', 'SMTP_USER', 'SMTP_PASS'];
-  const missingRequired = requiredKeys.filter((key) => !process.env[key]);
-  const optionalMissing = ['SMTP_FROM'].filter((key) => !process.env[key]);
-
-  if (missingRequired.length) {
-    console.error('Missing required SMTP configuration keys:', missingRequired.join(', '));
-    return res.status(500).json({ error: 'Email service not configured' });
-  }
-
-  if (optionalMissing.length) {
-    console.warn('Missing optional SMTP configuration keys:', optionalMissing.join(', '));
-  }
-
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: parseInt(SMTP_PORT || '587', 10),
-    secure: SMTP_SECURE === 'true',
-    auth: {
-      user: SMTP_USER,
-      pass: SMTP_PASS
-    }
-  });
 
   try {
-    await transporter.sendMail({
-      from: SMTP_FROM || SMTP_USER,
-      to: 'contato@labregoia.com.br',
-      subject: 'Novo contato do site',
-      text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nEmpresa: ${company}\nServiço: ${service}\nMensagem: ${message}`
+    const { name, email, phone, company, service, message } = req.body || {};
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: 'Campos obrigatórios: name, email, message' });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,         // smtp.gmail.com
+      port: Number(process.env.SMTP_PORT), // 465
+      secure: true,                        // 465 => TLS implícito
+      auth: {
+        user: process.env.SMTP_USER,       // contato@labregoia.com.br
+        pass: process.env.SMTP_PASS,       // App Password
+      },
+      connectionTimeout: 15000,
+      greetingTimeout: 10000,
+      socketTimeout: 20000,
     });
 
-    res.status(200).json({ status: 'ok' });
-  } catch (error) {
-    console.error('Email send error:', error);
-    res.status(500).json({ error: 'Failed to send email' });
+    await transporter.verify(); // teste de handshake
+
+    await transporter.sendMail({
+      from: `Labrego IA <${process.env.SMTP_USER}>`, // use o mesmo do USER
+      to: process.env.CONTACT_INBOX || process.env.SMTP_USER,
+      replyTo: email,
+      subject: `Novo contato: ${name}`,
+      text: [
+        `Nome: ${name}`,
+        `Email: ${email}`,
+        `Telefone: ${phone || '-'}`,
+        `Empresa: ${company || '-'}`,
+        `Serviço: ${service || '-'}`,
+        '',
+        (message || '').toString()
+      ].join('\n'),
+    });
+
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    console.error('SMTP error:', err);
+    return res.status(500).json({ error: 'Email send failed' });
   }
-};
+}
