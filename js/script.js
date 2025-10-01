@@ -11,25 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Floating contact button with menu
-    const floatingContactBtn = document.getElementById('floatingContact');
-    const floatingContactWrapper = document.getElementById('floatingContactWrapper');
     const floatingContactElement = document.querySelector('.floating-contact');
-    if (floatingContactBtn) {
-        floatingContactBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (floatingContactWrapper) {
-                floatingContactWrapper.classList.toggle('open');
-            }
-        });
-
-        // Close when clicking outside
-        document.addEventListener('click', function(e) {
-            if (floatingContactWrapper && !floatingContactWrapper.contains(e.target)) {
-                floatingContactWrapper.classList.remove('open');
-            }
-        });
-    }
     
     // Success modal for contact form
     const successModal = document.getElementById('successModal');
@@ -40,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Contact form submission
-    document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
         e.preventDefault();
         const form = e.currentTarget;
 
@@ -53,30 +35,31 @@ document.addEventListener('DOMContentLoaded', function() {
             message: form.message.value.trim()
         };
 
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            });
+        const whatsappMessage = [
+            `Olá! Meu nome é ${data.name || '...'}.`,
+            data.company ? `Empresa: ${data.company}.` : '',
+            data.phone ? `Telefone: ${data.phone}.` : '',
+            data.service ? `Tenho interesse em: ${form.service.options[form.service.selectedIndex].text}.` : '',
+            data.message ? `Mensagem: ${data.message}` : ''
+        ]
+            .filter(Boolean)
+            .join('\n');
 
-            const body = await res.json().catch(() => ({}));
-            if (!res.ok) throw new Error(body?.error || `HTTP ${res.status}`);
+        const whatsappBaseUrl = 'https://wa.me/5511991108378';
+        const whatsappUrl = whatsappMessage
+            ? `${whatsappBaseUrl}?text=${encodeURIComponent(whatsappMessage)}`
+            : whatsappBaseUrl;
 
-            if (successModal) {
-                const firstName = data.name.split(' ')[0];
-                document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
-                document.getElementById('successModalMessage').textContent = `Recebemos seu contato com carinho 💜
-Em breve nossa equipe vai falar com você para entender melhor suas ideias e apresentar as melhores soluções.`;
-                successModal.classList.add('open');
-            } else {
-                alert('Mensagem enviada! Retornaremos em breve.');
-            }
-            form.reset();
-        } catch (err) {
-            console.error('Form submission error:', err);
-            alert(`Falha ao enviar: ${err.message}`);
+        window.open(whatsappUrl, '_blank');
+
+        if (successModal) {
+            const firstName = data.name.split(' ')[0] || 'Tudo certo';
+            document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
+            document.getElementById('successModalMessage').textContent = 'Abrimos uma conversa no WhatsApp para continuar nosso atendimento. Até já! 💜';
+            successModal.classList.add('open');
         }
+
+        form.reset();
     });
     
     // Smooth scrolling for anchor links

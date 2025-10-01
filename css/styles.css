@@ -1936,6 +1936,15 @@ html {
     justify-content: center;
 }
 
+.floating-btn.whatsapp {
+    background: #25D366;
+    color: var(--white);
+}
+
+.floating-btn.whatsapp:hover {
+    background: #1ebe5d;
+}
+
 .floating-btn:hover {
     transform: scale(1.1);
     box-shadow: var(--shadow-xl);
