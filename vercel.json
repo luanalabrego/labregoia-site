@@ -11,7 +11,7 @@
     { "source": "/cases", "destination": "/pages/cases.html" },
     { "source": "/admin", "destination": "/pages/admin.html" },
     { "source": "/servicos", "destination": "/pages/servicos.html" },
-    { "source": "/leads", "destination": "/pages/gerar-leads.html" }
+    { "source": "/leads", "destination": "/leads/index.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }
