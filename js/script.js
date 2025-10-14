@@ -16,54 +16,125 @@ document.addEventListener('DOMContentLoaded', function() {
     // Success modal for contact form
     const successModal = document.getElementById('successModal');
     const successModalClose = document.getElementById('successModalClose');
+    const successModalTitle = document.getElementById('successModalTitle');
+    const successModalMessage = document.getElementById('successModalMessage');
     successModalClose?.addEventListener('click', () => successModal.classList.remove('open'));
     successModal?.addEventListener('click', (e) => {
         if (e.target === successModal) successModal.classList.remove('open');
     });
 
+    const showFeedbackModal = (title, message) => {
+        if (!successModal) {
+            alert(`${title}\n${message}`);
+            return;
+        }
+
+        if (successModalTitle) successModalTitle.textContent = title;
+        if (successModalMessage) successModalMessage.textContent = message;
+        successModal.classList.add('open');
+    };
+
     // Contact form submission
-    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const form = e.currentTarget;
+    document.querySelectorAll('form#contactForm').forEach((form) => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formElement = e.currentTarget;
+            const isCrmLeadForm = formElement.dataset.formType === 'crm-lead';
 
-        const serviceSelect = form.service;
-        const selectedServiceLabel = serviceSelect?.options[serviceSelect.selectedIndex]?.textContent.trim();
+            const submitButton = formElement.querySelector('button[type="submit"]');
+            const originalButtonContent = submitButton?.innerHTML;
+            const setSubmittingState = (isSubmitting) => {
+                if (!submitButton) return;
+                submitButton.disabled = isSubmitting;
+                submitButton.innerHTML = isSubmitting ? 'Enviando...' : originalButtonContent;
+            };
 
-        const data = {
-            name: form.name.value.trim(),
-            email: form.email.value.trim(),
-            phone: form.phone.value.trim(),
-            company: form.company.value.trim(),
-            service: serviceSelect?.value || '',
-            serviceLabel: selectedServiceLabel && serviceSelect.value ? selectedServiceLabel : '',
-            challenge: form.challenge?.value.trim(),
-            message: form.message?.value.trim()
-        };
+            const serviceSelect = formElement.service;
+            const selectedServiceLabel = serviceSelect?.options[serviceSelect.selectedIndex]?.textContent.trim();
 
-        const whatsappMessage = [
-            `Olá! Meu nome é ${data.name || '...'}.`,
-            data.company ? `Empresa: ${data.company}.` : '',
-            data.phone ? `Telefone: ${data.phone}.` : '',
-            data.email ? `E-mail: ${data.email}.` : '',
-            data.serviceLabel ? `Serviço de interesse: ${data.serviceLabel}.` : '',
-            data.challenge ? `Desafio principal: ${data.challenge}` : '',
-            data.message ? `Detalhes adicionais: ${data.message}` : ''
-        ]
-            .filter(Boolean)
-            .join('\n');
+            const data = {
+                name: formElement.name.value.trim(),
+                email: formElement.email?.value.trim() || '',
+                phone: formElement.phone?.value.trim() || '',
+                company: formElement.company?.value.trim() || '',
+                service: serviceSelect?.value || '',
+                serviceLabel: selectedServiceLabel && serviceSelect.value ? selectedServiceLabel : '',
+                challenge: formElement.challenge?.value.trim(),
+                message: formElement.message?.value.trim()
+            };
 
-        const whatsappBaseUrl = 'https://wa.me/5511991108378';
-        const whatsappUrl = whatsappMessage
-            ? `${whatsappBaseUrl}?text=${encodeURIComponent(whatsappMessage)}`
-            : whatsappBaseUrl;
+            if (isCrmLeadForm) {
+                let redirecting = false;
+                try {
+                    setSubmittingState(true);
 
-        window.open(whatsappUrl, '_blank');
+                    const response = await fetch('/api/crm/clients', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: data.name,
+                            phone: data.phone,
+                            company: data.company,
+                            email: data.email
+                        })
+                    });
 
-        form.reset();
+                    if (!response.ok) {
+                        let errorMessage = 'Não conseguimos enviar seu cadastro agora. Tente novamente em instantes.';
+                        try {
+                            const errorBody = await response.json();
+                            if (errorBody?.error) {
+                                errorMessage = errorBody.error;
+                            }
+                        } catch (parseError) {
+                            console.error('Erro ao interpretar resposta do CRM', parseError);
+                        }
+                        throw new Error(errorMessage);
+                    }
 
-        setTimeout(() => {
-            window.location.href = '/pages/obrigado.html';
-        }, 300);
+                    redirecting = true;
+                    window.location.href = '/pages/obrigado.html';
+                    return;
+                } catch (error) {
+                    console.error('Erro ao enviar lead para o CRM', error);
+                    const message = error instanceof Error && error.message
+                        ? error.message
+                        : 'Tente novamente em instantes ou fale com nossa equipe pelo WhatsApp.';
+                    showFeedbackModal('Não foi possível enviar seu cadastro', message);
+                } finally {
+                    if (!redirecting) {
+                        setSubmittingState(false);
+                    }
+                }
+
+                return;
+            }
+
+            const whatsappMessage = [
+                `Olá! Meu nome é ${data.name || '...'}.`,
+                data.company ? `Empresa: ${data.company}.` : '',
+                data.phone ? `Telefone: ${data.phone}.` : '',
+                data.email ? `E-mail: ${data.email}.` : '',
+                data.serviceLabel ? `Serviço de interesse: ${data.serviceLabel}.` : '',
+                data.challenge ? `Desafio principal: ${data.challenge}` : '',
+                data.message ? `Detalhes adicionais: ${data.message}` : ''
+            ]
+                .filter(Boolean)
+                .join('\n');
+
+            const whatsappBaseUrl = 'https://wa.me/5511991108378';
+            const whatsappUrl = whatsappMessage
+                ? `${whatsappBaseUrl}?text=${encodeURIComponent(whatsappMessage)}`
+                : whatsappBaseUrl;
+
+            window.open(whatsappUrl, '_blank');
+
+            formElement.reset();
+
+            setTimeout(() => {
+                window.location.href = '/pages/obrigado.html';
+            }, 300);
+        });
     });
     
     // Smooth scrolling for anchor links
