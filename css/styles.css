@@ -5028,3 +5028,111 @@ html {
   width:24px; background: linear-gradient(90deg, #607cf9, #9c46e0);
 }
 
+
+/* Lead Generation Landing Page */
+.lead-hero {
+    padding: 160px 0 120px;
+    background: radial-gradient(circle at top right, rgba(96, 124, 249, 0.25), transparent 55%),
+        linear-gradient(135deg, rgba(96, 124, 249, 0.1) 0%, rgba(96, 124, 249, 0.05) 100%);
+}
+
+.lead-hero__content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lead-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.lead-hero__title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.lead-hero__subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.lead-form {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.lead-form__wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(96, 124, 249, 0.2);
+}
+
+.lead-form__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lead-form__header h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.lead-form__header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.lead-form__form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.lead-form__form .form-group {
+    margin: 0;
+}
+
+.form-group--full {
+    grid-column: 1 / -1;
+}
+
+.lead-form__form .btn {
+    justify-self: flex-start;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .lead-hero {
+        padding: 120px 0 80px;
+    }
+
+    .lead-form__wrapper {
+        padding: 32px;
+    }
+
+    .lead-form__form {
+        grid-template-columns: 1fr;
+    }
+
+    .lead-form__form .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
