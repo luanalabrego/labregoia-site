@@ -1865,8 +1865,8 @@ html {
 /* Floating Contact Button */
 .floating-contact {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
+    bottom: 40px;
+    right: 40px;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -1921,6 +1921,7 @@ html {
 }
 
 .floating-btn {
+    position: relative;
     width: 56px;
     height: 56px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -1934,6 +1935,23 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    outline: none;
+    overflow: visible;
+    z-index: 0;
+}
+
+.floating-btn.whatsapp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.35);
+    transform: scale(1);
+    opacity: 0;
+    pointer-events: none;
+    animation: whatsappPulse 2.75s ease-out infinite;
+    z-index: -1;
 }
 
 .floating-btn.whatsapp {
@@ -1958,6 +1976,21 @@ html {
 @keyframes floatBtn {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    60% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }
 
 /* Responsive Design Updates */
@@ -1990,10 +2023,10 @@ html {
     }
     
     .floating-contact {
-        bottom: 16px;
-        right: 16px;
+        bottom: 24px;
+        right: 24px;
     }
-    
+
     .floating-btn {
         width: 48px;
         height: 48px;
@@ -5031,7 +5064,7 @@ html {
 
 /* Lead Generation Landing Page */
 .lead-hero {
-    padding: 160px 0 120px;
+    padding: 120px 0 72px;
     background: radial-gradient(circle at top right, rgba(96, 124, 249, 0.25), transparent 55%),
         linear-gradient(135deg, rgba(96, 124, 249, 0.1) 0%, rgba(96, 124, 249, 0.05) 100%);
 }
@@ -5068,7 +5101,7 @@ html {
 }
 
 .lead-form {
-    padding: 100px 0;
+    padding: 72px 0 96px;
     background: var(--white);
 }
 
@@ -5119,7 +5152,7 @@ html {
 
 @media (max-width: 768px) {
     .lead-hero {
-        padding: 120px 0 80px;
+        padding: 96px 0 48px;
     }
 
     .lead-form__wrapper {
