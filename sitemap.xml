@@ -11,6 +11,13 @@
     
     <!-- Páginas Principais -->
     <url>
+        <loc>https://labregoia.com/leads</loc>
+        <lastmod>2025-08-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
         <loc>https://labregoia.com/pages/servicos.html</loc>
         <lastmod>2025-08-09</lastmod>
         <changefreq>weekly</changefreq>
