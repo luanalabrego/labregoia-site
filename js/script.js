@@ -30,17 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
             name: form.name.value.trim(),
             email: form.email.value.trim(),
             phone: form.phone.value.trim(),
-            company: form.company.value.trim(),
-            service: form.service.value,
-            message: form.message.value.trim()
+            company: form.company.value.trim()
         };
 
         const whatsappMessage = [
             `Olá! Meu nome é ${data.name || '...'}.`,
             data.company ? `Empresa: ${data.company}.` : '',
             data.phone ? `Telefone: ${data.phone}.` : '',
-            data.service ? `Tenho interesse em: ${form.service.options[form.service.selectedIndex].text}.` : '',
-            data.message ? `Mensagem: ${data.message}` : ''
+            data.email ? `E-mail: ${data.email}.` : ''
         ]
             .filter(Boolean)
             .join('\n');
@@ -55,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (successModal) {
             const firstName = data.name.split(' ')[0] || 'Tudo certo';
             document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
-            document.getElementById('successModalMessage').textContent = 'Abrimos uma conversa no WhatsApp para continuar nosso atendimento. Até já! 💜';
+            document.getElementById('successModalMessage').textContent = 'Abrimos uma conversa no WhatsApp para entender seu projeto e apresentar como a Labrego IA pode ajudar.';
             successModal.classList.add('open');
         }
 

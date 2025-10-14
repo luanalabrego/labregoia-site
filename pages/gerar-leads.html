@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17509441764"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17509441764');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecte sua empresa à Labrego IA</title>
+  <link rel="icon" href="/assets/logo-512.png" type="image/png">
+  <meta name="description" content="Cadastre-se para conversar com a Labrego IA sobre soluções de inteligência artificial e automação sob medida para sua empresa.">
+  <meta name="keywords" content="labrego ia, cadastro, inteligência artificial para empresas, automação, consultoria em ia">
+  <link rel="canonical" href="https://labregoia.com/pages/gerar-leads.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Labrego IA">
+  <meta property="og:title" content="Conecte sua empresa à Labrego IA">
+  <meta property="og:description" content="Informe seus dados e nossa equipe retornará com uma proposta personalizada de IA para sua empresa.">
+  <meta property="og:url" content="https://labregoia.com/pages/gerar-leads.html">
+  <meta property="og:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conecte sua empresa à Labrego IA">
+  <meta name="twitter:description" content="Cadastre-se para falar com especialistas em IA, automação e produtos digitais da Labrego IA.">
+  <meta name="twitter:image" content="https://labregoia.com/assets/LogoPrincipal-1.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Goodly:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header header-light">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="../index.html" aria-label="Voltar para a página inicial">
+            <img src="../assets/LogoPrincipal-1.png" alt="Labrego IA" class="logo-img">
+          </a>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Início</a>
+          <a href="#lead-form" class="nav-link">Formulário</a>
+        </nav>
+        <button class="btn btn-primary header-contact-btn" onclick="document.getElementById('lead-form').scrollIntoView({ behavior: 'smooth' });">
+          Quero falar com a Labrego IA
+          <span class="arrow">→</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="lead-hero">
+      <div class="container">
+        <div class="lead-hero__content">
+          <p class="lead-hero__eyebrow">Integração de IA e automação para negócios</p>
+          <h1 class="lead-hero__title">Cadastre sua empresa para receber um diagnóstico personalizado</h1>
+          <p class="lead-hero__subtitle">Nossa equipe vai entender seu cenário, propor um roadmap de IA e acompanhar a implementação para gerar resultados reais.</p>
+          <button class="btn btn-secondary btn-large" onclick="document.getElementById('lead-form').scrollIntoView({ behavior: 'smooth' });">
+            Quero receber o diagnóstico
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-form" id="lead-form">
+      <div class="container">
+        <div class="lead-form__wrapper">
+          <div class="lead-form__header">
+            <h2>Inscreva sua empresa e receba nossa proposta</h2>
+            <p>Preencha os dados abaixo para que possamos entender seu contexto e direcionar a melhor frente de IA, automação ou produto digital.</p>
+          </div>
+          <form class="contact-form lead-form__form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Nome completo</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email profissional</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefone/WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Empresa</label>
+              <input type="text" id="company" name="company" placeholder="Nome da empresa" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-large">
+              Receber contato da equipe
+              <span class="arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="contact-success-modal" id="successModal" aria-hidden="true">
+    <div class="contact-success-modal__content">
+      <button class="contact-success-modal__close" id="successModalClose" aria-label="Fechar">&times;</button>
+      <h2 class="contact-success-modal__title" id="successModalTitle"></h2>
+      <p class="contact-success-modal__message" id="successModalMessage"></p>
+    </div>
+  </div>
+
+  <a href="https://wa.me/5511991108378" target="_blank" rel="noopener" class="floating-btn whatsapp" id="floatingContact" aria-label="Falar com a Labrego IA no WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="../js/script.js" defer></script>
+</body>
+</html>
