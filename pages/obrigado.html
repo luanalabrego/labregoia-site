@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado pelo contato | Labrego IA</title>
+  <link rel="icon" href="/assets/logo-512.png" type="image/png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="thank-you-page">
+  <header class="thank-you-header">
+    <a href="/" class="thank-you-logo" aria-label="Voltar para a página inicial da Labrego IA">
+      <img src="/assets/LogoPrincipal-1.png" alt="Labrego IA" />
+    </a>
+  </header>
+
+  <main class="thank-you-container">
+    <section class="thank-you-card">
+      <span class="thank-you-badge">Mensagem recebida</span>
+      <h1>Obrigado por entrar em contato!</h1>
+      <p>Recebemos suas informações e um especialista da Labrego IA vai retornar em breve para entender melhor o seu projeto.</p>
+      <p class="thank-you-subtext">Enquanto isso, aproveite para conhecer mais sobre nossas soluções e cases de sucesso.</p>
+      <a class="btn btn-primary btn-large" href="/" role="button">Conhecer o nosso site <span class="arrow">→</span></a>
+    </section>
+  </main>
+
+  <footer class="thank-you-footer">
+    <p>© <span id="thankYouYear"></span> Labrego IA. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('thankYouYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
