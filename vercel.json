@@ -10,7 +10,8 @@
     { "source": "/sobre", "destination": "/pages/sobre.html" },
     { "source": "/cases", "destination": "/pages/cases.html" },
     { "source": "/admin", "destination": "/pages/admin.html" },
-    { "source": "/servicos", "destination": "/pages/servicos.html" }
+    { "source": "/servicos", "destination": "/pages/servicos.html" },
+    { "source": "/leads", "destination": "/pages/gerar-leads.html" }
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }
