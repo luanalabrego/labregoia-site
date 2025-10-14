@@ -26,18 +26,28 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const form = e.currentTarget;
 
+        const serviceSelect = form.service;
+        const selectedServiceLabel = serviceSelect?.options[serviceSelect.selectedIndex]?.textContent.trim();
+
         const data = {
             name: form.name.value.trim(),
             email: form.email.value.trim(),
             phone: form.phone.value.trim(),
-            company: form.company.value.trim()
+            company: form.company.value.trim(),
+            service: serviceSelect?.value || '',
+            serviceLabel: selectedServiceLabel && serviceSelect.value ? selectedServiceLabel : '',
+            challenge: form.challenge?.value.trim(),
+            message: form.message?.value.trim()
         };
 
         const whatsappMessage = [
             `Olá! Meu nome é ${data.name || '...'}.`,
             data.company ? `Empresa: ${data.company}.` : '',
             data.phone ? `Telefone: ${data.phone}.` : '',
-            data.email ? `E-mail: ${data.email}.` : ''
+            data.email ? `E-mail: ${data.email}.` : '',
+            data.serviceLabel ? `Serviço de interesse: ${data.serviceLabel}.` : '',
+            data.challenge ? `Desafio principal: ${data.challenge}` : '',
+            data.message ? `Detalhes adicionais: ${data.message}` : ''
         ]
             .filter(Boolean)
             .join('\n');
@@ -49,14 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         window.open(whatsappUrl, '_blank');
 
-        if (successModal) {
-            const firstName = data.name.split(' ')[0] || 'Tudo certo';
-            document.getElementById('successModalTitle').textContent = `Obrigado, ${firstName}!`;
-            document.getElementById('successModalMessage').textContent = 'Abrimos uma conversa no WhatsApp para entender seu projeto e apresentar como a Labrego IA pode ajudar.';
-            successModal.classList.add('open');
-        }
-
         form.reset();
+
+        setTimeout(() => {
+            window.location.href = '/pages/obrigado.html';
+        }, 300);
     });
     
     // Smooth scrolling for anchor links
