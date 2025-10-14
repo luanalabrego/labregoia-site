@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const formElement = e.currentTarget;
             const isCrmLeadForm = formElement.dataset.formType === 'crm-lead';
+            const crmEndpoint = formElement.dataset.crmEndpoint || '/api/crm/clients';
+            const crmSecret = formElement.dataset.crmSecret;
 
             const submitButton = formElement.querySelector('button[type="submit"]');
             const originalButtonContent = submitButton?.innerHTML;
@@ -68,9 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 try {
                     setSubmittingState(true);
 
-                    const response = await fetch('/api/crm/clients', {
+                    const headers = { 'Content-Type': 'application/json' };
+                    if (crmSecret) {
+                        headers['x-form-secret'] = crmSecret;
+                    }
+
+                    const response = await fetch(crmEndpoint, {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers,
                         body: JSON.stringify({
                             name: data.name,
                             phone: data.phone,
@@ -82,9 +89,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (!response.ok) {
                         let errorMessage = 'Não conseguimos enviar seu cadastro agora. Tente novamente em instantes.';
                         try {
-                            const errorBody = await response.json();
-                            if (errorBody?.error) {
-                                errorMessage = errorBody.error;
+                            const contentType = response.headers.get('content-type') || '';
+                            if (contentType.includes('application/json')) {
+                                const errorBody = await response.json();
+                                if (errorBody?.error) {
+                                    errorMessage = errorBody.error;
+                                }
+                            } else {
+                                const errorText = (await response.text()).trim();
+                                if (errorText) {
+                                    errorMessage = errorText;
+                                }
                             }
                         } catch (parseError) {
                             console.error('Erro ao interpretar resposta do CRM', parseError);
